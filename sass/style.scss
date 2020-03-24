@@ -1,0 +1,38 @@
+@import "standarts/variables";
+@import "standarts/mixins";
+
+/*Библиотеки*/
+@import "libs/normalize";
+@import "libs/fonts";
+
+/*Помощники*/
+@import "libs/helpers";
+
+/*Основные*/
+@import "standarts/main";
+
+/*БЭМ-блоки*/
+@import "bem/btn-start";
+@import "bem/buttons";
+@import "bem/titles";
+@import "bem/clear-line";
+@import "bem/icon-btn";
+@import "bem/table";
+@import "bem/info-block";
+
+/*Блоки*/
+@import "blocks/form-control";
+@import "blocks/logo";
+@import "blocks/custom-select";
+@import "blocks/add-photo";
+@import "blocks/menu";
+@import "blocks/user";
+@import "blocks/wallet";
+@import "blocks/address";
+@import "blocks/tooltip";
+
+/*Страницы*/
+@import "page/sign-in";
+@import "page/create-account";
+@import "page/my-information";
+@import "page/home";

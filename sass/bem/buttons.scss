@@ -1,0 +1,51 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 40px;
+  text-transform: uppercase;
+  color: $color-33;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-bottom: 8px;
+
+  &--yellow {
+    border: 1px solid $u-orange;
+    background-color: $u-orange;
+  }
+
+  &--outline {
+    border: 1px solid $color-33;
+    color: $color-33;
+  }
+
+  &--vk {
+    border: 1px solid $silver-big;
+    background-color: $u-white;
+  }
+
+  &--auto {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--sm {
+    min-height: 30px;
+
+    &.btn--auto {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  svg {
+    &:first-child {
+      margin-right: 8px;
+    }
+    &:last-child {
+      margin-left: 8px;
+    }
+  }
+}

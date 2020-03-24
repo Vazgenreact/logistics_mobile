@@ -1,0 +1,17 @@
+.wallet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background-color: $silver-normal;
+
+  &__money {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+  .btn {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,48 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  color: $font-color-main;
+  background-color: $u-white;
+  font-size: 14px;
+
+  &.mobile-body {
+    min-height: 100vh;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: $main-font;
+  color: $color-33;
+}
+
+input,
+textarea,
+select {
+  appearance: none;
+  border-radius: 0;
+  background-color: $u-white;
+}
+
+.main {
+  width: 100%;
+  max-width: $desctop-width;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+}

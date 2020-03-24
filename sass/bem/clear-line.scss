@@ -1,0 +1,11 @@
+.clear-line {
+  display: block;
+  height: 10px;
+  margin: 0 -20px;
+  background-color: $silver-normal;
+  border: 0;
+
+  &--sm {
+    height: 1px;
+  }
+}

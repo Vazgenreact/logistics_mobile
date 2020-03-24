@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container">
+    <div class="sign-in-page">
+        <div class="welcome-img">
+            <svg><use href="#welcome-img"></use></svg>
+        </div>
+
+        <div class="start-buttons">
+            <a href="#" class="btn-start active">войти</a>
+            <a href="#" class="btn-start">создать аккаунт</a>
+        </div>
+
+        <form action="#" class="sign-in-form">
+            <div class="mb-10">
+                <div class="d-flex justify-between input-text">
+                    <span>Адрес электронной почты</span>
+                    <small class="color-red">Такого email не существует</small>
+                </div>
+                <input type="email" class="input" value="arkhypenko@gmail.com">
+            </div>
+            <div class="mb-20">
+                <div class="d-flex justify-between input-text">
+                    <span>Пароль</span>
+                    <a href="#" class="small">Забыли пароль?</a>
+                </div>
+                <input type="password" class="input" placeholder="">
+            </div>
+
+            <button class="btn btn--yellow" type="submit">
+                <span>войти</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+            <a href="#" class="btn btn--vk">
+                <svg width="18" height="10"><use href="#i-vk"></use></svg>
+                <span class="font-400">Вконтакте</span>
+            </a>
+        </form>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

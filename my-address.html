@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="my-information-page">
+        <div class="small-logo">
+            <img class="small-logo__img" src="./img/logo-mini.png" alt="">
+            <p class="title">Мои адреса</p>
+        </div>
+
+        <p class="text mb-15">Вы можете добавить один или несколько контактов и адресов для получения грузов из Китая</p>
+
+        <button class="btn btn--yellow mb-30" type="button">
+            <span>добавить новый адрес</span>
+            <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+        </button>
+
+        <hr class="clear-line">
+
+        <table class="table pt-20 mb-15">
+            <tr>
+                <td class="grow-1">Архипенко Юлия Владимировна</td>
+                <td class="shrink-0 text-right">
+                    <button class="icon-btn">
+                        <svg width="15" height="14"><use href="#i-edit"></use></svg>
+                    </button>
+                    <button class="icon-btn ml-5">
+                        <svg width="7" height="7"><use href="#i-close"></use></svg>
+                    </button>
+                </td>
+            </tr>
+            <tr><td colspan="2">Восточная, 22/3, 319</td></tr>
+            <tr><td colspan="2">Краснодарский край, Краснодар</td></tr>
+            <tr><td colspan="2">350910</td></tr>
+            <tr><td colspan="2">Россия</td></tr>
+            <tr><td colspan="2">892821965453</td></tr>
+        </table>
+
+        <div class="info-block">
+            <p class="text">Это ваш адрес доставки по умолчанию</p>
+        </div>
+        <hr class="clear-line">
+
+        <form action="" class="address-form">
+            <div class="text-right">
+                <button class="address-form__close icon-btn" type="button">
+                    <svg width="7" height="7"><use href="#i-close"></use></svg>
+                </button>
+            </div>
+
+            <div>
+                <div class="input-group mb-5">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Фамилия</span>
+                        </div>
+                        <input type="text" class="input" value="Архипенко">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Имя</span>
+                        </div>
+                        <input type="text" class="input" value="Юлия">
+                    </div>
+                </div>
+                <div class="input-group mb-5">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Отчество</span>
+                        </div>
+                        <input type="text" class="input" value="Владимировна">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Страна</span>
+                            <div class="tooltip">
+                                <span onclick="this.classList.toggle('active')">
+                                    <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" value="Россия">
+                    </div>
+                </div>
+                <div class="input-group mb-5">
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Край или область</span>
+                            <div class="tooltip">
+                                <span onclick="this.classList.toggle('active')">
+                                    <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" value="Краснодарский Край">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Город</span>
+                        </div>
+                        <input type="text" class="input" value="Краснодар">
+                    </div>
+                </div>
+                <div class="input-group mb-5">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Улица</span>
+                        </div>
+                        <input type="text" class="input" value="Строителей">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Дом</span>
+                        </div>
+                        <input type="text" class="input" value="5">
+                    </div>
+                </div>
+                <div class="input-group mb-5">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Квартира</span>
+                        </div>
+                        <input type="text" class="input" value="8">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Индекс</span>
+                        </div>
+                        <input type="text" class="input" value="9856984">
+                    </div>
+                </div>
+                <div class="input-group mb-5">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Телефон</span>
+                        </div>
+                        <input type="text" class="input" value="+3 726221566">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Паспорт</span>
+                            <div class="tooltip">
+                                <span onclick="this.classList.toggle('active')">
+                                    <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" value="АК5684ВК">
+                    </div>
+                </div>
+
+                <div class="w-100 mb-10 pt-20">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>Использовать этот адрес доставки по умолчанию</span>
+                    </label>
+                </div>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
+                    </label>
+                </div>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end pt-20">
+                <button class="btn btn--yellow btn--auto" type="submit">
+                    <span>сохранить</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </button>
+            </div>
+        </form>
+
+        <div class="info-block">
+            <p class="text">Это ваш адрес доставки по умолчанию</p>
+        </div>
+        <hr class="clear-line">
+
+        <form action="" class="address-form">
+            <div class="d-flex justify-between input-group">
+                <div class="w-100 mb-5 pt-20">
+                    <strong class="text">Укажите получателя</strong>
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Фамилия</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Имя</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Отчество</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Телефон</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Резервный Телефон</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="d-flex justify-between input-text">
+                        <span>Паспорт</span>
+                        <div class="tooltip">
+                            <svg width="12" height="14"><use href="#i-info"></use></svg>
+                        </div>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+
+                <div class="w-100 mb-5 pt-20">
+                    <strong class="text">Укажите адрес доставки груза</strong>
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="d-flex justify-between input-text">
+                        <span>Страна</span>
+                        <div class="tooltip">
+                            <svg width="12" height="14"><use href="#i-info"></use></svg>
+                        </div>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="d-flex justify-between input-text">
+                        <span>Край или область</span>
+                        <div class="tooltip">
+                            <svg width="12" height="14"><use href="#i-info"></use></svg>
+                        </div>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Город</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Улица</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Дом</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Квартира</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+                <div class="input-group__item mb-5">
+                    <div class="input-text">
+                        <span>Индекс</span>
+                    </div>
+                    <input type="text" class="input" value="">
+                </div>
+
+                <div class="w-100 mb-10 pt-20">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>Использовать этот адрес доставки по умолчанию</span>
+                    </label>
+                </div>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
+                    </label>
+                </div>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex flex-end pt-20">
+                <button class="btn btn--yellow btn--auto" type="submit">
+                    <span>сохранить</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </button>
+            </div>
+        </form>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="20" height="19">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="20" height="21">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="25" height="16">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="23" height="17">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="23" height="16">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="18" height="18">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
