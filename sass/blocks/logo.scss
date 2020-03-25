@@ -1,7 +1,5 @@
 .logo {
-  width: 107px;
-  height: 30px;
-  margin-bottom: 20px;
+  text-align: center;
 
   a {
     display: inline-block;
@@ -15,7 +13,7 @@
 .small-logo {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 
   &__img {
     width: 13px;
