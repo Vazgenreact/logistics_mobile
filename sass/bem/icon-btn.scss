@@ -1,15 +1,12 @@
 .icon-btn {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   padding: 0;
   margin: 0;
   border: 0;
   border-radius: 3px;
   background-color: $color-f5;
-  text-align: center;
-
-  svg {
-    vertical-align: middle;
-  }
 }

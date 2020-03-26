@@ -1,0 +1,62 @@
+.transaction {
+  border-bottom: 1px solid $silver-big;
+  padding: 5px 0;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 0.9375em 0;
+    transition: all .2s;
+
+    &.active {
+      padding: 0.9375em 10px;
+      background: $silver-normal;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+      border-radius: 3px;
+      transition: all .2s;
+
+      & + .transaction__detail {
+        display: block;
+      }
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $silver-big;
+    margin-right: 10px;
+  }
+  &__info {
+    flex-shrink: 0;
+    margin-left: 5px;
+    text-align: right;
+  }
+  &__price {
+    font-size: 1.125em;
+  }
+
+  &--plus &__price {
+    color: $font-color-green;
+  }
+  &__date {
+    font-size: .875em;
+    color: $font-color-silver;
+  }
+
+  &__detail {
+    display: none;
+    padding: 20px 0;
+
+    .text--muted {
+      font-size: .9em;
+    }
+    .text {
+      margin-bottom: 10px;
+    }
+  }
+}

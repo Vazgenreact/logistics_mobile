@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 15px;
+  padding: 1.5625em 1.25em;
+  margin-bottom: 33px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background-color: $silver-normal;
 
   &__money {
-    font-size: 26px;
+    font-size: 1.875em;
     line-height: 1.1;
   }
   .btn {

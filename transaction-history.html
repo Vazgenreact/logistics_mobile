@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <img class="small-logo__img" src="./img/logo-mini.png" alt="">
+            <p class="title">История транзакций личного кабинета</p>
+        </div>
+        <p class="text mb-20">В данном разделе отображены все операции по Вашим счетам.
+            Для получения подробной информации по каждой транзакции нажмите
+            на интересующую Вас операцию. Для быстрой навигации воспользуйтесь
+            фильтром и поиском.</p>
+
+        <form action="#" class="mb-20">
+            <div class="filter">
+                <p class="filter__text text">История</p>
+                <div class="filter__operation relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select name="" class="input input--select">
+                        <option value="all" selected>Все операции</option>
+                        <option value="">операция 1</option>
+                        <option value="">операция 2</option>
+                        <option value="">операция 3</option>
+                    </select>
+                </div>
+                <div class="filter__price relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select name="" class="input input--select">
+                        <option value="dollar" selected>$, доллары</option>
+                        <option value="">$, доллары</option>
+                        <option value="">$, доллары</option>
+                        <option value="">$, доллары</option>
+                    </select>
+                </div>
+                <div class="filter__search search">
+                    <input type="text" class="input input--muted" placeholder="Поиск по операции">
+                    <button class="search__btn">
+                        <svg width="20" height="20"><use href="#i-search"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="mb-40 transactions-result">
+            <div class="transaction">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="18" height="20"><use href="#i-box-paiment"></use></svg>
+                    </div>
+                    <span class="text grow-1">Оплата, Заказ на выкуп №1</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>- 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Оплата зказа на выкуп с китайских сайтов</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">Оплачено</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Стоимость товара</span>
+                        <span>1250</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы</span>
+                        <span>55</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Итоговая стоимость</span>
+                        <span>1305</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction transaction--plus">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="21" height="20"><use href="#i-balance-payment"></use></svg>
+                    </div>
+                    <span class="text grow-1">Пополнение, Баланс личного кабинета Заказ на выкуп №1</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>+ 9 100 220</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Пополнение баланса личного кабинета (ЮАНИ)</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">Исполнено</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Метод оплаты:</span>
+                        <span>перевод на карту Сбербанка</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Счет зачисления:</span>
+                        <span>баланс личного кабинета (¥)</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Сумма пополнения:</span>
+                        <span>5 000 ¥, юаней</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Курсы валют:</span>
+                        <span>1 ¥ = 10,2 ₽ <span>&nbsp;&nbsp;&nbsp;</span> 1 ¥ = 0,1482 $</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction transaction--plus">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="20" height="20"><use href="#i-ref-bonus"></use></svg>
+                    </div>
+                    <span class="text grow-1">Начисление реферального бонуса</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>+ 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Начисление реферального бонуса</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">В обработке</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Начисление реферального бонуса за участника:</span>
+                        <span>e*******i@gmail.com</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Сумма пополнения кабинета:</span>
+                        <span>453 $</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Сумма начислений:</span>
+                        <span>4,53 $</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="20" height="20"><use href="#i-money-outoff"></use></svg>
+                    </div>
+                    <span class="text grow-1">Вывод средств с баланса личного кабинета</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>- 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Вывод средств с баланса личного кабинета</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">В обработке</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Метод оплаты:</span>
+                        <span>перевод на карту Сбербанка</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Счет списания:</span>
+                        <span>баланс личного кабинета (¥)</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы:</span>
+                        <span>10,2 ¥, юаней</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Курсы валют:</span>
+                        <span>1 ¥ = 10,2 ₽ <span>&nbsp;&nbsp;&nbsp;</span> 1 ¥ = 0,1482 $</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction transaction--plus">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="21" height="20"><use href="#i-balance-payment"></use></svg>
+                    </div>
+                    <span class="text grow-1">Пополнение, Баланс личного кабинета Заказ на выкуп №1</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>+ 9 100 220</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Вывод средств с баланса личного кабинета</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">В обработке</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Метод оплаты:</span>
+                        <span>перевод на карту Сбербанка</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Счет списания:</span>
+                        <span>баланс личного кабинета (¥)</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы:</span>
+                        <span>10,2 ¥, юаней</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Курсы валют:</span>
+                        <span>1 ¥ = 10,2 ₽ <span>&nbsp;&nbsp;&nbsp;</span> 1 ¥ = 0,1482 $</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="18" height="20"><use href="#i-box-paiment"></use></svg>
+                    </div>
+                    <span class="text grow-1">Оплата, Заказ на выкуп №1</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>- 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Вывод средств с баланса личного кабинета</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">В обработке</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Метод оплаты:</span>
+                        <span>перевод на карту Сбербанка</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Счет списания:</span>
+                        <span>баланс личного кабинета (¥)</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы:</span>
+                        <span>10,2 ¥, юаней</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Курсы валют:</span>
+                        <span>1 ¥ = 10,2 ₽ <span>&nbsp;&nbsp;&nbsp;</span> 1 ¥ = 0,1482 $</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction transaction--plus">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="20" height="20"><use href="#i-ref-bonus"></use></svg>
+                    </div>
+                    <span class="text grow-1">Начисление реферального бонуса</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>+ 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Вывод средств с баланса личного кабинета</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">В обработке</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Метод оплаты:</span>
+                        <span>перевод на карту Сбербанка</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Счет списания:</span>
+                        <span>баланс личного кабинета (¥)</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы:</span>
+                        <span>10,2 ¥, юаней</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Курсы валют:</span>
+                        <span>1 ¥ = 10,2 ₽ <span>&nbsp;&nbsp;&nbsp;</span> 1 ¥ = 0,1482 $</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="20" height="20"><use href="#i-money-outoff"></use></svg>
+                    </div>
+                    <span class="text grow-1">Вывод средств с баланса личного кабинета</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>- 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Вывод средств с баланса личного кабинета</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">В обработке</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Метод оплаты:</span>
+                        <span>перевод на карту Сбербанка</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Счет списания:</span>
+                        <span>баланс личного кабинета (¥)</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы:</span>
+                        <span>10,2 ¥, юаней</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Курсы валют:</span>
+                        <span>1 ¥ = 10,2 ₽ <span>&nbsp;&nbsp;&nbsp;</span> 1 ¥ = 0,1482 $</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

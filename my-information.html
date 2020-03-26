@@ -13,12 +13,12 @@
 </div>
 
 <div class="container menu-padding">
-    <div class="my-information-page">
+    <div class="pt-30">
         <div class="small-logo">
             <img class="small-logo__img" src="./img/logo-mini.png" alt="">
             <p class="title">Моя информация</p>
         </div>
-        <p class="text mb-25">Вы в любой момент можете обновить вашу учетную запись и внести любые
+        <p class="text mb-20">Вы в любой момент можете обновить вашу учетную запись и внести любые
             изменения в приведенные ниже данные</p>
 
         <label class="add-photo">
@@ -55,59 +55,45 @@
                 <span class="input-text w-100">Дата рождения</span>
                 <div class="date-group">
                     <div class="date-group__day">
-                        <div class="custom-select">
-                            <div class="input custom-select__input" id="date-group__day" onclick="onToggleSelect(this)">
-                                <input class="input-hide" name="select_date_day" value="1">
-                                <span class="text">1</span>
-                                <svg class="custom-select__arrow" width="6" height="3"><use href="#i-select-arrow"></use></svg>
-                            </div>
-                            <ul class="custom-select__list">
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '1', this)">1</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '2', this)">2</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '3', this)">3</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '4', this)">4</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '5', this)">5</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '6', this)">6</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '7', this)">7</li>
-                            </ul>
-                        </div>
+                        <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                        <select name="day" class="input input--select">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
                     </div>
                     <div class="date-group__month">
-                        <div class="custom-select">
-                            <div class="input custom-select__input" id="date-group__month" onclick="onToggleSelect(this)">
-                                <input class="input-hide" name="select_date_day" value="1">
-                                <span class="text">Январ</span>
-                                <svg class="custom-select__arrow" width="6" height="3"><use href="#i-select-arrow"></use></svg>
-                            </div>
-                            <ul class="custom-select__list">
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '1', this)">Январ</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '2', this)">Февраль</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '3', this)">Март</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '4', this)">Апрель</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '5', this)">Май</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '6', this)">Июнь</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '7', this)">Июль</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '8', this)">Август</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '9', this)">Сентябрь</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '10', this)">Октябрь</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '11', this)">Ноябрь</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '12', this)">Декабрь</li>
-                            </ul>
-                        </div>
+                        <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                        <select name="month" class="input input--select">
+                            <option value="Январ">Январ</option>
+                            <option value="Февраль">Февраль</option>
+                            <option value="Март">Март</option>
+                            <option value="Апрель">Апрель</option>
+                            <option value="Май">Май</option>
+                            <option value="Июнь">Июнь</option>
+                            <option value="Июль">Июль</option>
+                            <option value="Август">Август</option>
+                            <option value="Сентябрь">Сентябрь</option>
+                            <option value="Октябрь">Октябрь</option>
+                            <option value="Ноябрь">Ноябрь</option>
+                            <option value="Декабрь">Декабрь</option>
+                        </select>
                     </div>
                     <div class="date-group__year">
-                        <div class="custom-select">
-                            <div class="input custom-select__input" id="date-group__year" onclick="onToggleSelect(this)">
-                                <input class="input-hide" name="select_date_day" value="1970">
-                                <span class="text">1970</span>
-                                <svg class="custom-select__arrow" width="6" height="3"><use href="#i-select-arrow"></use></svg>
-                            </div>
-                            <ul class="custom-select__list">
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '1970', this)">1970</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '1971', this)">1971</li>
-                                <li class="custom-select__item" onclick="onChangeSelect('select_date_day', '1972', this)">1972</li>
-                            </ul>
-                        </div>
+                        <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                        <select name="year" class="input input--select">
+                            <option value="1971">1971</option>
+                            <option value="1972">1972</option>
+                            <option value="1973">1973</option>
+                            <option value="1974">1974</option>
+                            <option value="1975">1975</option>
+                            <option value="1976">1976</option>
+                            <option value="1977">1977</option>
+                        </select>
                     </div>
                 </div>
             </div>

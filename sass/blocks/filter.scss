@@ -1,0 +1,22 @@
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__text {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  &__operation {
+    flex-grow: 15;
+    margin-right: 10px;
+  }
+  &__price {
+    flex-grow: 14;
+  }
+  &__search {
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+}

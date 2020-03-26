@@ -34,3 +34,5 @@ function onAutocomplete(id, t) {
     document.getElementById(id).value = t.innerHTML;
     document.getElementById(id).classList.remove('active');
 }
+
+$('.')
