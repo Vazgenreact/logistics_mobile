@@ -1,0 +1,61 @@
+.to-pay {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 10px;
+  transition: margin .2s;
+
+  &__link {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $u-yellow;
+  }
+  .btn--auto {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    min-height: auto;
+    flex-shrink: 0;
+    background-color: transparent;
+
+    svg {
+      transform: rotate(-90deg);
+      transition: .2s;
+    }
+  }
+  .identifier {
+    margin-right: 15px;
+  }
+  &__price {
+    font-size: 1.5625em;
+    margin-right: 10px;
+  }
+
+  &__detail {
+    display: none;
+    padding: 10px 20px 20px;
+
+    .clear-line {
+      background-color: $silver-big;
+    }
+  }
+
+  &.active {
+    border-color: $color-f5;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    transition: margin .2s;
+
+    .btn--auto svg {
+      transform: rotate(90deg);
+      transition: .2s;
+    }
+
+    .to-pay__detail {
+      display: block;
+    }
+  }
+}

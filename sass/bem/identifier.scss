@@ -1,0 +1,16 @@
+.identifier {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -2px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $font-color-red;
+    border-radius: 50%;
+  }
+}

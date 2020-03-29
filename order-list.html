@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Список заказов</p>
+        </div>
+
+        <form action="#" class="mb-30">
+            <div class="filter filter-orders">
+                <div class="filter-orders__item relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select name="" class="input input--select">
+                        <option selected>Статус заказа</option>
+                        <option value="">Не оплачен</option>
+                        <option value="">Оплачен</option>
+                        <option value="">Выкуплен</option>
+                    </select>
+                </div>
+                <div class="filter-orders__item relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select name="" class="input input--select">
+                        <option selected>Дата создания заказа</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+                <div class="filter__search search">
+                    <input type="text" class="input input--muted" placeholder="Поиск по заказам">
+                    <button class="search__btn">
+                        <svg width="20" height="20"><use href="#i-search"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="order">
+            <div class="order__top">
+                <strong class="text-uppercase grow-1">Заказ на выкуп №1</strong>
+                <span>21.04.2019</span>
+                <button class="icon-btn ml-5">
+                    <svg width="10" height="10"><use href="#i-close"></use></svg>
+                </button>
+            </div>
+            <ul class="order__detail reset-list">
+                <li class="d-flex">
+                    <span class="shrink-0">Номер заказа:</span>
+                    <span class="grow-1">№1584558</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Дата создания:</span>
+                    <span class="grow-1">21.04.2019</span>
+                </li>
+                <li class="d-flex warning-bg">
+                    <span class="shrink-0">Статус заказа:</span>
+                    <span class="grow-1">Не оплачен</span>
+                    <a href="#" class="color-red">Оплатите заказ</a>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Сумма заказа:</span>
+                    <span class="grow-1">1 257 ¥, юаней</span>
+                </li>
+            </ul>
+            <div class="order__buttons">
+                <a href="#" class="btn btn--muted">
+                    <span>изменить</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+                <a href="#" class="btn btn--outline">
+                    <span>Подробнее</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order__top">
+                <strong class="text-uppercase grow-1">Заказ на выкуп №2</strong>
+                <span>21.04.2019</span>
+            </div>
+            <ul class="order__detail reset-list">
+                <li class="d-flex">
+                    <span class="shrink-0">Номер заказа:</span>
+                    <span class="grow-1">№1584558</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Дата создания:</span>
+                    <span class="grow-1">21.04.2019</span>
+                </li>
+                <li class="d-flex warning-bg">
+                    <span class="shrink-0">Статус заказа:</span>
+                    <span class="grow-1">Ожидаем на складе</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Сумма заказа:</span>
+                    <span class="grow-1">1 257 ¥, юаней</span>
+                </li>
+            </ul>
+            <div class="order__buttons">
+                <a href="#" class="btn btn--outline">
+                    <span>Подробнее</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order__top">
+                <strong class="text-uppercase grow-1">Заказ на выкуп №2</strong>
+                <span>21.04.2019</span>
+            </div>
+            <ul class="order__detail reset-list">
+                <li class="d-flex">
+                    <span class="shrink-0">Номер заказа:</span>
+                    <span class="grow-1">№1584558</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Дата создания:</span>
+                    <span class="grow-1">21.04.2019</span>
+                </li>
+                <li class="d-flex warning-bg">
+                    <span class="shrink-0">Статус заказа:</span>
+                    <span class="grow-1">оплачен</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Сумма заказа:</span>
+                    <span class="grow-1">1 257 ¥, юаней</span>
+                </li>
+            </ul>
+            <div class="order__buttons">
+                <a href="#" class="btn btn--outline">
+                    <span>Подробнее</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order__top">
+                <strong class="text-uppercase grow-1">Заказ на выкуп №2</strong>
+                <span>21.04.2019</span>
+            </div>
+            <ul class="order__detail reset-list">
+                <li class="d-flex">
+                    <span class="shrink-0">Номер заказа:</span>
+                    <span class="grow-1">№1584558</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Дата создания:</span>
+                    <span class="grow-1">21.04.2019</span>
+                </li>
+                <li class="d-flex warning-bg">
+                    <span class="shrink-0">Статус заказа:</span>
+                    <span class="grow-1">Готов к отправке</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Сумма заказа:</span>
+                    <span class="grow-1">1 257 ¥, юаней</span>
+                </li>
+            </ul>
+            <div class="order__buttons">
+                <a href="#" class="btn btn--outline">
+                    <span>Подробнее</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="create-new-order">
+            <strong class="title">создайте<br> новый заказ</strong>
+            <a href="#" class="btn btn--yellow btn--auto">
+                <span>создать заказ</span>
+                <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

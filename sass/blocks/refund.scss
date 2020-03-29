@@ -1,0 +1,28 @@
+.refund {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    min-height: 50px;
+    background-color: $color-f5;
+    color: $color-33;
+    margin-bottom: 10px;
+
+    &.active + .refund__content {
+      display: block;
+    }
+    &.active svg {
+      transform: rotate(90deg);
+      transition: .3s;
+    }
+  }
+  &__content {
+    display: none;
+    padding: 20px;
+    background-color: $color-f5;
+  }
+}

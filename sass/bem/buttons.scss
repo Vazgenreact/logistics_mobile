@@ -1,5 +1,5 @@
 .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -16,7 +16,14 @@
   }
 
   &--outline {
+    background-color: transparent;
     border: 1px solid $color-33;
+    color: $color-33;
+  }
+
+  &--muted {
+    background-color: transparent;
+    border: 1px solid $color-f5;
     color: $color-33;
   }
 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Ваш заказ успешно создан</p>
+        </div>
+
+        <ul class="reset-list">
+            <li class="d-flex justify-between mb-10">
+                <strong>Номер заказа:</strong>
+                <span>№1584558</span>
+            </li>
+            <li class="d-flex justify-between mb-10">
+                <strong>Дата создания:</strong>
+                <span>21.04.2019</span>
+            </li>
+            <li class="d-flex justify-between mb-10">
+                <strong>Статус заказа:</strong>
+                <span>Не оплачен</span>
+            </li>
+            <li class="d-flex justify-between">
+                <strong>Сумма заказа:</strong>
+                <span>1 257 ¥, юаней</span>
+            </li>
+        </ul>
+
+        <div class="product__warning">
+            <div class="d-flex justify-between"><span>Курс валют</span><span>1 юань = 10,2 рубля</span></div>
+            <div class="d-flex justify-between"><span>на сегодня:</span><span>1 юань = 0,1482 доллара</span></div>
+        </div>
+
+        <div class="mb-25">
+            <div class="input-text">Метод оплаты:</div>
+            <div class="relative w-100">
+                <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                <select class="input input--select">
+                    <option value="РУБЛИ" selected>Баланс личного кабинета (РУБЛИ)</option>
+                    <option value="Доллар">Баланс личного кабинета (Доллар)</option>
+                    <option value="Юань">Баланс личного кабинета (Юань)</option>
+                </select>
+            </div>
+            <p class="text color-red"><small>Недостаточно средств. Необходимо пополнить баланс</small></p>
+        </div>
+
+        <div class="d-flex align-center pb-30 border-bottom">
+            <span>Спишется:</span>
+            <span class="total-amount">6583</span>
+            <span>Рубля</span>
+        </div>
+
+        <div class="d-flex align-center justify-between mt-30 mb-20">
+            <p class="text text--muted">Нажимая кнопку, Вы принимаете <a href="#">условия сервиса</a></p>
+            <a href="#" class="btn btn--yellow btn--auto">
+                <span>оплатить</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

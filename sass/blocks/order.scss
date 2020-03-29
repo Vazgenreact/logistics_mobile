@@ -1,0 +1,54 @@
+.order {
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  border: 1px solid $silver-big;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 5px 20px;
+    border-bottom: 1px solid $silver-big;
+  }
+  &__detail {
+    padding: 20px 0 15px;
+
+    & > .d-flex {
+      padding: 0 20px;
+      line-height: 30px;
+    }
+    .select-block {
+      position: relative;
+      margin-right: auto;
+      max-width: 130px;
+      line-height: 1;
+      margin-left: -10px;
+
+      .input {
+        padding: 0 10px;
+        height: 35px;
+      }
+    }
+    .shrink-0 {
+      flex-basis: 35%;
+    }
+  }
+  .warning-bg {
+    min-height: 40px;
+    align-items: center;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px;
+
+    .btn {
+      flex-basis: 48.5%;
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+}

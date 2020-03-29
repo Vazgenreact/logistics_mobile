@@ -19,6 +19,12 @@
 @import "bem/icon-btn";
 @import "bem/table";
 @import "bem/info-block";
+@import "bem/add-file";
+@import "bem/saved-message";
+@import "bem/identifier";
+@import "bem/total-amount";
+@import "bem/ol-list";
+@import "bem/create-new-order";
 
 /*Блоки*/
 @import "blocks/form-control";
@@ -34,6 +40,18 @@
 @import "blocks/filter";
 @import "blocks/transaction";
 @import "blocks/messages";
+@import "blocks/product";
+@import "blocks/images-slider";
+@import "blocks/to-pay";
+@import "blocks/order-info";
+@import "blocks/modal";
+@import "blocks/referral-link";
+@import "blocks/bonus";
+@import "blocks/statistic";
+@import "blocks/referral-table";
+@import "blocks/order";
+@import "blocks/tabs";
+@import "blocks/refund";
 
 /*Страницы*/
 @import "page/sign-in";

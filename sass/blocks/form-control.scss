@@ -19,6 +19,12 @@
     }
   }
 
+  &--textarea {
+    padding: 15px 20px;
+    min-height: 100px;
+    max-width: 100%;
+  }
+
   &:focus {
     border-color: $color-33;
     outline: none;

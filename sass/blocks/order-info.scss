@@ -1,0 +1,25 @@
+.order-info {
+  position: relative;
+  padding: 14px 10px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.125em;
+  background-color: $u-yellow;
+
+  &__date {
+    font-size: 0.875em;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background-color: $u-yellow;
+  }
+}

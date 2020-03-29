@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">История транзакций</p>
+        </div>
+
+        <div class="order-info">
+            <strong class="order-info__title">Заказ на выкуп №1</strong>
+            <span class="order-info__date">12.03.2020</span>
+        </div>
+        <!--    Товар №1    -->
+        <div class="product">
+            <div class="product__link">
+                <svg class="mr-10 shrink-0" width="19" height="20"><use href="#i-box2"></use></svg>
+                <strong class="grow-1">Товар №1</strong>
+                <button class="icon-btn icon-btn--white mr-10" onclick="this.parentElement.parentElement.classList.toggle('active')">
+                    <svg class="product__arrow" width="6" height="10"><use href="#i-arrow"></use></svg>
+                </button>
+                <button class="icon-btn icon-btn--white"  onclick="document.getElementById('modal').classList.add('active')">
+                    <svg width="10" height="10"><use href="#i-close"></use></svg>
+                </button>
+            </div>
+
+            <div class="product__detail">
+                <div class="mb-20">
+                    <p class="text mb-5">Ссылка на товар</p>
+                    <input type="password" class="input input--muted" placeholder="Введите ссылку на товар">
+                </div>
+
+                <div class="mb-20">
+                    <p class="text">Загрузите фотографию с модификациями товара</p>
+                    <div class="images-slider">
+                        <label class="add-file add-file--big mr-10">
+                            <input type="file" class="input-hide">
+                            <svg width="20" height="20"><use href="#i-add"></use></svg>
+                        </label>
+                        <div class="images-slider__item">
+                            <img class="images-slider__img" src="https://cdn.cnn.com/cnnnext/dam/assets/191203174105-edward-whitaker-1-exlarge-169.jpg" alt="">
+                        </div>
+                        <div class="images-slider__item"></div>
+                        <div class="images-slider__item"></div>
+                        <div class="images-slider__item"></div>
+                        <div class="images-slider__item"></div>
+                    </div>
+                </div>
+
+                <div class="mb-20">
+                    <p class="text mb-5">Или добавьте скриншот с модификациями товара</p>
+                    <div class="d-flex">
+                        <input type="text" class="input input--muted grow-1 mr-10" placeholder="Введите ссылку на товар">
+                        <label class="add-file add-file--sm">
+                            <input type="file" class="input-hide">
+                            <svg width="20" height="20"><use href="#i-add"></use></svg>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-20">
+                    <p class="text mb-5">Укажите суммарную стоимость товарных позиций по данной ссылке</p>
+                    <div class="d-flex align-center">
+                        <input type="text" class="input input--muted grow-1 mr-10" placeholder="Введите сумму">
+                        <span class="shrink-0">¥, юаней</span>
+                    </div>
+                </div>
+
+                <p class="text mb-10">Дополнительные параметры:</p>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>Требуется визуальная проверка на брак</span>
+                    </label>
+                </div>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>Требуется фото товара по прибытию на склад</span>
+                    </label>
+                </div>
+
+                <div class="product__warning">
+                    <p class="text mb-15">Обратите внимание! Стоимость ополнительных услуг оплачивается отдельно за каждую единицу товара согласно следующим тарифам:</p>
+                    <div class="d-flex justify-between"><span>Визуальная проверка на брак:</span><span>1 ¥/единица</span></div>
+                    <div class="d-flex justify-between"><span>Отдельное фото товара:</span><span>1 ¥/единица</span></div>
+                </div>
+
+                <div class="mb-10">
+                    <span class="input-text">Комментарий:</span>
+                    <textarea name="" class="input input--muted input--textarea" placeholder="Если у Вас есть дополнительные требования, укажите их здесь"></textarea>
+                </div>
+                <div class="d-flex flex-end saved-message">
+                    <small class="d-flex align-center">
+                        <svg width="7" height="7"><use href="#i-check-circle"></use></svg>
+                        <span class="ml-5">Изменения созранены</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+        <!--    Товар №2    -->
+        <div class="product ">
+            <div class="product__link">
+                <svg class="mr-10 shrink-0" width="19" height="20"><use href="#i-box2"></use></svg>
+                <strong class="grow-1">Товар №2</strong>
+                <button class="icon-btn icon-btn--white mr-10">
+                    <svg class="product__arrow" width="6" height="10"><use href="#i-arrow"></use></svg>
+                </button>
+                <button class="icon-btn icon-btn--white">
+                    <svg width="10" height="10"><use href="#i-close"></use></svg>
+                </button>
+            </div>
+
+            <div class="product__detail">
+                <div class="mb-20">
+                    <span class="input-text">Ссылка на товар</span>
+                    <input type="password" class="input input--muted" placeholder="Введите ссылку на товар">
+                </div>
+
+                <div class="mb-20">
+                    <p class="text">Загрузите фотографию с модификациями товара</p>
+                    <div class="images-slider">
+                        <label class="add-file add-file--big mr-10">
+                            <input type="file" class="input-hide">
+                            <svg width="20" height="20"><use href="#i-add"></use></svg>
+                        </label>
+                        <div class="images-slider__item">
+                            <img class="images-slider__img" src="" alt="">
+                        </div>
+                        <div class="images-slider__item"></div>
+                    </div>
+                </div>
+
+                <div class="mb-20">
+                    <p class="text mb-5">Или добавьте скриншот с модификациями товара</p>
+                    <div class="d-flex">
+                        <input type="text" class="input input--muted grow-1 mr-10" placeholder="Введите ссылку на товар">
+                        <label class="add-file add-file--sm">
+                            <input type="file" class="input-hide">
+                            <svg width="20" height="20"><use href="#i-add"></use></svg>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-20">
+                    <p class="text mb-5">Укажите суммарную стоимость товарных позиций по данной ссылке</p>
+                    <div class="d-flex align-center">
+                        <input type="text" class="input input--muted grow-1 mr-10" placeholder="Введите сумму">
+                        <span class="shrink-0">¥, юаней</span>
+                    </div>
+                </div>
+
+                <p class="text mb-10">Дополнительные параметры:</p>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>Требуется визуальная проверка на брак</span>
+                    </label>
+                </div>
+                <div class="w-100 mb-10">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>Требуется фото товара по прибытию на склад</span>
+                    </label>
+                </div>
+
+                <div class="product__warning">
+                    <p class="text mb-15">Обратите внимание! Стоимость ополнительных услуг оплачивается отдельно за каждую единицу товара согласно следующим тарифам:</p>
+                    <div class="d-flex justify-between"><span>Визуальная проверка на брак:</span><span>1 ¥/единица</span></div>
+                    <div class="d-flex justify-between"><span>Отдельное фото товара:</span><span>1 ¥/единица</span></div>
+                </div>
+
+                <div class="mb-10">
+                    <span class="input-text">Комментарий:</span>
+                    <textarea name="" class="input input--muted input--textarea" placeholder="Если у Вас есть дополнительные требования, укажите их здесь"></textarea>
+                </div>
+                <div class="d-flex flex-end saved-message">
+                    <small class="d-flex align-center">
+                        <svg width="7" height="7"><use href="#i-check-circle"></use></svg>
+                        <span class="ml-5">Изменения созранены</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <!--    добавить товар    -->
+        <div class="d-flex align-center justify-between mt-30 mb-50">
+            <p class="text font-400">Добавить ещё один товар к этому заказу</p>
+            <a href="#" class="btn btn--outline">
+                <span>добавить товар</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+
+        <div class="to-pay">
+            <div class="to-pay__link" onclick="this.parentElement.classList.toggle('active')">
+                <div class="d-flex align-center">
+                    <span class="identifier">
+                        <svg width="20" height="20"><use href="#i-cart"></use></svg>
+                    </span>
+                    <strong class="text-uppercase">к оплате</strong>
+                </div>
+                <div class="d-flex align-center">
+                    <strong class="to-pay__price">9 367 059 ¥</strong>
+                    <button class="btn btn--outline btn--auto">
+                        <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="to-pay__detail">
+                <div class="d-flex justify-between mb-10">
+                    <span>Стоимость товара</span>
+                    <strong>1250</strong>
+                </div>
+                <div class="d-flex justify-between mb-10">
+                    <span>Комиссия платформы</span>
+                    <strong>55</strong>
+                </div>
+                <div class="d-flex justify-between mb-20">
+                    <span>Итоговая стоимость</span>
+                    <strong>1755</strong>
+                </div>
+
+                <hr class="clear-line clear-line--sm mb-10">
+
+                <div class="text--muted mb-30">
+                    <div class="d-flex justify-between mb-10 relative">
+                        <div class="d-flex">
+                            <span>Доставка по Китаю</span>
+                            <div class="tooltip ml-5">
+                                <span onclick="this.classList.toggle('active')">
+                                    <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <strong>0</strong>
+                    </div>
+                    <div class="d-flex justify-between mb-10 relative">
+                        <div class="d-flex">
+                            <span>Доп. услуги</span>
+                            <div class="tooltip ml-5">
+                                    <span onclick="this.classList.toggle('active')">
+                                        <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                    </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <strong>0</strong>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn--yellow">
+                    <span>оформить заказ</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link identifier">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal">
+    <div class="modal__content text-center">
+        <div class="mb-25">
+            <strong>Информация сохранена.
+                Вы можете вернуться к оформлению заказа в любой момент</strong>
+        </div>
+        <a href="#" class="btn btn--yellow btn--auto">
+            <span>понятно</span>
+            <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+        </a>
+
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

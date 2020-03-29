@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Список заказов</p>
+        </div>
+
+        <div class="order pb-40">
+            <div class="order__top">
+                <strong class="text-uppercase grow-1">Заказ на выкуп №1</strong>
+                <span>21.04.2019</span>
+            </div>
+
+            <ul class="order__detail reset-list">
+                <li class="d-flex">
+                    <span class="shrink-0">Номер заказа:</span>
+                    <span class="grow-1">№1584558</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">ФИО</span>
+                    <span class="grow-1">Хайрутдинов Алексей</span>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Дата создания:</span>
+                    <span class="grow-1">21.04.2019</span>
+                </li>
+                <li class="d-flex warning-bg">
+                    <span class="shrink-0">Статус заказа:</span>
+                    <span class="grow-1 ">Оплачен</span> <!-- toggleClass d-none -->
+                    <div class="select-block d-none"> <!-- toggleClass d-none -->
+                        <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                        <select name="" class="input input--select">
+                            <option>Оплачен</option>
+                            <option value="">Выкуплен</option>
+                            <option value="">Готов к отправке</option>
+                            <option value="">Отправлен</option>
+                            <option value="">Получен</option>
+                        </select>
+                    </div>
+                    <button class="icon-btn ml-5">
+                        <svg width="15" height="15"><use href="#i-edit"></use></svg>
+                    </button>
+                    <button class="icon-btn ml-5" disabled>
+                        <svg width="15" height="15"><use href="#i-save"></use></svg>
+                    </button>
+                </li>
+                <li class="d-flex">
+                    <span class="shrink-0">Сумма заказа:</span>
+                    <span class="grow-1">1 257 ¥, юаней</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tabs mb-40">
+            <ul class="tabs-nav reset-list">
+                <li class="tabs-nav__item">
+                    <a href="#" class="tabs-nav__link " onclick="toggleTabs('redemption-of-goods', this)">выкуп товара</a>
+                </li>
+                <li class="tabs-nav__item">
+                    <a href="#" class="tabs-nav__link active" onclick="toggleTabs('additional-services', this)">дополнительные<br> услуги</a>
+                </li>
+            </ul>
+            <div class="tabs-content">
+                <div class="tabs-content__item " id="redemption-of-goods">
+                    <!--    Товар №1    -->
+                    <div class="product">
+                        <div class="product__link" onclick="this.parentElement.classList.toggle('active')">
+                            <svg class="mr-10 shrink-0" width="19" height="20"><use href="#i-box2"></use></svg>
+                            <strong class="grow-1">Товар №1</strong>
+                            <button class="icon-btn icon-btn--white mr-10">
+                                <svg class="product__arrow" width="6" height="10"><use href="#i-arrow"></use></svg>
+                            </button>
+                        </div>
+
+                        <div class="product__detail">
+                            <div class="mb-20">
+                                <p class="text mb-5">Ссылка на товар</p>
+                                <div class="d-flex">
+                                    <input type="text" class="input input--muted grow-1 mr-10" readonly value="https://detail.1688.com/pic/5585...">
+                                    <a href="#" class="add-file add-file--sm">
+                                        <input type="file" class="input-hide">
+                                        <svg width="24" height="20"><use href="#i-link-arrow"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text">Фотография с модификациями товара</p>
+                                <div class="images-slider">
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item"></div>
+                                    <div class="images-slider__item"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text mb-5">Скриншот с модификациями товара</p>
+                                <div class="d-flex">
+                                    <input type="text" class="input input--muted grow-1 mr-10" readonly value="https://detail.1688.com/pic/5585...">
+                                    <a href="#" class="add-file add-file--sm">
+                                        <input type="file" class="input-hide">
+                                        <svg width="24" height="20"><use href="#i-link-arrow"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text mb-5">Суммарная стоимость товарных позиций по данной ссылке</p>
+                                <div class="d-flex align-center">
+                                    <input type="text" class="input grow-1 mr-10" readonly value="42 540">
+                                    <span class="shrink-0">¥, юаней</span>
+                                </div>
+                            </div>
+
+                            <p class="text mb-10">Дополнительные параметры:</p>
+                            <div class="w-100 mb-10">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" class="input-hide" checked>
+                                    <span class="checkbox__icon mr-10">
+                                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                    </span>
+                                    <span>Требуется визуальная проверка на брак</span>
+                                </label>
+                            </div>
+                            <div class="w-100 mb-10">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" class="input-hide">
+                                    <span class="checkbox__icon mr-10">
+                                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                    </span>
+                                    <span>Требуется фото товара по прибытию на склад</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="input-text">Комментарий:</span>
+                                <textarea name="" class="input input--muted input--textarea" readonly
+                                          placeholder="Suspendisse potenti. Morbi laoreet blandit leo, vitae dignissim velit consectetur non. Aliquam at risus ac felis egestas tempus."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    Товар №2    -->
+                    <div class="product">
+                        <div class="product__link" onclick="this.parentElement.classList.toggle('active')">
+                            <svg class="mr-10 shrink-0" width="19" height="20"><use href="#i-box2"></use></svg>
+                            <strong class="grow-1">Товар №2</strong>
+                            <button class="icon-btn icon-btn--white mr-10">
+                                <svg class="product__arrow" width="6" height="10"><use href="#i-arrow"></use></svg>
+                            </button>
+                        </div>
+
+                        <div class="product__detail">
+                            <div class="mb-20">
+                                <p class="text mb-5">Ссылка на товар</p>
+                                <div class="d-flex">
+                                    <input type="text" class="input input--muted grow-1 mr-10" readonly value="https://detail.1688.com/pic/5585...">
+                                    <a href="#" class="add-file add-file--sm">
+                                        <input type="file" class="input-hide">
+                                        <svg width="24" height="20"><use href="#i-link-arrow"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text">Фотография с модификациями товара</p>
+                                <div class="images-slider">
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item"></div>
+                                    <div class="images-slider__item"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text mb-5">Скриншот с модификациями товара</p>
+                                <div class="d-flex">
+                                    <input type="text" class="input input--muted grow-1 mr-10" readonly value="https://detail.1688.com/pic/5585...">
+                                    <a href="#" class="add-file add-file--sm">
+                                        <input type="file" class="input-hide">
+                                        <svg width="24" height="20"><use href="#i-link-arrow"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text mb-5">Суммарная стоимость товарных позиций по данной ссылке</p>
+                                <div class="d-flex align-center">
+                                    <input type="text" class="input grow-1 mr-10" readonly value="42 540">
+                                    <span class="shrink-0">¥, юаней</span>
+                                </div>
+                            </div>
+
+                            <p class="text mb-10">Дополнительные параметры:</p>
+                            <div class="w-100 mb-10">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" class="input-hide" checked>
+                                    <span class="checkbox__icon mr-10">
+                                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                    </span>
+                                    <span>Требуется визуальная проверка на брак</span>
+                                </label>
+                            </div>
+                            <div class="w-100 mb-10">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" class="input-hide">
+                                    <span class="checkbox__icon mr-10">
+                                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                    </span>
+                                    <span>Требуется фото товара по прибытию на склад</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="input-text">Комментарий:</span>
+                                <textarea name="" class="input input--muted input--textarea" readonly
+                                          placeholder="Suspendisse potenti. Morbi laoreet blandit leo, vitae dignissim velit consectetur non. Aliquam at risus ac felis egestas tempus."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    Товар №3    -->
+                    <div class="product active">
+                        <div class="product__link" onclick="this.parentElement.classList.toggle('active')">
+                            <svg class="mr-10 shrink-0" width="19" height="20"><use href="#i-box2"></use></svg>
+                            <strong class="grow-1">Товар №3</strong>
+                            <button class="icon-btn icon-btn--white mr-10">
+                                <svg class="product__arrow" width="6" height="10"><use href="#i-arrow"></use></svg>
+                            </button>
+                        </div>
+
+                        <div class="product__detail">
+                            <div class="mb-20">
+                                <p class="text mb-5">Ссылка на товар</p>
+                                <div class="d-flex">
+                                    <input type="text" class="input input--muted grow-1 mr-10" readonly value="https://detail.1688.com/pic/5585...">
+                                    <a href="#" class="add-file add-file--sm">
+                                        <input type="file" class="input-hide">
+                                        <svg width="24" height="20"><use href="#i-link-arrow"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text">Фотография с модификациями товара</p>
+                                <div class="images-slider">
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item">
+                                        <img class="images-slider__img" src="img/modification.png" alt="">
+                                    </div>
+                                    <div class="images-slider__item"></div>
+                                    <div class="images-slider__item"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text mb-5">Скриншот с модификациями товара</p>
+                                <div class="d-flex">
+                                    <input type="text" class="input input--muted grow-1 mr-10" readonly value="https://detail.1688.com/pic/5585...">
+                                    <a href="#" class="add-file add-file--sm">
+                                        <input type="file" class="input-hide">
+                                        <svg width="24" height="20"><use href="#i-link-arrow"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mb-20">
+                                <p class="text mb-5">Суммарная стоимость товарных позиций по данной ссылке</p>
+                                <div class="d-flex align-center">
+                                    <input type="text" class="input grow-1 mr-10" readonly value="42 540">
+                                    <span class="shrink-0">¥, юаней</span>
+                                </div>
+                            </div>
+
+                            <p class="text mb-10">Дополнительные параметры:</p>
+                            <div class="w-100 mb-10">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" class="input-hide" checked>
+                                    <span class="checkbox__icon mr-10">
+                                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                    </span>
+                                    <span>Требуется визуальная проверка на брак</span>
+                                </label>
+                            </div>
+                            <div class="w-100 mb-10">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" class="input-hide">
+                                    <span class="checkbox__icon mr-10">
+                                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                    </span>
+                                    <span>Требуется фото товара по прибытию на склад</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="input-text">Комментарий:</span>
+                                <textarea name="" class="input input--muted input--textarea" readonly
+                                          placeholder="Suspendisse potenti. Morbi laoreet blandit leo, vitae dignissim velit consectetur non. Aliquam at risus ac felis egestas tempus."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content__item p-20 active" id="additional-services">
+                    <div class="mb-30">
+                        <div class="input-text">Выставить доп. счет по данному заказу</div>
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option>Выберите услугу</option>
+                                <option value="">услуг 1</option>
+                                <option value="">услуг 2</option>
+                                <option value="">услуг 3</option>
+                                <option value="">услуг 4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-center mb-20">
+                        <span class="text mr-20">Укажите<br> сумму</span>
+                        <input type="text" class="input input--select mr-10">
+                        <div class="relative shrink-0">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option value="юани">¥, юани</option>
+                                <option value="доллары">$, доллары</option>
+                                <option value="рубли">₽, рубли</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-30">
+                        <span class="input-text">Комментарий:</span>
+                        <textarea name="" class="input input--textarea input--muted" placeholder="Текст комментария"></textarea>
+                    </div>
+
+                    <div class="d-flex flex-end mb-40">
+                        <button class="btn btn--yellow btn--auto">
+                            <span>выставить счет</span>
+                            <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                        </button>
+                    </div>
+
+                    <div class="refund">
+                        <div class="refund__link" onclick="this.classList.toggle('active')">
+                            <span>Оформить возврат средств</span>
+                            <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                        </div>
+                        <div class="refund__content">
+                            <div class="mb-30">
+                                <div class="relative w-100">
+                                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                                    <select class="input input--select">
+                                        <option>Оформить возврат средств</option>
+                                        <option value="">услуг 1</option>
+                                        <option value="">услуг 2</option>
+                                        <option value="">услуг 3</option>
+                                        <option value="">услуг 4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center mb-20">
+                                <span class="text mr-20">Сумма к<br> возврату</span>
+                                <input type="text" class="input input--select mr-10">
+                                <div class="relative shrink-0">
+                                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                                    <select class="input input--select">
+                                        <option value="юани">¥, юани</option>
+                                        <option value="доллары">$, доллары</option>
+                                        <option value="рубли">₽, рубли</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-30">
+                                <span class="input-text">Комментарий:</span>
+                                <textarea name="" class="input input--textarea input--muted" placeholder="Текст комментария"></textarea>
+                            </div>
+
+                            <div class="d-flex flex-end mb-20">
+                                <button class="btn btn--yellow btn--auto">
+                                    <span>выставить счет</span>
+                                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title mb-10">История выставленных счетов по заказу</div>
+        <div class="mb-40">
+            <div class="transaction">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="18" height="20"><use href="#i-box-paiment"></use></svg>
+                    </div>
+                    <span class="text grow-1">Оплата, Заказ на выкуп №1</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>- 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Оплата зказа на выкуп с китайских сайтов</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">Оплачено</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Стоимость товара</span>
+                        <span>1250</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы</span>
+                        <span>55</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Итоговая стоимость</span>
+                        <span>1305</span>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction">
+                <div class="transaction__link" onclick="this.classList.toggle('active')">
+                    <div class="transaction__icon">
+                        <svg width="18" height="20"><use href="#i-box-paiment"></use></svg>
+                    </div>
+                    <span class="text grow-1">Оплата, Заказ на выкуп №1</span>
+                    <div class="transaction__info">
+                        <div class="transaction__price"><strong>- 1020</strong> ¥</div>
+                        <span class="transaction__date">22.11.2018</span>
+                    </div>
+                </div>
+                <div class="transaction__detail">
+                    <span class="text--muted">Тип операции:</span>
+                    <p class="text">Оплата зказа на выкуп с китайских сайтов</p>
+
+                    <span class="text--muted">Статус операции:</span>
+                    <p class="text">Оплачено</p>
+
+                    <span class="text--muted">Дополнительная информация:</span>
+                    <div class="d-flex justify-between align-end">
+                        <span>Стоимость товара</span>
+                        <span>1250</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Комиссия платформы</span>
+                        <span>55</span>
+                    </div>
+                    <div class="d-flex justify-between align-end">
+                        <span>Итоговая стоимость</span>
+                        <span>1305</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

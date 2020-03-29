@@ -24,8 +24,8 @@ document.addEventListener('click', function (e) {
 });
 
 function toggleTabs(id, t) {
-    document.querySelector('.admin_tab.active').classList.remove('active');
-    document.querySelector('.admin_content.active').classList.remove('active');
+    document.querySelector('.tabs-nav__link.active').classList.remove('active');
+    document.querySelector('.tabs-content__item.active').classList.remove('active');
     document.getElementById(id).classList.add('active');
     t.classList.add('active');
 }
@@ -34,5 +34,3 @@ function onAutocomplete(id, t) {
     document.getElementById(id).value = t.innerHTML;
     document.getElementById(id).classList.remove('active');
 }
-
-$('.')

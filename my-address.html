@@ -15,7 +15,7 @@
 <div class="container menu-padding">
     <div class="pt-30">
         <div class="small-logo">
-            <img class="small-logo__img" src="./img/logo-mini.png" alt="">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
             <p class="title">Мои адреса</p>
         </div>
         <p class="text mb-25">Вы можете добавить один или несколько контактов и адресов для получения грузов из Китая</p>
@@ -218,37 +218,42 @@
                     </button>
                 </div>
                 <!--        input        -->
-                <div class="input-group__item mb-20">
-                    <div class="input-text">
-                        <span>Фамилия</span>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Фамилия</span>
+                        </div>
+                        <input type="text" class="input" value="">
                     </div>
-                    <input type="text" class="input" value="">
-                </div>
-                <div class="input-group__item mb-20">
+                    <div class="input-group__item">
                     <div class="input-text">
                         <span>Имя</span>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
-                    <div class="input-text">
-                        <span>Отчество</span>
-                    </div>
-                    <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Отчество</span>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
                     <div class="input-text">
                         <span>Телефон</span>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
-                    <div class="input-text">
-                        <span>Резервный Телефон</span>
-                    </div>
-                    <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Резервный Телефон</span>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Паспорт</span>
                         <div class="tooltip">
@@ -257,20 +262,22 @@
                     </div>
                     <input type="text" class="input" value="">
                 </div>
+                </div>
 
                 <div class="w-100 mb-15">
                     <strong class="text">Укажите адрес доставки груза</strong>
                 </div>
-                <div class="input-group__item mb-20">
-                    <div class="d-flex justify-between input-text">
-                        <span>Страна</span>
-                        <div class="tooltip">
-                            <svg width="12" height="14"><use href="#i-info"></use></svg>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Страна</span>
+                            <div class="tooltip">
+                                <svg width="12" height="14"><use href="#i-info"></use></svg>
+                            </div>
                         </div>
+                        <input type="text" class="input" value="">
                     </div>
-                    <input type="text" class="input" value="">
-                </div>
-                <div class="input-group__item mb-20">
+                    <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Край или область</span>
                         <div class="tooltip">
@@ -279,35 +286,42 @@
                     </div>
                     <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
-                    <div class="input-text">
-                        <span>Город</span>
-                    </div>
-                    <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Город</span>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
                     <div class="input-text">
                         <span>Улица</span>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
+                </div>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
                     <div class="input-text">
                         <span>Дом</span>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
+                    <div class="input-group__item">
                     <div class="input-text">
                         <span>Квартира</span>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
-                <div class="input-group__item mb-20">
-                    <div class="input-text">
-                        <span>Индекс</span>
+                </div>
+                <div class="input-group mb-20 w-100">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Индекс</span>
+                        </div>
+                        <input type="text" class="input" value="">
                     </div>
-                    <input type="text" class="input" value="">
                 </div>
 
                 <!--        Checkbox        -->

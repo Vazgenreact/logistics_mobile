@@ -15,7 +15,7 @@
 <div class="container menu-padding">
     <div class="pt-30 messages-container">
         <div class="small-logo">
-            <img class="small-logo__img" src="./img/logo-mini.png" alt="">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
             <p class="title">сообщения</p>
         </div>
 
@@ -88,12 +88,15 @@
 
             <!--     Отправить сообщение    -->
             <form action="" class="messages__form">
-                <label class="messages__label">
+                <div class="messages__label">
+                    <label>
+                        <input type="file" class="input-hide">
+                        <svg class="messages__icon" width="20" height="20">
+                            <use href="#i-file"></use>
+                        </svg>
+                    </label>
                     <input type="text" class="input messages__input input--muted" placeholder="Введите сообщение">
-                    <svg class="messages__icon" width="20" height="20">
-                        <use href="#i-file"></use>
-                    </svg>
-                </label>
+                </div>
                 <button class="messages__send">
                     <svg width="20" height="20">
                         <use href="#i-send"></use>

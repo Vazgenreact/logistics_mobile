@@ -91,7 +91,7 @@ small, .small {
   margin-right: 10px!important;
 }
 .pt-10 {
-  padding-top: 10px;
+  padding-top: 10px!important;
 }
 .p-20 {
   padding: 20px!important;
@@ -120,11 +120,26 @@ small, .small {
 .pb-25 {
   padding-bottom: 25px!important;
 }
+.pb-30 {
+  padding-bottom: 30px!important;
+}
+.pb-40 {
+  padding-bottom: 40px!important;
+}
 .pt-30 {
-  padding-top: 30px;
+  padding-top: 30px!important;
 }
 .mb-40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px!important;
+}
+.mb-50 {
+  margin-bottom: 50px!important;
+}
+.mt-30 {
+  margin-top: 30px!important;
+}
+.p-20 {
+  padding: 20px!important;
 }
 
 .color-red {
@@ -136,7 +151,7 @@ small, .small {
 .text {
   margin: 0;
   font-size: 1em;
-  line-height: 16px;
+  line-height: 1.125;
 
   &--muted {
     color: $font-color-silver;
@@ -144,4 +159,10 @@ small, .small {
 }
 .font-400 {
   font-weight: 400;
+}
+.border-bottom {
+  border-bottom: 1px solid $silver-big;
+}
+.warning-bg {
+  background-color: $u-yellow;
 }
