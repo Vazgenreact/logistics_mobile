@@ -6,7 +6,11 @@
     display: flex;
     align-items: center;
     background-color: $color-f5;
-    padding: 10px 10px 10px 15px;
+    padding: 0 10px 0 15px;
+
+    & > .grow-1 {
+      padding: 10px 0;
+    }
   }
 
   &__detail {

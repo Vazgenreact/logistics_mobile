@@ -1,10 +1,14 @@
 .create-new-order {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $u-pink;
   padding: 17px 20px;
-  margin: 40px -20px 10px;
+
 
   .title {
     padding-right: 10px;

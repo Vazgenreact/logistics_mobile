@@ -1,8 +1,9 @@
 .to-pay {
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: 10px;
-  transition: margin .2s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  z-index: 9;
 
   &__link {
     padding: 15px 20px;
@@ -45,9 +46,8 @@
     border-color: $color-f5;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 3px;
-    margin-left: 0;
-    margin-right: 0;
-    transition: margin .2s;
+    left: 20px;
+    right: 20px;
 
     .btn--auto svg {
       transform: rotate(90deg);
