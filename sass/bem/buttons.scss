@@ -35,6 +35,11 @@
     }
   }
 
+  &--pink {
+    background-color: $u-pink;
+    border: 0;
+  }
+
   &--auto {
     width: auto;
     padding-left: 1.1em;

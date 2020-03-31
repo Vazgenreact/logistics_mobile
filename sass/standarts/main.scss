@@ -15,7 +15,12 @@ body {
     min-height: 100vh;
   }
 }
-@media screen and (max-width: 374.5px) {
+@media screen and (max-width: 377px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 374px) {
   body {
     font-size: 13px;
   }

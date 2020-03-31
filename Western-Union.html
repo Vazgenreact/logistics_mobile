@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Пополнение баланса</p>
+        </div>
+
+        <div class="mb-25">
+            <div class="input-text">Метод оплаты:</div>
+            <div class="relative w-100">
+                <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                <select class="input input--select">
+                    <option value="Сбербанка" >Перевод на карту Сбербанка</option>
+                    <option value="АльфаБанк">Перевод на карту Альфа Банк</option>
+                    <option value="Тинькофф">Перевод на карту Тинькофф</option>
+                    <option value="QIWI">Перевод на кошелек QIWI</option>
+                    <option value="ЯндексДеньги">Перевод на счет Яндекс Деньги</option>
+                    <option value="WesternUnion" selected>Перевод Western Union</option>
+                    <option value="Alipay">Перевод на Alipay</option>
+                    <option value="WeChat" >Перевод на WeChat</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-25">
+            <div class="input-text">Счет зачисления</div>
+            <div class="relative w-100">
+                <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                <select class="input input--select">
+                    <option value="ЮАНИ" >Баланс личного кабинета (ЮАНИ)</option>
+                    <option value="доллары" selected>Баланс личного кабинета (доллары)</option>
+                    <option value="рубли">Баланс личного кабинета (рубли)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-15">
+            <p class="text mb-5">Cумма к пополнению</p>
+            <div class="d-flex align-center">
+                <input type="text" class="input input--muted grow-1 mr-10" placeholder="Введите сумму">
+                <span class="shrink-0">$, доллары</span>
+            </div>
+        </div>
+
+        <div class="border-bottom mb-25">
+            <div class="product__warning mt-0">
+                <div class="d-flex justify-between"><span>Курс валют</span><span>1 юань = 10,2 рубля</span></div>
+                <div class="d-flex justify-between"><span>на сегодня:</span><span>1 юань = 0,1482 доллара</span></div>
+            </div>
+        </div>
+
+        <!--    remove class d-none    -->
+        <div class="">
+            <p class="text mb-15">Вам нужно осуществить перевод средств по следующим реквизитам:</p>
+            <div class="alarm-warning mb-20">
+                <p class="text"><strong>Внимание!</strong> Оплату по данным реквизитам необходимо произвести
+                    <strong>не позднее 23:59 часов 18.07.2019.</strong>
+                    В дальнейшем реквизиты карты могут быть изменены
+                    на другие.</p>
+            </div>
+        </div>
+
+        <div class="border-bottom mb-30">
+            <div class="bank bank--union mb-30">
+                <div class="bank__logo">
+                    <img src="img/western_union.png" alt="">
+                </div>
+                <div class="bank__content">
+                    <li class="d-flex align-center">
+                        <span class="first">Направление перевода:</span>
+                        <strong class="grow-1 text-uppercase self-start">Китай, г.Гуанчжоу</strong>
+                    </li>
+                    <li class="d-flex align-center">
+                        <span class="first">ФИО получателя:</span>
+                        <strong class="grow-1 text-uppercase">jon yan</strong>
+                    </li>
+                    <li class="d-flex align-center">
+                        <span class="first">Комиссия сервиса:</span>
+                        <div class="grow-1 d-flex align-center">
+                            <span class="bank__percent">0%</span>
+                            <small>Мы не берем комиссию, но ее может взять ваш банк</small>
+                        </div>
+                    </li>
+                    <li class="d-flex align-center">
+                        <strong class="first">Нужно перевести:</strong>
+                        <div class="grow-1 d-flex align-center">
+                            <strong class="bank__percent">1 000 000</strong>
+                            <p class="text">$, долларов</p>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-40">
+            <div class="d-flex align-center">
+                <p class="text grow-1 mr-15">После осуществления платежа нажмите кнопку</p>
+                <a href="#" class="btn btn--yellow btn--auto shrink-0">
+                    <span>я оплатил</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+
+            <div class="d-flex flex-end">
+                <button class="btn btn--outline btn--muted btn--auto mr-10">
+                    <span class="text--muted font-400">отменить</span>
+                    <svg width="6" height="10" class="svg--muted"><use href="#i-arrow"></use></svg>
+                </button>
+                <button class="btn btn--outline btn--muted btn--auto btn--pink">
+                    <svg width="13" height="10"><use href="#i-check"></use></svg>
+                    <strong>я оплатил</strong>
+                </button>
+            </div>
+        </div>
+
+        <hr class="clear-line">
+
+        <div class="bank-payment">
+            <div class="title">предоставьте информацию о платеже</div>
+
+            <p class="text">Прикрепите фотографию чека или квитанции о переводе денежных средств</p>
+            <div class="bank-payment__check mb-20">
+                <div class="check-img">
+                    <img src="img/image4.png" alt="">
+                </div>
+                <label class="add-file add-file--sm mr-10">
+                    <input type="file" class="input-hide">
+                    <svg width="20" height="20"><use href="#i-add"></use></svg>
+                </label>
+                <a href="#" class="btn btn--yellow btn--auto shrink-0">
+                    <span>отправить</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+
+            <div class="mb-20">
+                <p class="text mb-5">Или предоставьте скриншот из личного кабинета банкинга об успешной оплате</p>
+                <div class="d-flex">
+                    <input type="text" class="input input--muted grow-1 mr-10" placeholder="">
+                    <label class="add-file add-file--sm">
+                        <input type="file" class="input-hide">
+                        <svg width="20" height="20"><use href="#i-add"></use></svg>
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex align-center">
+                <div class="d-flex text--muted">
+                    <svg width="10" height="10" class="shrink-0 svg--muted"><use href="#i-check-circle"></use></svg>
+                    <small>Информация отправлена. Ожидайте зачисления средств</small>
+                </div>
+                <a href="#" class="btn btn--yellow btn--auto shrink-0">
+                    <span>отправить</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

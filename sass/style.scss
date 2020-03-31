@@ -25,6 +25,8 @@
 @import "bem/total-amount";
 @import "bem/ol-list";
 @import "bem/create-new-order";
+@import "bem/alarm-warning";
+@import "bem/copy-btn";
 
 /*Блоки*/
 @import "blocks/form-control";
@@ -52,6 +54,7 @@
 @import "blocks/order";
 @import "blocks/tabs";
 @import "blocks/refund";
+@import "blocks/bank";
 
 /*Страницы*/
 @import "page/sign-in";
