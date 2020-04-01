@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 90px;
+  bottom: 80px;
   z-index: 9;
 
   &__link {
@@ -46,8 +46,7 @@
     border-color: $color-f5;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 3px;
-    left: 20px;
-    right: 20px;
+    background-color: #fff;
 
     .btn--auto svg {
       transform: rotate(90deg);

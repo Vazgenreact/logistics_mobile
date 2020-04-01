@@ -16,7 +16,8 @@
     position: absolute;
     left: 30px;
     right: 30px;
-    bottom: 60px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #fff;
     border-radius: 3px;
     padding: 40px 20px;
@@ -29,11 +30,11 @@
   }
 
   .we-chat-img {
-    margin: 15px auto 0;
+    margin: -40px -20px;
 
     img {
       max-width: 100%;
-      width: 236px;
+      width: 100%;
     }
   }
 }
