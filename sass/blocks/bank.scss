@@ -35,6 +35,26 @@
       background-color: $color-wechatpay;
     }
   }
+  &--yandexdengi {
+    .bank__logo {
+      background-color: $color-yad;
+    }
+  }
+  &--qiwi {
+    .bank__logo {
+      background-color: $color-qiwi;
+    }
+  }
+  &--tinkoff {
+    .bank__logo {
+      background-color: $color-tinkoff;
+    }
+  }
+  &--alfabank {
+    .bank__logo {
+      background-color: $color-alfabank;
+    }
+  }
   &__content {
     margin-top: -5px;
     background-color: $color-f5;
