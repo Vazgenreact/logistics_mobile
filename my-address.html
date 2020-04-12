@@ -34,7 +34,7 @@
                     <button class="icon-btn">
                         <svg width="15" height="15"><use href="#i-edit"></use></svg>
                     </button>
-                    <button class="icon-btn ml-5">
+                    <button class="icon-btn ml-5" onclick="document.getElementById('modal').classList.add('active')">
                         <svg width="10" height="10"><use href="#i-close"></use></svg>
                     </button>
                 </td>
@@ -83,14 +83,9 @@
                 <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Страна</span>
-                        <div class="tooltip">
-                            <span onclick="this.classList.toggle('active')">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </span>
-                            <div class="tooltip__content">
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                            </div>
-                        </div>
+                        <button class="tooltip-btn" type="button" onclick="document.getElementById('modal-tooltip').classList.add('active')">
+                            <svg width="15" height="17"><use href="#i-info"></use></svg>
+                        </button>
                     </div>
                     <input type="text" class="input" value="Россия">
                 </div>
@@ -99,14 +94,9 @@
                 <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Край или область</span>
-                        <div class="tooltip">
-                            <span onclick="this.classList.toggle('active')">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </span>
-                            <div class="tooltip__content">
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                            </div>
-                        </div>
+                        <button class="tooltip-btn" type="button">
+                            <svg width="15" height="17"><use href="#i-info"></use></svg>
+                        </button>
                     </div>
                     <input type="text" class="input" value="Краснодарский Край">
                 </div>
@@ -155,14 +145,9 @@
                 <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Паспорт</span>
-                        <div class="tooltip">
-                            <span onclick="this.classList.toggle('active')">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </span>
-                            <div class="tooltip__content">
-                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                            </div>
-                        </div>
+                        <button class="tooltip-btn" type="button">
+                            <svg width="15" height="17"><use href="#i-info"></use></svg>
+                        </button>
                     </div>
                     <input type="text" class="input" value="АК5684ВК">
                 </div>
@@ -256,9 +241,9 @@
                     <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Паспорт</span>
-                        <div class="tooltip">
-                            <svg width="12" height="14"><use href="#i-info"></use></svg>
-                        </div>
+                        <button class="tooltip-btn" type="button">
+                            <svg width="15" height="17"><use href="#i-info"></use></svg>
+                        </button>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
@@ -271,18 +256,18 @@
                     <div class="input-group__item">
                         <div class="d-flex justify-between input-text">
                             <span>Страна</span>
-                            <div class="tooltip">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </div>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
                         </div>
                         <input type="text" class="input" value="">
                     </div>
                     <div class="input-group__item">
                     <div class="d-flex justify-between input-text">
                         <span>Край или область</span>
-                        <div class="tooltip">
-                            <svg width="12" height="14"><use href="#i-info"></use></svg>
-                        </div>
+                        <button class="tooltip-btn" type="button">
+                            <svg width="15" height="17"><use href="#i-info"></use></svg>
+                        </button>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
@@ -410,6 +395,47 @@
         </nav>
     </div>
 </div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-25">
+            <p><strong>Внимание!</strong>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-30">
+            <strong>Вы уверены, что хотите удалить заказ на доставку?</strong>
+        </div>
+
+        <div class="d-flex justify-center">
+            <button class="btn btn--outline btn--auto mr-10">
+                <span class="font-400">удалить</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+            <button class="btn btn--outline btn--auto">
+                <span>отмена</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal').classList.remove('active')">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
 
 <script src="js/main.js"></script>
 </body>

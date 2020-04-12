@@ -245,28 +245,18 @@
                     <div class="d-flex justify-between mb-10 relative">
                         <div class="d-flex">
                             <span>Доставка по Китаю</span>
-                            <div class="tooltip ml-5">
-                                <span onclick="this.classList.toggle('active')">
-                                    <svg width="12" height="14"><use href="#i-info"></use></svg>
-                                </span>
-                                <div class="tooltip__content">
-                                    <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                                </div>
-                            </div>
+                            <button class="tooltip-btn ml-5" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
                         </div>
                         <strong>0</strong>
                     </div>
                     <div class="d-flex justify-between mb-10 relative">
                         <div class="d-flex">
                             <span>Доп. услуги</span>
-                            <div class="tooltip ml-5">
-                                    <span onclick="this.classList.toggle('active')">
-                                        <svg width="12" height="14"><use href="#i-info"></use></svg>
-                                    </span>
-                                <div class="tooltip__content">
-                                    <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                                </div>
-                            </div>
+                            <button class="tooltip-btn ml-5" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
                         </div>
                         <strong>0</strong>
                     </div>
@@ -329,18 +319,40 @@
 </div>
 
 <!-- toggle class    active -->
-<div class="modal" id="modal">
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
     <div class="modal__content text-center">
         <div class="mb-25">
-            <strong>Информация сохранена.
-                Вы можете вернуться к оформлению заказа в любой момент</strong>
+            <p><strong>Внимание!</strong>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
         </div>
-        <a href="#" class="btn btn--yellow btn--auto">
-            <span>понятно</span>
-            <svg width="6" height="10"><use href="#i-arrow"></use></svg>
-        </a>
-
         <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-30">
+            <strong>Вы уверены, что хотите удалить заказ на доставку?</strong>
+        </div>
+
+        <div class="d-flex justify-center">
+            <button class="btn btn--outline btn--auto mr-10">
+                <span class="font-400">удалить</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+            <button class="btn btn--outline btn--auto">
+                <span>отмена</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal').classList.remove('active')">
             <svg width="10" height="10"><use href="#i-close"></use></svg>
         </button>
     </div>

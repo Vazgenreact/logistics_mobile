@@ -52,7 +52,7 @@
             <div class="order__top">
                 <strong class="text-uppercase grow-1">Заказ на выкуп №1</strong>
                 <span>21.04.2019</span>
-                <button class="icon-btn ml-5">
+                <button class="icon-btn ml-5" type="button" onclick="document.getElementById('modal').classList.add('active')">
                     <svg width="10" height="10"><use href="#i-close"></use></svg>
                 </button>
             </div>
@@ -231,6 +231,30 @@
                 </li>
             </ul>
         </nav>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-30">
+            <strong>Вы уверены, что хотите удалить заказ на доставку?</strong>
+        </div>
+
+        <div class="d-flex justify-center">
+            <button class="btn btn--outline btn--auto mr-10">
+                <span class="font-400">удалить</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+            <button class="btn btn--outline btn--auto">
+                <span>отмена</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal').classList.remove('active')">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
     </div>
 </div>
 

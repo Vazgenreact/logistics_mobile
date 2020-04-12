@@ -52,14 +52,9 @@
                     <div class="input-group__item">
                         <div class="d-flex justify-between input-text">
                             <span>Страна</span>
-                            <div class="tooltip">
-                            <span onclick="this.classList.toggle('active')">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </span>
-                                <div class="tooltip__content">
-                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                                </div>
-                            </div>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
                         </div>
                         <input type="text" class="input" value="">
                     </div>
@@ -68,14 +63,9 @@
                     <div class="input-group__item">
                         <div class="d-flex justify-between input-text">
                             <span>Край или область</span>
-                            <div class="tooltip">
-                            <span onclick="this.classList.toggle('active')">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </span>
-                                <div class="tooltip__content">
-                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                                </div>
-                            </div>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
                         </div>
                         <input type="text" class="input" value="Краснодарский Край">
                     </div>
@@ -124,14 +114,9 @@
                     <div class="input-group__item">
                         <div class="d-flex justify-between input-text">
                             <span>Паспорт</span>
-                            <div class="tooltip">
-                            <span onclick="this.classList.toggle('active')">
-                                <svg width="12" height="14"><use href="#i-info"></use></svg>
-                            </span>
-                                <div class="tooltip__content">
-                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                                </div>
-                            </div>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
                         </div>
                         <input type="text" class="input" value="">
                     </div>
@@ -262,6 +247,22 @@
                 </li>
             </ul>
         </nav>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-25">
+            <p><strong>Внимание!</strong>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
     </div>
 </div>
 

@@ -118,19 +118,14 @@
     <!--  1. Выберите метод упаковки для данной отправки  -->
     <div class="pt-30">
         <form action="">
-            <div class="d-flex mb-30">
+            <div class="d-flex align-start mb-30">
                 <div class="list-count">
                     <span class="list-count__icon">1</span>
                     <strong class="text">Выберите метод упаковки для данной отправки</strong>
                 </div>
-                <div class="tooltip ml-5">
-                    <span onclick="this.classList.toggle('active')">
-                        <svg width="15" height="18"><use href="#i-info-black"></use></svg>
-                    </span>
-                    <div class="tooltip__content">
-                        <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                    </div>
-                </div>
+                <button class="tooltip-btn ml-5" type="button">
+                    <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                </button>
             </div>
 
             <div class="mb-20">
@@ -210,14 +205,9 @@
             <div class="border-bottom mb-30">
                 <div class="d-flex align-center relative mb-15">
                     <strong>Расчет страховой стоимости</strong>
-                    <div class="tooltip ml-5">
-                    <span onclick="this.classList.toggle('active')">
+                    <button class="tooltip-btn ml-5" type="button">
                         <svg width="15" height="17"><use href="#i-info-black"></use></svg>
-                    </span>
-                        <div class="tooltip__content">
-                            <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
-                        </div>
-                    </div>
+                    </button>
                 </div>
                 <div class="cost-calculation mb-30">
                     <div class="cost-calculation__item">
@@ -384,9 +374,9 @@
                 <div class="input-group__item">
                     <div class="d-flex align-center justify-between">
                         <span class="input-text">Страна</span>
-                        <div>
+                        <button class="tooltip-btn" type="button">
                             <svg width="15" height="17"><use href="#i-info"></use></svg>
-                        </div>
+                        </button>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
@@ -395,9 +385,9 @@
                 <div class="input-group__item">
                     <div class="d-flex align-center justify-between">
                         <span class="input-text">Край или область</span>
-                        <div>
+                        <button class="tooltip-btn" type="button">
                             <svg width="15" height="17"><use href="#i-info"></use></svg>
-                        </div>
+                        </button>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
@@ -440,9 +430,9 @@
                 <div class="input-group__item">
                     <div class="d-flex align-center justify-between">
                         <span class="input-text">Паспорт</span>
-                        <div>
+                        <button class="tooltip-btn" type="button">
                             <svg width="15" height="17"><use href="#i-info"></use></svg>
-                        </div>
+                        </button>
                     </div>
                     <input type="text" class="input" value="">
                 </div>
@@ -918,6 +908,22 @@
     </nav>
 </div>
 
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-25">
+            <p><strong>Внимание!</strong>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
