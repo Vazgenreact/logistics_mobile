@@ -59,4 +59,16 @@
       margin-bottom: 10px;
     }
   }
+  &__comment {
+    display: flex;
+    border-top: 1px solid $silver-big;
+    margin-top: 15px;
+    padding-top: 15px;
+
+    .comment-img {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+    }
+  }
 }

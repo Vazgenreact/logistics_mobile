@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container to-pay-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Новый расчет доставки</p>
+        </div>
+
+        <!--    first  form block    -->
+        <form action="">
+            <div class="d-flex mb-30">
+                <div class="list-count">
+                    <span class="list-count__icon">1</span>
+                    <strong>Укажите данные груза:</strong>
+                </div>
+            </div>
+
+            <div class="input-group mb-20">
+                <div class="input-group__small">
+                    <div class="input-text">
+                        <span>Длина, см</span>
+                    </div>
+                    <input type="number" class="input" value="">
+                </div>
+                <div class="input-group__small">
+                    <div class="input-text">
+                        <span>Ширина, см</span>
+                    </div>
+                    <input type="number" class="input" value="">
+                </div>
+                <div class="input-group__small">
+                    <div class="input-text">
+                        <span>Высота, см</span>
+                    </div>
+                    <input type="number" class="input" value="">
+                </div>
+            </div>
+            <div class="input-group mb-10">
+                <div class="input-group__small">
+                    <div class="input-text">
+                        <span>Вес, кг</span>
+                    </div>
+                    <input type="number" class="input" value="">
+                </div>
+                <div class="input-group__small">
+                    <div class="input-text">
+                        <span>Количество мест</span>
+                    </div>
+                    <input type="number" class="input input" value="">
+                </div>
+                <div class="input-group__small pt-20">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                            <svg width="10" height="8"><use href="#i-check"></use></svg>
+                        </span>
+                        <span>умножить на количество</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="product__warning mt-0 d-flex justify-between">
+                <span>Объем: 2 000 м3</span>
+                <span>Плотность груза: 2 000 кг/м3</span>
+            </div>
+
+            <div class="mb-40">
+                <div class="d-flex justify-between">
+                    <span>Укажите груз:</span>
+                    <span class="color-blue" onclick="this.parentElement.parentElement.nextElementSibling.classList.toggle('d-none')">Не нашли нужный товар?</span>
+                </div>
+                <div class="filter__search search">
+                    <input type="text" class="input input--muted" placeholder="Введите название">
+                    <button class="search__btn" type="button">
+                        <svg width="20" height="20"><use href="#i-search"></use></svg>
+                    </button>
+                </div>
+                <div class="teg">
+                    <div class="teg__item">
+                        <span>Женские ветровки</span>
+                        <button class="teg__close" type="button">
+                            <svg width="6" height="6"><use href="#i-close"></use></svg>
+                        </button>
+                    </div>
+                    <div class="teg__item">
+                        <span>Брюки мужские</span>
+                        <button class="teg__close" type="button">
+                            <svg width="6" height="6"><use href="#i-close"></use></svg>
+                        </button>
+                    </div>
+                    <div class="teg__item">
+                        <span>Сушилка для обуви</span>
+                        <button class="teg__close" type="button">
+                            <svg width="6" height="6"><use href="#i-close"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-cargo pt-20 mb-40 d-none">
+                <div class="d-flex justify-between mb-20">
+                    <span>Укажите груз:</span>
+                    <button class="reset-btn">
+                        <svg width="7" height="7"><use href="#i-close"></use></svg>
+                    </button>
+                </div>
+
+                <div class="relative w-100 mb-10">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select class="input input--select">
+                        <option value="Категория" >Категория</option>
+                        <option value="Категория 1" >Категория 1</option>
+                        <option value="Категория 2" >Категория 2</option>
+                        <option value="Категория" >Категори 3</option>
+                        <option value="Категория" >Категория 4</option>
+                    </select>
+                </div>
+                <div class="relative w-100 mb-10">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select class="input input--select">
+                        <option value="Категория" >Подкатегория</option>
+                        <option value="Категория 1" >Категория 1</option>
+                        <option value="Категория 2" >Категория 2</option>
+                        <option value="Категория" >Категори 3</option>
+                        <option value="Категория" >Категория 4</option>
+                    </select>
+                </div>
+                <div class="relative w-100 mb-10">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select class="input input--select">
+                        <option value="Категория" >Товар</option>
+                        <option value="Категория 1" >Категория 1</option>
+                        <option value="Категория 2" >Категория 2</option>
+                        <option value="Категория" >Категори 3</option>
+                        <option value="Категория" >Категория 4</option>
+                    </select>
+                </div>
+
+                <div class="d-flex align-center justify-between mt-30 mb-20">
+                    <p class="text text--muted mr-30">Добавьте одну или несколько категорий товара</p>
+                    <a href="#" class="btn btn--yellow btn--auto">
+                        <span>добавить</span>
+                        <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex align-center relative mb-15">
+                <strong>Расчет страховой стоимости</strong>
+                <div class="tooltip ml-5">
+                    <span onclick="this.classList.toggle('active')">
+                        <svg width="12" height="14"><use href="#i-info-black"></use></svg>
+                    </span>
+                    <div class="tooltip__content">
+                        <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cost-calculation mb-30">
+                <div class="cost-calculation__item">
+                    <p class="text mb-5">Стоимость груза</p>
+                    <div class="money-input">
+                        <input type="number" class="input">
+                        <span class="money-input__text">$</span>
+                    </div>
+                </div>
+                <div class="cost-calculation__item">
+                    <p class="text mb-5">Страховой сбор</p>
+                    <span class="bank__percent">2%</span>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end mb-30">
+                <a href="#" class="btn btn--yellow btn--auto">
+                    <span>далее</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </form>
+
+        <!--    two  form block    -->
+        <form action="">
+            <div class="d-flex mb-30">
+                <div class="list-count">
+                    <span class="list-count__icon">2</span>
+                    <strong>Выберите метод упаковки для данной отправки</strong>
+                </div>
+                <div class="tooltip ml-5">
+                    <span onclick="this.classList.toggle('active')">
+                        <svg width="15" height="18"><use href="#i-info-black"></use></svg>
+                    </span>
+                    <div class="tooltip__content">
+                        <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method1" checked>
+                    <label class="method__label" for="packing_method1">
+                        <div class="method__icon--sm">
+                            <svg width="25" height="17"><use href="#skotch"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Мешок + скотч</span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method2">
+                    <label class="method__label" for="packing_method2">
+                        <div class="method__icon--sm">
+                            <svg width="24" height="25"><use href="#korobka"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Коробка + мешок + скотч </span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method3">
+                    <label class="method__label" for="packing_method3">
+                        <div class="method__icon--sm">
+                            <svg width="24" height="24"><use href="#obreshetka"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Обрешетка + мешок + скотч </span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method4">
+                    <label class="method__label" for="packing_method4">
+                        <div class="method__icon--sm">
+                            <svg width="24" height="24"><use href="#palet"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Палет + обрешетка<br> + стрейч-пленка + скотч </span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="">
+                <span class="input-text">Комментарий:</span>
+                <textarea name="" class="input input--muted input--textarea" placeholder="Если у Вас есть дополнительные требования, укажите их здесь"></textarea>
+            </div>
+            <div class="d-flex flex-end saved-message mb-20">
+                <div class="d-flex align-center">
+                    <svg width="7" height="7"><use href="#i-check-circle"></use></svg>
+                    <small class="ml-5">Комментарий сохранен</small>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end mb-30">
+                <a href="#" class="btn btn--yellow btn--auto">
+                    <span>далее</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </form>
+
+        <!--    three  form block    -->
+        <form action="">
+            <div class="d-flex mb-30">
+                <div class="list-count">
+                    <span class="list-count__icon">3</span>
+                    <strong>Укажите адрес доставки груза</strong>
+                </div>
+            </div>
+
+            <!--      no delivery address      -->
+            <div>
+                <div class="mb-15">
+                    <label class="checkbox">
+                        <input type="radio" name="delivery-address" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                        <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
+                    </label>
+                </div>
+                <div class="mb-15">
+                    <label class="checkbox">
+                        <input type="radio" name="delivery-address" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                        <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                    </label>
+                </div>
+                <div class="">
+                    <div class="mb-20 input-group">
+                        <div class="input-group__item">
+                            <span class="input-text">Страна</span>
+                            <input type="text" class="input" value="">
+                        </div>
+                        <div class="input-group__item">
+                            <span class="input-text">Город</span>
+                            <div class="autocomplete-select">
+                                <input type="text" class="input" value="">
+                                <ul class="custom-select__list">
+                                    <li class="custom-select__item">Перевод на карту Сбербанка</li>
+                                    <li class="custom-select__item">Перевод на карту ВТБ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none">
+                    <div class="mb-20 input-group">
+                        <div class="input-group__item mb-15">
+                            <span class="input-text">Страна</span>
+                            <input type="text" class="input" value="">
+                        </div>
+                        <div class="input-group__item mb-15">
+                            <span class="input-text">Город</span>
+                            <div class="autocomplete-select">
+                                <input type="text" class="input" value="">
+                                <ul class="custom-select__list">
+                                    <li class="custom-select__item">Перевод на карту Сбербанка</li>
+                                    <li class="custom-select__item">Перевод на карту ВТБ</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="input-group__item mb-15">
+                            <span class="input-text">Улица</span>
+                            <input type="text" class="input" value="">
+                        </div>
+                        <div class="input-group__item mb-15">
+                            <span class="input-text">Дом</span>
+                            <input type="text" class="input" value="">
+                        </div>
+                        <div class="input-group__item mb-15">
+                            <span class="input-text">Квартира</span>
+                            <input type="text" class="input" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--      yes delivery address      -->
+            <div class="border-bottom mb-40">
+                <div class="delivery mb-20">
+                    <label class="checkbox justify-between w-100 mb-15">
+                        <small class="green-ellipse">Адрес по умолчанию</small>
+                        <input type="checkbox" class="input-hide" checked>
+                        <span class="checkbox__icon">
+                            <svg width="10" height="6"><use href="#i-check"></use></svg>
+                        </span>
+                    </label>
+
+                    <ul class="reset-list pb-25">
+                        <li>Архипенко Юлия Владимировна</li>
+                        <li>Красная, 15/1, 88</li>
+                        <li>Краснодарский край, Краснодар</li>
+                        <li>350900</li>
+                        <li>Россия</li>
+                        <li>892821965453</li>
+                    </ul>
+
+                    <div class="delivery__bottom">
+                        <div class="mb-15">
+                            <label class="checkbox">
+                                <input type="radio" name="delivery-address" class="input-hide" checked>
+                                <span class="checkbox__icon mr-10 self-start">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                <span>До пункта выдачи заказов<br> Транспортной компани (ПВЗ).<br> САМОВЫВОЗ</span>
+                            </label>
+                        </div>
+                        <div class="mb-15">
+                            <label class="checkbox">
+                                <input type="radio" name="delivery-address" class="input-hide">
+                                <span class="checkbox__icon mr-10">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="new-address mb-40">
+                    <div class="d-flex align-center">
+                        <svg width="25" height="25" class="shrink-0 mr-10"><use href="#new-adress"></use></svg>
+                        <p class="text font-400">Или создайте<br> новый адрес</p>
+                    </div>
+                    <a href="#" class="btn btn--outline btn--auto">
+                        <span>новый адрес</span>
+                        <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <!--    four  form block    -->
+        <div>
+            <div class="d-flex mb-30">
+                <div class="list-count">
+                    <span class="list-count__icon">4</span>
+                    <strong>Выберите метод доставки:</strong>
+                </div>
+            </div>
+            <p class="text mb-30">В данном пункте Вы можете создать свой уникальный составной маршрут для отправки груза из Китая
+                в город назначения. Не важно, оптовый это груз
+                или розничный заказ. Стоимость заказа указана исходя из характеристик Вашего груза.</p>
+
+            <form action="">
+                <div class="d-flex mb-20">
+                    <div class="list-count">
+                        <span class="list-count__icon-sm">1</span>
+                        <strong>Для доставки груза: Китай - Россия</strong>
+                    </div>
+                </div>
+
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option value="" selected>Москва</option>
+                                <option value="">Баланс</option>
+                                <option value="">Баланс</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group__item">
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option value="" selected>Сортировать по:</option>
+                                <option value="">Срокам</option>
+                                <option value="">Стоимости</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-20">
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia1" checked>
+                        <label class="method__label" for="china-russia1">
+                            <div class="method__icon">
+                                <svg width="20" height="28"><use href="#superexpres"></use></svg>
+                            </div>
+                            <span class="method__title">Супер<br> Экспрес</span>
+                            <span class="grow-1">3-4 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia2">
+                        <label class="method__label" for="china-russia2">
+                            <div class="method__icon">
+                                <svg width="42" height="25"><use href="#avia"></use></svg>
+                            </div>
+                            <span class="method__title">Авиа</span>
+                            <span class="grow-1">6-8 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia3">
+                        <label class="method__label" for="china-russia3">
+                            <div class="method__icon">
+                                <svg width="26" height="25"><use href="#poezd"></use></svg>
+                            </div>
+                            <span class="method__title">Ж/Д</span>
+                            <span class="grow-1">10-12 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia4">
+                        <label class="method__label" for="china-russia4">
+                            <div class="method__icon">
+                                <svg width="26" height="25"><use href="#poezd"></use></svg>
+                            </div>
+                            <span class="method__title">Ж/Д</span>
+                            <span class="grow-1">13-15 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia5">
+                        <label class="method__label" for="china-russia5">
+                            <div class="method__icon">
+                                <svg width="23" height="25"><use href="#avto"></use></svg>
+                            </div>
+                            <span class="method__title">Авто</span>
+                            <span class="grow-1">18-25 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia6">
+                        <label class="method__label" for="china-russia6">
+                            <div class="method__icon">
+                                <svg width="22" height="25"><use href="#ship"></use></svg>
+                            </div>
+                            <span class="method__title">Море</span>
+                            <span class="grow-1">35-45 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-end mb-30">
+                    <a href="#" class="btn btn--yellow btn--auto">
+                        <span>далее</span>
+                        <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                    </a>
+                </div>
+            </form>
+
+            <form action="">
+                <div class="d-flex mb-10">
+                    <div class="list-count">
+                        <span class="list-count__icon-sm">2</span>
+                        <strong>Для доставки груза по России</strong>
+                    </div>
+                </div>
+
+                <div class="input-group mb-15">
+                    <div class="input-group__item">
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option value="" selected>Москва</option>
+                                <option value="">Баланс</option>
+                                <option value="">Баланс</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group__item">
+                        <input type="text" class="input input--select" value="Краснодар">
+                    </div>
+                </div>
+
+                <p class="mb-30">Представлены ТК с автоматическим расчетом стоимости доставки. Если Вам требуется отправить груз внутри страны ТК, которой нет в списке, выберите соответствующий пункт меню и укажите название ТК
+                    в комментарии к заявке.</p>
+
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option value="" selected>Сортировать по:</option>
+                                <option value="">Срокам</option>
+                                <option value="">Стоимости</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-20">
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia1" checked>
+                        <label class="method__label" for="delivery-russia1">
+                            <span class="method__title text-uppercase">
+                                СДэК
+                                <svg class="ml-5" width="15" height="15"><use href="#star"></use></svg>
+                            </span>
+                            <span class="grow-1">3-4 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia2">
+                        <label class="method__label" for="delivery-russia2">
+                            <span class="method__title">Почта<br> России</span>
+                            <span class="grow-1">6-8 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia3">
+                        <label class="method__label" for="delivery-russia3">
+                            <span class="method__title">Деловые<br> линии</span>
+                            <span class="grow-1">10-12 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia4">
+                        <label class="method__label" for="delivery-russia4">
+                            <span class="method__title">ЖелДор<br> Экспедиция</span>
+                            <span class="grow-1">18-25 дн</span>
+                            <div class="method__loading mr-10">
+                                <svg width="19" height="20"><use href="#loading"></use></svg>
+                            </div>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia5">
+                        <label class="method__label" for="delivery-russia5">
+                            <span class="method__title">Байкал<br> сервис</span>
+                            <span class="grow-1">35-45 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia6">
+                        <label class="method__label" for="delivery-russia6">
+                            <span class="method__title">GTD</span>
+                            <span class="grow-1">10-12 дн</span>
+                            <span class="method__price mr-10">20 000$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia7">
+                        <label class="method__label" for="delivery-russia7">
+                            <span class="method__title">Виктория</span>
+                            <span class="grow-1">18-25 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia8">
+                        <label class="method__label" for="delivery-russia8">
+                            <span class="method__title">Главдоставка</span>
+                            <span class="grow-1">35-45 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia9">
+                        <label class="method__label" for="delivery-russia9">
+                            <span class="method__title">Самовывоз<br> Люблино</span>
+                            <span class="grow-1">0 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method method--no-icon">
+                        <input class="d-none" type="radio" name="packing_method" id="delivery-russia10">
+                        <label class="method__label" for="delivery-russia10">
+                            <span class="method__title">Самовывоз<br> южные ворота</span>
+                            <span class="grow-1">0 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method__label method__label--messages">
+                        <div class="mb-10">Желаемой транспортной компании нет в списке. Я укажу название в комментарии к заказу</div>
+                        <input type="text" class="input" placeholder="Название транспортной компании">
+                        <div class="d-flex flex-end w-100">
+                            <div class="d-flex align-center">
+                                <svg width="7" height="7"><use href="#i-check-circle"></use></svg>
+                                <small class="ml-5">Комментарий сохранен</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="to-pay">
+            <div class="to-pay__link" onclick="this.parentElement.classList.toggle('active')">
+                <div class="d-flex align-center">
+                    <span class="mr-15">
+                        <svg width="20" height="20"><use href="#i-cart"></use></svg>
+                    </span>
+                    <strong class="text-uppercase">к оплате</strong>
+                </div>
+                <div class="d-flex align-center">
+                    <strong class="to-pay__price">9 367 059 ¥</strong>
+                    <button class="btn btn--outline btn--auto">
+                        <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="to-pay__detail">
+                <div class="d-flex justify-between mb-10">
+                    <span>Стоимость товара</span>
+                    <strong>1250</strong>
+                </div>
+                <div class="d-flex justify-between mb-10">
+                    <span>Комиссия платформы</span>
+                    <strong>55</strong>
+                </div>
+                <div class="d-flex justify-between mb-20">
+                    <span>Итоговая стоимость</span>
+                    <strong>1755</strong>
+                </div>
+
+                <hr class="clear-line clear-line--sm mb-10">
+
+                <div class="text--muted mb-30">
+                    <div class="d-flex justify-between mb-10 relative">
+                        <div class="d-flex">
+                            <span>Доставка по Китаю</span>
+                            <div class="tooltip ml-5">
+                                <span onclick="this.classList.toggle('active')">
+                                    <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <strong>0</strong>
+                    </div>
+                    <div class="d-flex justify-between mb-10 relative">
+                        <div class="d-flex">
+                            <span>Доп. услуги</span>
+                            <div class="tooltip ml-5">
+                                    <span onclick="this.classList.toggle('active')">
+                                        <svg width="12" height="14"><use href="#i-info"></use></svg>
+                                    </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <strong>0</strong>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn--yellow">
+                    <span>Сохранить</span>
+                    <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

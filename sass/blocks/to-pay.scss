@@ -5,6 +5,17 @@
   bottom: 80px;
   z-index: 9;
 
+  &--order {
+    color: #333;
+  }
+
+  @media screen and (max-width: 377px) {
+    bottom: 74px;
+  }
+  @media screen and (max-width: 374px) {
+    bottom: 70px;
+  }
+
   &__link {
     padding: 15px 20px;
     display: flex;
@@ -36,6 +47,7 @@
   &__detail {
     display: none;
     padding: 10px 20px 20px;
+    background-color: #fff;
 
     .clear-line {
       background-color: $silver-big;

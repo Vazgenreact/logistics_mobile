@@ -45,6 +45,11 @@
     padding-left: 1.1em;
     padding-right: 1.1em;
   }
+  &--auto-2 {
+    width: auto;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+  }
 
   &--sm {
     min-height: 30px;
@@ -66,5 +71,31 @@
 
   span {
     margin-top: 2px;
+  }
+
+  &--notification {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $font-color-red;
+    }
+  }
+}
+
+.large-buttons {
+  width: 287px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 359px) {
+  .large-buttons {
+    width: 100%;
   }
 }

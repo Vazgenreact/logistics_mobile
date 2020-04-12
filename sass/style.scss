@@ -27,6 +27,8 @@
 @import "bem/create-new-order";
 @import "bem/alarm-warning";
 @import "bem/copy-btn";
+@import "bem/teg-item";
+@import "bem/money-input";
 
 /*Блоки*/
 @import "blocks/form-control";
@@ -55,9 +57,17 @@
 @import "blocks/tabs";
 @import "blocks/refund";
 @import "blocks/bank";
+@import "blocks/cost-calculation";
+@import "blocks/method";
+@import "blocks/delivery";
+@import "blocks/new-address";
+@import "blocks/order-slider";
+@import "blocks/quantity-place";
+@import "blocks/shipping-address";
 
 /*Страницы*/
 @import "page/sign-in";
 @import "page/create-account";
 @import "page/my-information";
 @import "page/home";
+@import "page/reviews";

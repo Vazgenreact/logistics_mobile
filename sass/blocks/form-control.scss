@@ -7,6 +7,10 @@
   font-size: 1em;
   color: $color-33;
 
+  &--error {
+    border-color: $font-color-red;
+  }
+
   &--select {
     height: 40px;
   }
@@ -34,6 +38,10 @@
 .input-text {
   font-size: 1em;
   line-height: 25px;
+
+  span {
+    white-space: nowrap;
+  }
 }
 
 .input-group {
@@ -44,6 +52,9 @@
 
   &__item {
     flex-basis: calc(50% - 6px);
+  }
+  &__small {
+    flex-basis: calc(33.33% - 6px);
   }
 }
 

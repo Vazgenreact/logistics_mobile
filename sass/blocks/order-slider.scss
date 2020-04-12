@@ -1,0 +1,112 @@
+.order-slider {
+  margin-bottom: 20px;
+
+  &__item {
+
+  }
+  &__content {
+
+  }
+  &__nav {
+    display: flex;
+
+    li {
+      flex-basis: 33.33%;
+      padding: 0 6px;
+    }
+  }
+  &__link {
+    display: block;
+    text-align: center;
+    padding: 4px;
+    color: $font-color-silver;
+    border-bottom: 2px solid $silver-big;
+
+    &.active {
+      border-color: $color-blue;
+      color: $color-blue;
+    }
+  }
+  &__tab {
+    display: none;
+    padding-top: 15px;
+
+    &.active {
+      display: block;
+    }
+    .reset-list {
+      display: flex;
+      flex-direction: column;
+      height: 180px;
+      margin-bottom: 15px;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px 0;
+      }
+    }
+  }
+
+  .delivery__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    padding: 20px 0 2px;
+
+    .btn--muted:not(.btn--outline) {
+      font-weight: 300;
+      border-color: $font-color-silver;
+      & * {
+        margin-top: 0;
+        opacity: .45;
+      }
+    }
+  }
+}
+
+.order-slider .delivery .reset-list li:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    height: 2px;
+    background-color: $color-f5;
+
+    &.active {
+      background-color: $font-color-silver;
+    }
+  }
+}
+
+.even-style {
+  li {
+    margin-bottom: 0!important;
+    padding: 5px 9px 6px;
+  }
+  li:nth-child(even) {
+    background-color: $silver-normal;
+  }
+}
+
+.product-count {
+  width: 2.857em;
+  height: 2.142em;
+  border-radius: 3px;
+  text-align: center;
+  font-size: .875em;
+  line-height: 2.142em;
+  color: $font-color-silver;
+  border: 1px solid $silver-big;
+
+  &.active {
+    border-color: $color-blue;
+    color: #333;
+  }
+}

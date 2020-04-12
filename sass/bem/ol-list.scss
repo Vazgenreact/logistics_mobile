@@ -2,3 +2,26 @@
   list-style-position: inside;
   padding: 0;
 }
+
+.list-count {
+  display: flex;
+  align-items: center;
+
+  &__icon-sm,
+  &__icon {
+    margin-right: 10px;
+    text-align: center;
+    background-color: $silver-normal;
+    border-radius: 3px;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  &__icon-sm {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+}

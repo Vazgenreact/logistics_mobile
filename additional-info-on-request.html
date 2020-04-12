@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Дополнительная информация</p>
+        </div>
+        <p class="text mb-10">Пожалуйста, добавьте недостоющую информацию о своем грузе и мы выполним комплектацию и отправку быстрее</p>
+
+        <form action="" class="address-form">
+            <div class="list-count mb-30">
+                <span class="list-count__icon">1</span>
+                <strong>Введите полные данные для доставки</strong>
+            </div>
+
+            <!--        inputs        -->
+            <div class="border-bottom mb-40 pb-20">
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Фамилия</span>
+                        </div>
+                        <input type="text" class="input input--error" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Имя</span>
+                        </div>
+                        <input type="text" class="input input--error" value="">
+                    </div>
+                </div>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Отчество</span>
+                        </div>
+                        <input type="text" class="input input--error" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Страна</span>
+                            <div class="tooltip">
+                            <span onclick="this.classList.toggle('active')">
+                                <svg width="12" height="14"><use href="#i-info"></use></svg>
+                            </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Край или область</span>
+                            <div class="tooltip">
+                            <span onclick="this.classList.toggle('active')">
+                                <svg width="12" height="14"><use href="#i-info"></use></svg>
+                            </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" value="Краснодарский Край">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Город</span>
+                        </div>
+                        <input type="text" class="input" value="Краснодар">
+                    </div>
+                </div>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Улица</span>
+                        </div>
+                        <input type="text" class="input input--error" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Дом</span>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Квартира</span>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Индекс</span>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="input-text">
+                            <span>Телефон</span>
+                        </div>
+                        <input type="text" class="input input--error" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="d-flex justify-between input-text">
+                            <span>Паспорт</span>
+                            <div class="tooltip">
+                            <span onclick="this.classList.toggle('active')">
+                                <svg width="12" height="14"><use href="#i-info"></use></svg>
+                            </span>
+                                <div class="tooltip__content">
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi deleniti ducimus iusto laborum obcaecati quisquam recusandae sint vel?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-count mb-30">
+                <span class="list-count__icon">2</span>
+                <strong>Укажите данные груза:</strong>
+            </div>
+
+            <div class="mb-20">
+                <p class="text">Загрузите фотографию с товаром</p>
+                <div class="images-slider">
+                    <label class="add-file add-file--big mr-10">
+                        <input type="file" class="input-hide">
+                        <svg width="20" height="20"><use href="#i-add"></use></svg>
+                    </label>
+                    <div class="images-slider__item">
+                        <img class="images-slider__img" src="https://cdn.cnn.com/cnnnext/dam/assets/191203174105-edward-whitaker-1-exlarge-169.jpg" alt="">
+                    </div>
+                    <div class="images-slider__item"></div>
+                    <div class="images-slider__item"></div>
+                    <div class="images-slider__item"></div>
+                    <div class="images-slider__item"></div>
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <p class="text mb-5">Или добавьте скриншот с товаром</p>
+                <div class="d-flex">
+                    <input type="text" class="input input--muted grow-1 mr-10" placeholder="Введите ссылку на скриншот">
+                    <label class="add-file add-file--sm">
+                        <input type="file" class="input-hide">
+                        <svg width="20" height="20"><use href="#i-add"></use></svg>
+                    </label>
+                </div>
+            </div>
+
+            <p class="text mb-10">Дополнительные параметры:</p>
+            <div class="w-100 mb-10">
+                <label class="checkbox">
+                    <input type="checkbox" name="" class="input-hide" checked>
+                    <span class="checkbox__icon mr-10">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                    <span>Требуется визуальная проверка на брак</span>
+                </label>
+            </div>
+            <div class="w-100 mb-10">
+                <label class="checkbox">
+                    <input type="checkbox" name="" class="input-hide">
+                    <span class="checkbox__icon mr-10">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                    <span>Требуется фото товара по прибытию на склад</span>
+                </label>
+            </div>
+
+            <div class="product__warning">
+                <p class="text mb-15">Обратите внимание! Стоимость ополнительных услуг оплачивается отдельно за каждую единицу товара согласно следующим тарифам:</p>
+                <div class="d-flex justify-between"><span>Визуальная проверка на брак:</span><span>1 ¥/единица</span></div>
+                <div class="d-flex justify-between"><span>Отдельное фото товара:</span><span>1 ¥/единица</span></div>
+            </div>
+
+            <div class="mb-10">
+                <span class="input-text">Комментарий:</span>
+                <textarea name="" class="input input--muted input--textarea" placeholder="Если у Вас есть дополнительные требования, укажите их здесь"></textarea>
+            </div>
+            <div class="d-flex flex-end saved-message mb-20">
+                <div class="d-flex align-center">
+                    <svg width="7" height="7"><use href="#i-check-circle"></use></svg>
+                    <small class="ml-5">Комментарий сохранен</small>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end pt-10">
+                <button class="btn btn--yellow btn--auto" type="submit">
+                    <span>сохранить</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </button>
+            </div>
+        </form>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

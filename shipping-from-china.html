@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">отправки из китая</p>
+        </div>
+        <p class="text mb-30">В этом разделе находится вся информация по Вашим отправкам из Китая. В зависимости от задач, подготовьте новый расчет доставки, сформируйте  заказы на отправку со склада или посмотрите данные по уже отправленному товару.</p>
+
+        <div class="mb-30">
+            <a href="#" class="btn btn--outline btn--notification mb-10">
+                <span>заказы на складе</span>
+                <svg width="6" height="11"><use href="#i-arrow"></use></svg>
+            </a>
+            <a href="#" class="btn btn--outline btn--notification mb-10">
+                <span>история отправоке</span>
+                <svg width="6" height="11"><use href="#i-arrow"></use></svg>
+            </a>
+            <a href="#" class="btn btn--outline  mb-10">
+                <span>Новый расчет доставки</span>
+                <svg width="6" height="11"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+
+        <div class="shipping-address mb-10">
+            <div class="shipping-address__link"
+                 onclick="this.parentElement.nextElementSibling.classList.toggle('d-none');
+                            this.nextElementSibling.classList.toggle('active')
+                            this.classList.toggle('active')">
+                <p class="text"><strong>Адрес</strong> нашего склада в Китае, г. Гуанчжоу:</p>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </div>
+            <div class="shipping-address__content">
+                <div class="d-flex align-center pb-20">
+                    <div class="grow-1 mr-10">
+                        广州市越秀区荔德路318号 汇富商 贸中<br>
+                        心A28 栋102仓库 13128641323 ALEXEYH.<br>
+                        箱子上面写 "ID0001/00001”
+                    </div>
+                    <button class="copy-btn shrink-0">
+                        <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                    </button>
+                </div>
+                <div class="shipping-address__bottom">
+                    <p class="mb-0">Скопируйте текст выше и передайте своему поставщику / магазину</p>
+                </div>
+            </div>
+        </div>
+        <div class="shipping-address-all d-none">
+            <div class="shipping-address mb-10">
+                <div class="shipping-address__link">
+                    <p class="text"><strong>Адрес</strong> нашего склада в Китае, г. Иу:</p>
+                </div>
+                <div class="shipping-address__content">
+                    <div class="d-flex align-center pb-20">
+                        <div class="grow-1 mr-10">
+                            广州市越秀区荔德路318号 汇富商 贸中<br>
+                            心A28 栋102仓库 13128641323 ALEXEYH.<br>
+                            箱子上面写 "ID0001/00001”
+                        </div>
+                        <button class="copy-btn shrink-0">
+                            <svg width="18" height="22"><use href="#i-copy"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="shipping-address-all__bottom">
+                <p class="mb-0">Скопируйте текст выше и передайте своему поставщику / магазину</p>
+            </div>
+        </div>
+
+        <div class="alarm-warning mb-20">
+            <div class="alarm-warning__link" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('d-none')">
+                <p class="text"><strong>Внимание!</strong> Обязательно сообщите номер клиента/заказа своему поставщику или магазину перед отправкой груза на наш склад.</p>
+                <svg class="toggle-icon" width="5" height="9"><use href="#i-arrow"></use></svg>
+            </div>
+            <div class="alarm-warning__content d-none">
+                <p>Каждое отправление должно содержать информацию.
+                    Иначе мы не сможем распознать груз в автоматическом режиме.</p>
+
+                <p>ID0001  - номер клиента / 00001 - номер заказа</p>
+
+                <p><strong>Важно!</strong> Номер клиента имеет постоянное значение и назначается системой при регистрации пользователя.</p>
+
+                <p>Номер заказа имеет переменное значение и назначается системой автоматически при оформлении заказа на отправку.</p>
+
+                <p><strong>Если Вы отправили товар на наш склад БЕЗ создания заявки на отправку, укажите только номер клиента.</strong></p>
+
+                <p>В таком случае номер заказа будет назначен автоматически при поступлении груза на наш склад.</p>
+
+                <p class="mb-0">Учитывайте, что при этом груз НЕ будет отправлен автоматически, потребует больше времени и дополнительной информации от Вас в дальнейшем.</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

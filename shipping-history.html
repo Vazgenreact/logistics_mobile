@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15">
+                <use href="#logo-sm"></use>
+            </svg>
+            <p class="title">история отправок</p>
+        </div>
+        <p class="text mb-20 mr-30">В данном разделе хранится вся нформация
+            о Ваших заявках на отправку и фактическим отправлениям. </p>
+
+        <div class="relative w-100 mb-20">
+            <svg class="select-icon" width="10" height="6">
+                <use href="#i-select-arrow"></use>
+            </svg>
+            <select class="input input--select">
+                <option value="all" selected>Все</option>
+                <option value="Категория 1">Ожидает поступления</option>
+                <option value="Категория 2">Отправлен</option>
+                <option value="Категория">Получен</option>
+            </select>
+        </div>
+
+        <!--    Статус: Ожидаем поступления    -->
+        <div class="mb-40">
+            <div class="d-flex justify-between mb-5">
+                <strong>Заказ на доставку </strong>
+                <strong>1<span class="text--muted">/7</span></strong>
+            </div>
+            <div class="order-slider">
+                <div class="order-slider__item">
+                    <div class="delivery">
+                        <div class="d-flex mb-25">
+                            <div class="grow-1">
+                                <div class="mb-5 text-bold">Заказ на доставку №1</div>
+                                <small class="yellow-ellipse">Статус: Ожидаем поступления</small>
+                            </div>
+                            <div class="d-flex">
+                                <button class="icon-btn">
+                                    <svg width="15" height="15">
+                                        <use href="#i-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="icon-btn ml-5" onclick="document.getElementById('modal').classList.add('active')">
+                                    <svg width="10" height="10">
+                                        <use href="#i-close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="order-slider__content">
+                            <ul class="order-slider__nav reset-list">
+                                <li><a class="order-slider__link active" href="#">Заказ</a></li>
+                                <li><a class="order-slider__link" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link" href="#">Доставка</a></li>
+                            </ul>
+                            <div class="order-slider__tab active">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Дата:</span>
+                                        <span>14.02.2020</span>
+                                    </li>
+                                    <li>
+                                        <span>№ заявки:</span>
+                                        <span>548763</span>
+                                    </li>
+                                    <li>
+                                        <span>Кол-во мест:</span>
+                                        <span class="product-count">2</span>
+                                    </li>
+                                    <li>
+                                        <span>Общий вес:</span>
+                                        <span class="text--muted">210 кг</span>
+                                    </li>
+                                    <li>
+                                        <span>Общий объем:</span>
+                                        <span class="text--muted">0.25 м3</span>
+                                    </li>
+                                    <li>
+                                        <span>Характер груза:</span>
+                                        <span class="text--muted">Электроника, одежда, игрушки</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom">
+                                    <div class="images-slider">
+                                        <div class="images-slider__item">
+                                            <img class="images-slider__img" src="img/modification.png" alt="">
+                                        </div>
+                                        <div class="images-slider__item">
+                                            <img class="images-slider__img" src="img/modification.png" alt="">
+                                        </div>
+                                        <div class="images-slider__item">
+                                            <img class="images-slider__img" src="img/modification.png" alt="">
+                                        </div>
+                                        <div class="images-slider__item">
+                                            <img class="images-slider__img" src="img/modification.png" alt="">
+                                        </div>
+                                        <div class="images-slider__item">
+                                            <img class="images-slider__img" src="img/modification.png" alt="">
+                                        </div>
+                                        <div class="images-slider__item">
+                                            <img class="images-slider__img" src="img/modification.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Стоимость доставки:</span>
+                                        <span class="text--muted">200$</span>
+                                    </li>
+                                    <li>
+                                        <span>Тариф</span>
+                                        <span class="text--muted">120$</span>
+                                    </li>
+                                    <li>
+                                        <span>Страховой сбор</span>
+                                        <span class="text--muted">10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Упаковка и погр.работы</span>
+                                        <span class="text--muted">10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Статус:</span>
+                                        <span class="text--muted">не оплачено</span>
+                                    </li>
+                                    <li>
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text--muted">-</span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            Компенсация:
+                                            <button class="tooltip-btn">
+                                                <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                                            </button>
+                                        </span>
+                                        <span class="">0$</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom"></div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list">
+                                    <li class="mb-10">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span class="">-</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Россия - Россия</span>
+                                        <span class="">Сдек, до двери</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата получения</span>
+                                        <span class="">-</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <span class="slider-nav__item active" style="width: calc((100% / 7) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 7) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 7) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 7) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 7) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 7) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 7) - 10px)"></span>
+            </div>
+        </div>
+
+        <!--    Статус: Готов к отправке    -->
+        <div class="mb-40">
+            <div class="order-slider">
+                <div class="order-slider__item">
+                    <div class="delivery">
+                        <div class="d-flex mb-25">
+                            <div class="grow-1">
+                                <div class="mb-5 text-bold">Заказ на доставку №1</div>
+                                <small class="green-ellipse">Статус: Готов к отправке</small>
+                            </div>
+                        </div>
+
+                        <div class="order-slider__content">
+                            <ul class="order-slider__nav reset-list">
+                                <li><a class="order-slider__link " href="#">Заказ</a></li>
+                                <li><a class="order-slider__link active" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link" href="#">Доставка</a></li>
+                            </ul>
+                            <div class="order-slider__tab ">
+                                <!-- no-slider -->
+                                <div class="">
+                                    <ul class="reset-list justify-between">
+                                        <li>
+                                            <span>Дата:</span>
+                                            <span>14.02.2020</span>
+                                        </li>
+                                        <li>
+                                            <span>№ заявки:</span>
+                                            <span>548763</span>
+                                        </li>
+                                        <li>
+                                            <span>Кол-во мест:</span>
+                                            <span class="product-count active">2</span> <!--click open slider, close no-slider -->
+                                        </li>
+                                        <li>
+                                            <span>Общий вес:</span>
+                                            <span class="">210 кг</span>
+                                        </li>
+                                        <li>
+                                            <span>Общий объем:</span>
+                                            <span class="">0.25 м3</span>
+                                        </li>
+                                        <li>
+                                            <span>Характер груза:</span>
+                                            <span class="">Электроника</span>
+                                        </li>
+                                    </ul>
+                                    <div class="delivery__bottom">
+                                        <div class="images-slider">
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slider -->
+                                <div class="quantity-place d-none">
+                                    <div class="quantity-place__top">
+                                        <button class="btn prev">
+                                            <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                                        </button>
+
+                                        <strong>Место 1</strong>
+                                        <strong class="d-none">Место 2</strong>
+
+                                        <button class="btn next">
+                                            <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="quantity-place__list">
+                                        <ul class="reset-list">
+                                            <li>
+                                                <span>Габариты:</span>
+                                                <span>0.1*0.3*0.5</span>
+                                            </li>
+                                            <li>
+                                                <span>Объем:</span>
+                                                <span>0.25 м<sup>3</sup></span>
+                                            </li>
+                                            <li>
+                                                <span>Вес:</span>
+                                                <span>20кг</span>
+                                            </li>
+                                            <li>
+                                                <span>Плотность:</span>
+                                                <span>210 кг</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="reset-list d-none">
+                                            <li>
+                                                <span>Габариты:</span>
+                                                <span>0.1*0.3*0.5</span>
+                                            </li>
+                                            <li>
+                                                <span>Объем:</span>
+                                                <span>0.25 м<sup>3</sup></span>
+                                            </li>
+                                            <li>
+                                                <span>Вес:</span>
+                                                <span>20кг</span>
+                                            </li>
+                                            <li>
+                                                <span>Плотность:</span>
+                                                <span>210 кг</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="delivery__bottom align-start">
+                                        <small>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.”</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab active">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Стоимость доставки:</span>
+                                        <span class="text-bold">200$</span>
+                                    </li>
+                                    <li>
+                                        <span>Тариф</span>
+                                        <span>120$</span>
+                                    </li>
+                                    <li>
+                                        <span>Страховой сбор</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Упаковка и погр.работы</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Статус:</span>
+                                        <span class="color-red">не оплачено</span>
+                                    </li>
+                                    <li>
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text-bold">18.02.20</span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            Компенсация:
+                                            <button class="tooltip-btn">
+                                                <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                                            </button>
+                                        </span>
+                                        <span class="">0$</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom">
+                                    <a href="#" class="btn btn--yellow btn--auto">
+                                        <span>оплатить</span>
+                                        <svg width="5" height="9">
+                                            <use href="#i-arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list">
+                                    <li class="mb-10">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span class="">25.02.2020</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Россия - Россия</span>
+                                        <span class="">Сдек, до двери</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата получения</span>
+                                        <span class="">29.02.2020</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom">
+                                    <a href="#" class="btn btn--muted">
+                                        <span>подтвердить получение</span>
+                                        <svg width="5" height="9">
+                                            <use href="#i-arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <ul class="menu__list reset-list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="29" height="27">
+                                <use href="#i-home"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="29" height="31">
+                                <use href="#i-box"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="36" height="23">
+                                <use href="#i-delivery"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="33" height="25">
+                                <use href="#i-referal"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="33" height="23">
+                                <use href="#i-message"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="26" height="26">
+                                <use href="#i-menu"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--    Статус: Отправлен    -->
+        <div class="mb-40">
+            <div class="order-slider">
+                <div class="order-slider__item">
+                    <div class="delivery">
+                        <div class="d-flex mb-25">
+                            <div class="grow-1">
+                                <div class="mb-5 text-bold">Заказ на доставку №1</div>
+                                <small class="green-ellipse">Статус: Отправлен</small>
+                            </div>
+                        </div>
+
+                        <div class="order-slider__content">
+                            <ul class="order-slider__nav reset-list">
+                                <li><a class="order-slider__link " href="#">Заказ</a></li>
+                                <li><a class="order-slider__link" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link active" href="#">Доставка</a></li>
+                            </ul>
+                            <div class="order-slider__tab ">
+                                <!-- no-slider -->
+                                <div class="">
+                                    <ul class="reset-list justify-between">
+                                        <li>
+                                            <span>Дата:</span>
+                                            <span>14.02.2020</span>
+                                        </li>
+                                        <li>
+                                            <span>№ заявки:</span>
+                                            <span>548763</span>
+                                        </li>
+                                        <li>
+                                            <span>Кол-во мест:</span>
+                                            <span class="product-count active">2</span> <!--click open slider, close no-slider -->
+                                        </li>
+                                        <li>
+                                            <span>Общий вес:</span>
+                                            <span class="">210 кг</span>
+                                        </li>
+                                        <li>
+                                            <span>Общий объем:</span>
+                                            <span class="">0.25 м3</span>
+                                        </li>
+                                        <li>
+                                            <span>Характер груза:</span>
+                                            <span class="">Электроника</span>
+                                        </li>
+                                    </ul>
+                                    <div class="delivery__bottom">
+                                        <div class="images-slider">
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slider -->
+                                <div class="quantity-place d-none">
+                                    <div class="quantity-place__top">
+                                        <button class="btn prev">
+                                            <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                                        </button>
+
+                                        <strong>Место 1</strong>
+                                        <strong class="d-none">Место 2</strong>
+
+                                        <button class="btn next">
+                                            <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="quantity-place__list">
+                                        <ul class="reset-list">
+                                            <li>
+                                                <span>Габариты:</span>
+                                                <span>0.1*0.3*0.5</span>
+                                            </li>
+                                            <li>
+                                                <span>Объем:</span>
+                                                <span>0.25 м<sup>3</sup></span>
+                                            </li>
+                                            <li>
+                                                <span>Вес:</span>
+                                                <span>20кг</span>
+                                            </li>
+                                            <li>
+                                                <span>Плотность:</span>
+                                                <span>210 кг</span>
+                                            </li>
+                                        </ul>
+                                        <ul class="reset-list d-none">
+                                            <li>
+                                                <span>Габариты:</span>
+                                                <span>0.1*0.3*0.5</span>
+                                            </li>
+                                            <li>
+                                                <span>Объем:</span>
+                                                <span>0.25 м<sup>3</sup></span>
+                                            </li>
+                                            <li>
+                                                <span>Вес:</span>
+                                                <span>20кг</span>
+                                            </li>
+                                            <li>
+                                                <span>Плотность:</span>
+                                                <span>210 кг</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="delivery__bottom align-start">
+                                        <small>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum, lacus vitae commodo convallis, augue neque blandit mi, vel pulvinar mauris nulla vitae augue.”</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Стоимость доставки:</span>
+                                        <span>200$</span>
+                                    </li>
+                                    <li>
+                                        <span>Тариф</span>
+                                        <span>120$</span>
+                                    </li>
+                                    <li>
+                                        <span>Страховой сбор</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Упаковка и погр.работы</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Статус:</span>
+                                        <span class="text-bold">оплачено</span>
+                                    </li>
+                                    <li>
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text-bold">-</span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            Компенсация:
+                                            <button class="tooltip-btn">
+                                                <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                                            </button>
+                                        </span>
+                                        <span class="">0$</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom"></div>
+                            </div>
+                            <div class="order-slider__tab active">
+                                <ul class="reset-list">
+                                    <li class="mb-10">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span class="">25.02.2020</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Россия - Россия</span>
+                                        <span class="">Сдек, до двери</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата получения</span>
+                                        <span class="">29.02.2020</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom">
+                                    <a href="#" class="btn btn--outline">
+                                        <span>подтвердить получение</span>
+                                        <svg width="5" height="9">
+                                            <use href="#i-arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <ul class="menu__list reset-list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="29" height="27">
+                                <use href="#i-home"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="29" height="31">
+                                <use href="#i-box"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="36" height="23">
+                                <use href="#i-delivery"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="33" height="25">
+                                <use href="#i-referal"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="33" height="23">
+                                <use href="#i-message"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="26" height="26">
+                                <use href="#i-menu"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--    Статус: Получен    -->
+        <div class="mb-40">
+            <div class="order-slider">
+                <div class="order-slider__item">
+                    <div class="delivery">
+                        <div class="d-flex mb-25">
+                            <div class="grow-1">
+                                <div class="mb-5 text-bold">Заказ на доставку №1</div>
+                                <small class="green-ellipse">Статус: Получен</small>
+                            </div>
+                        </div>
+
+                        <div class="order-slider__content">
+                            <ul class="order-slider__nav reset-list">
+                                <li><a class="order-slider__link " href="#">Заказ</a></li>
+                                <li><a class="order-slider__link active" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link" href="#">Доставка</a></li>
+                            </ul>
+                            <div class="order-slider__tab ">
+                                <div class="">
+                                    <ul class="reset-list justify-between">
+                                        <li>
+                                            <span>Дата:</span>
+                                            <span>14.02.2020</span>
+                                        </li>
+                                        <li>
+                                            <span>№ заявки:</span>
+                                            <span>548763</span>
+                                        </li>
+                                        <li>
+                                            <span>Кол-во мест:</span>
+                                            <span class="product-count active">2</span>
+                                        </li>
+                                        <li>
+                                            <span>Общий вес:</span>
+                                            <span class="">210 кг</span>
+                                        </li>
+                                        <li>
+                                            <span>Общий объем:</span>
+                                            <span class="">0.25 м3</span>
+                                        </li>
+                                        <li>
+                                            <span>Характер груза:</span>
+                                            <span class="">Электроника</span>
+                                        </li>
+                                    </ul>
+                                    <div class="delivery__bottom">
+                                        <div class="images-slider">
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                            <div class="images-slider__item">
+                                                <img class="images-slider__img" src="img/modification.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab active">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Стоимость доставки:</span>
+                                        <span>200$</span>
+                                    </li>
+                                    <li>
+                                        <span>Тариф</span>
+                                        <span>120$</span>
+                                    </li>
+                                    <li>
+                                        <span>Страховой сбор</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Упаковка и погр.работы</span>
+                                        <span>10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Статус:</span>
+                                        <span class="text-bold">оплачено</span>
+                                    </li>
+                                    <li>
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text-bold">-</span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            Компенсация:
+                                            <button class="tooltip-btn">
+                                                <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                                            </button>
+                                        </span>
+                                        <span class="">0$</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom align-start">
+                                    <small>К сожалению, по данному грузу произошла задержка. Мы рассчитали и уже зачислили компенсацию на Ваш баланс. Приносим извинения за возможные неудобства.</small>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list">
+                                    <li class="mb-10">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span class="">25.02.2020</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Россия - Россия</span>
+                                        <span class="">Сдек, до двери</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата получения</span>
+                                        <span class="">29.02.2020</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom">
+                                    <a href="#" class="btn btn--outline btn--muted">
+                                        <svg width="15" height="12"><use href="#i-check"></use></svg>
+                                        <span>груз получен</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <ul class="menu__list reset-list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="29" height="27">
+                                <use href="#i-home"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="29" height="31">
+                                <use href="#i-box"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="36" height="23">
+                                <use href="#i-delivery"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="33" height="25">
+                                <use href="#i-referal"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="33" height="23">
+                                <use href="#i-message"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <svg width="26" height="26">
+                                <use href="#i-menu"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- toggle class    active -->
+<div class="modal" id="modal">
+    <div class="modal__content text-center">
+        <div class="mb-30">
+            <strong>Вы уверены, что хотите удалить заказ на доставку?</strong>
+        </div>
+
+        <div class="d-flex justify-center">
+            <button class="btn btn--outline btn--auto mr-10">
+                <span class="font-400">удалить</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+            <button class="btn btn--outline btn--auto">
+                <span>отмена</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </button>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal').classList.remove('active')">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

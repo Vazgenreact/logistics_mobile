@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">отзывы</p>
+        </div>
+        <p class="text mb-10">Напишите отзыв о нашей компании и получите 50₽ на баланс</p>
+
+        <form action="" class="reviews-form">
+            <div class="mb-10">
+                <textarea name="" class="input input--muted input--textarea" placeholder="Текст отзыва"></textarea>
+            </div>
+            <div class="d-flex justify-between">
+                <label class="btn add-file">
+                    <input type="file" class="input-hide">
+                    <svg width="16" height="14"><use href="#i-file"></use></svg>
+                </label>
+                <a href="#" class="color-blue">Предпросмотр</a>
+            </div>
+
+            <div class="d-flex align-center reviews-form__bottom">
+                <div class="shrink-0 mr-30">
+                    <small class="text--muted">Вы соглашаетесь с нашими<br> <a href="#" class="underline">Условиями использования</a></small>
+                </div>
+                <button class="btn btn--yellow">
+                    <span>отправить</span>
+                    <svg width="7" height="11"><use href="#i-arrow"></use></svg>
+                </button>
+            </div>
+        </form>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal">
+    <div class="modal__content text-center">
+        <div class="mb-25">
+            <strong class="text-uppercase">Спасибо!</strong>
+            <p>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
+        </div>
+        <a href="#" class="btn btn--yellow btn--auto">
+            <span>понятно</span>
+            <svg width="6" height="10"><use href="#i-arrow"></use></svg>
+        </a>
+
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

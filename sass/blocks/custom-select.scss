@@ -66,12 +66,12 @@
     content: '';
     position: absolute;
     right: 10px;
-    top: 13px;
+    top: 50%;
     width: 7px;
     height: 7px;
     border-right: 1px solid #333;
     border-bottom: 1px solid #333;
-    transform: rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     z-index: 8;
   }
 

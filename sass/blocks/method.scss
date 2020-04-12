@@ -1,0 +1,62 @@
+.method {
+  margin-bottom: 10px;
+
+  &--no-icon &__label {
+    padding-left: 15px;
+
+    .method__title {
+      width: 40%;
+    }
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid $silver-big;
+    border-radius: 3px;
+    padding-right: 11px;
+    min-height: 50px;
+    opacity: .45;
+
+    &--messages {
+      flex-direction: column;
+      padding: 15px 20px;
+    }
+  }
+  .checkbox__icon {
+    margin-right: 0;
+  }
+  input:not(:disabled):checked + &__label {
+    opacity: 1;
+
+    .checkbox__icon {
+      border-color: #000;
+      margin-right: 0;
+    }
+    .method__price,
+    .method__title {
+      font-weight: 700;
+    }
+    svg {
+      opacity: 1;
+    }
+  }
+  &__price,
+  &__title {
+    line-height: 1.25;
+  }
+  &__title {
+    min-width: 80px;
+    padding-right: 20px;
+  }
+
+  &__icon {
+    width: 60px;
+    text-align: center;
+
+    &--sm {
+      width: 50px;
+      text-align: center;
+    }
+  }
+}
