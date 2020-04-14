@@ -38,4 +38,36 @@
       width: 100%;
     }
   }
+
+  &--review {
+    .modal__content {
+      padding: 0;
+    }
+    .modal__close {
+      top: 20px;
+      right: 20px;
+      background-color: $color-f5;
+    }
+    .reviews {
+      padding-bottom: 10px;
+    }
+  }
+
+  &--snippet {
+    background-color: #fff;
+
+    .modal__content {
+      padding: 0;
+      left: 15px;
+      right: 15px;
+    }
+
+    .reviews {
+      box-shadow: none;
+      border: 0;
+    }
+    .modal__close {
+      background-color: $color-f5;
+    }
+  }
 }

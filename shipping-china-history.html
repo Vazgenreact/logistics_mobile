@@ -48,7 +48,7 @@
                     <input type="number" class="input" value="">
                 </div>
             </div>
-            <div class="input-group mb-10">
+            <div class="input-group flex-start mb-10">
                 <div class="input-group__small">
                     <div class="input-text">
                         <span>Вес, кг</span>
@@ -61,15 +61,22 @@
                     </div>
                     <input type="number" class="input input" value="">
                 </div>
-                <div class="input-group__small pt-20">
-                    <label class="checkbox">
-                        <input type="checkbox" name="" class="input-hide">
-                        <span class="checkbox__icon mr-10">
-                            <svg width="10" height="8"><use href="#i-check"></use></svg>
-                        </span>
-                        <span>умножить на количество</span>
-                    </label>
-                </div>
+            </div>
+            <div class="d-flex justify-between align-center mb-20">
+                <label class="checkbox">
+                    <input type="checkbox" name="" class="input-hide" checked>
+                    <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                    <span>умножить на количество</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="" class="input-hide">
+                    <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                    <span>брендовый товар</span>
+                </label>
             </div>
 
             <div class="product__warning mt-0 d-flex justify-between">
@@ -79,7 +86,12 @@
 
             <div class="mb-40">
                 <div class="d-flex justify-between">
-                    <span>Укажите груз:</span>
+                    <div class="d-flex align-center">
+                        <span>Укажите груз:</span>
+                        <button class="tooltip-btn ml-5" type="button">
+                            <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                        </button>
+                    </div>
                     <span class="color-blue" onclick="this.parentElement.parentElement.nextElementSibling.classList.toggle('d-none')">Не нашли нужный товар?</span>
                 </div>
                 <div class="filter__search search">
@@ -109,12 +121,15 @@
                     </div>
                 </div>
             </div>
-            <div class="custom-cargo pt-20 mb-40 d-none">
-                <div class="d-flex justify-between mb-20">
-                    <span>Укажите груз:</span>
-                    <button class="reset-btn">
-                        <svg width="7" height="7"><use href="#i-close"></use></svg>
-                    </button>
+            <div class="custom-cargo mb-40">
+                <div class="d-flex justify-between mb-5">
+                    <div class="d-flex align-center">
+                        <span>Укажите груз:</span>
+                        <button class="tooltip-btn ml-5" type="button">
+                            <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                        </button>
+                    </div>
+                    <span class="color-blue" onclick="this.parentElement.parentElement.nextElementSibling.classList.toggle('d-none')">Поиск по названию</span>
                 </div>
 
                 <div class="relative w-100 mb-10">
@@ -178,7 +193,7 @@
             </div>
 
             <div class="d-flex flex-end mb-30">
-                <a href="#" class="btn btn--yellow btn--auto">
+                <a href="#" class="btn btn--yellow btn--auto-2">
                     <span>далее</span>
                     <svg width="5" height="9"><use href="#i-arrow"></use></svg>
                 </a>
@@ -272,7 +287,7 @@
             </div>
 
             <div class="d-flex flex-end mb-30">
-                <a href="#" class="btn btn--yellow btn--auto">
+                <a href="#" class="btn btn--yellow btn--auto-2">
                     <span>далее</span>
                     <svg width="5" height="9"><use href="#i-arrow"></use></svg>
                 </a>
@@ -281,7 +296,7 @@
 
         <!--    three  form block    -->
         <form action="">
-            <div class="d-flex mb-30">
+            <div class="d-flex mb-25">
                 <div class="list-count">
                     <span class="list-count__icon">3</span>
                     <strong>Укажите адрес доставки груза</strong>
@@ -292,7 +307,7 @@
             <div>
                 <div class="mb-15">
                     <label class="checkbox">
-                        <input type="radio" name="delivery-address" class="input-hide" checked>
+                        <input type="radio" name="delivery-address3" class="input-hide" checked>
                         <span class="checkbox__icon mr-10">
                         <svg width="10" height="8"><use href="#i-check"></use></svg>
                     </span>
@@ -301,7 +316,7 @@
                 </div>
                 <div class="mb-15">
                     <label class="checkbox">
-                        <input type="radio" name="delivery-address" class="input-hide">
+                        <input type="radio" name="delivery-address3" class="input-hide">
                         <span class="checkbox__icon mr-10">
                         <svg width="10" height="8"><use href="#i-check"></use></svg>
                     </span>
@@ -326,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-none">
+                <div class="">
                     <div class="mb-20 input-group">
                         <div class="input-group__item mb-15">
                             <span class="input-text">Страна</span>
@@ -334,13 +349,7 @@
                         </div>
                         <div class="input-group__item mb-15">
                             <span class="input-text">Город</span>
-                            <div class="autocomplete-select">
-                                <input type="text" class="input" value="">
-                                <ul class="custom-select__list">
-                                    <li class="custom-select__item">Перевод на карту Сбербанка</li>
-                                    <li class="custom-select__item">Перевод на карту ВТБ</li>
-                                </ul>
-                            </div>
+                            <input type="text" class="input" value="">
                         </div>
                         <div class="input-group__item mb-15">
                             <span class="input-text">Улица</span>
@@ -359,7 +368,7 @@
             </div>
 
             <!--      yes delivery address      -->
-            <div class="border-bottom mb-40">
+            <div class="mb-40">
                 <div class="delivery mb-20">
                     <label class="checkbox justify-between w-100 mb-15">
                         <small class="green-ellipse">Адрес по умолчанию</small>
@@ -400,7 +409,7 @@
                     </div>
                 </div>
 
-                <div class="new-address mb-40">
+                <div class="new-address">
                     <div class="d-flex align-center">
                         <svg width="25" height="25" class="shrink-0 mr-10"><use href="#new-adress"></use></svg>
                         <p class="text font-400">Или создайте<br> новый адрес</p>
@@ -410,6 +419,13 @@
                         <svg width="5" height="9"><use href="#i-arrow"></use></svg>
                     </a>
                 </div>
+            </div>
+
+            <div class="d-flex flex-end mb-30">
+                <a href="#" class="btn btn--yellow btn--auto-2">
+                    <span>далее</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
             </div>
         </form>
 
@@ -556,7 +572,7 @@
                 </div>
 
                 <div class="d-flex flex-end mb-30">
-                    <a href="#" class="btn btn--yellow btn--auto">
+                    <a href="#" class="btn btn--yellow btn--auto-2">
                         <span>далее</span>
                         <svg width="5" height="9"><use href="#i-arrow"></use></svg>
                     </a>
@@ -754,7 +770,7 @@
         </div>
 
 
-        <div class="to-pay">
+        <div class="to-pay to-pay--order">
             <div class="to-pay__link" onclick="this.parentElement.classList.toggle('active')">
                 <div class="d-flex align-center">
                     <span class="mr-15">
@@ -769,45 +785,40 @@
                     </button>
                 </div>
             </div>
-            <div class="to-pay__detail">
-                <div class="d-flex justify-between mb-10">
-                    <span>Стоимость товара</span>
-                    <strong>1250</strong>
+            <div class="to-pay__detail pt-20">
+                <div class="mb-20">
+                    <strong>Доставка Китай - Россия, г. Москва:</strong>
                 </div>
                 <div class="d-flex justify-between mb-10">
-                    <span>Комиссия платформы</span>
-                    <strong>55</strong>
+                    <span>Тариф</span>
+                    <span>120$</span>
+                </div>
+                <div class="d-flex justify-between mb-10">
+                    <span>Страховой сбор</span>
+                    <span>10$</span>
                 </div>
                 <div class="d-flex justify-between mb-20">
-                    <span>Итоговая стоимость</span>
-                    <strong>1755</strong>
+                    <span>Упаковка и погр.работы</span>
+                    <span>10$</span>
                 </div>
 
-                <hr class="clear-line clear-line--sm mb-10">
+                <hr class="clear-line clear-line--sm mb-20">
 
-                <div class="text--muted mb-30">
-                    <div class="d-flex justify-between mb-10 relative">
-                        <div class="d-flex">
-                            <span>Доставка по Китаю</span>
-                            <button class="tooltip-btn ml-5" type="button">
-                                <svg width="15" height="17"><use href="#i-info"></use></svg>
-                            </button>
-                        </div>
-                        <strong>0</strong>
-                    </div>
-                    <div class="d-flex justify-between mb-10 relative">
-                        <div class="d-flex">
-                            <span>Доп. услуги</span>
-                            <button class="tooltip-btn ml-5" type="button">
-                                <svg width="15" height="17"><use href="#i-info"></use></svg>
-                            </button>
-                        </div>
-                        <strong>0</strong>
-                    </div>
+                <div class="mb-20">
+                    <strong>Доставка по России, Москва - Краснодар</strong>
                 </div>
+                <div class="d-flex justify-between mb-10">
+                    <span>ТК СДЭК</span>
+                    <span>120$</span>
+                </div>
+                <div class="d-flex justify-between mb-30">
+                    <span>До ПВЗ</span>
+                </div>
+
+                <p class="text--muted small">Указана предварительная стоимость отправки груза, исходя из заданных характеристик. Фактическая цена доставки может отличаться. Не является публичной офертой.</p>
 
                 <a href="#" class="btn btn--yellow">
-                    <span>Сохранить</span>
+                    <span>создать заявку</span>
                     <svg width="6" height="10"><use href="#i-arrow"></use></svg>
                 </a>
             </div>

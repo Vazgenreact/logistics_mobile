@@ -59,6 +59,12 @@
   background-color: $u-orange;
 }
 
+.delivery {
+  .checkbox__icon {
+    margin-right: 0;
+  }
+
+}
 .delivery-slider {
 
   &__list {
@@ -71,9 +77,5 @@
     width: 303px;
     flex-shrink: 0;
     margin-right: 10px;
-  }
-
-  .checkbox__icon {
-    margin-right: 0;
   }
 }

@@ -19,7 +19,20 @@
             <p class="title">отзывы</p>
         </div>
 
-        <div class="reviews">
+        <div class="relative w-100 mb-15">
+            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+            <select class="input input--select">
+                <option value="">Статус заказа</option>
+                <option value="" selected>Ожидает модерации</option>
+                <option value="">Оплачен</option>
+                <option value="">Отклонен</option>
+            </select>
+        </div>
+
+        <div class="d-flex flex-end mb-5">
+            <strong>1<span class="text--muted">/7</span></strong>
+        </div>
+        <div class="reviews mb-30">
             <div class="reviews__top">
                 <img class="reviews__img" src="img/user.png" alt="">
                 <div>
@@ -29,33 +42,71 @@
                         <span class="ml-5">id00011546565</span>
                     </div>
                 </div>
+                <button class="icon-btn icon-search" onclick="document.getElementById('modal-review').classList.add('active')">
+                    <svg width="15" height="15"><use href="#i-search"></use></svg>
+                </button>
             </div>
-            <p class="text text--muted mb-10">21:53 20.03.2020</p>
+            <p class="text text--muted">21:53 20.03.2020</p>
             <div class="reviews__text">
                 <p class="text">Cras sit amet vulputate massa. Integer enim purus, egestas ut iaculis sed, consectetur ut eros. Sed eu tellus vitae lacus vestibulum scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
             </div>
-            <div class="d-flex f-wrap">
+            <div class="d-flex f-wrap mb-20">
                 <img class="reviews__add-img" src="img/review.png" alt="">
                 <img class="reviews__add-img" src="img/review.png" alt="">
                 <img class="reviews__add-img" src="img/review.png" alt="">
                 <img class="reviews__add-img" src="img/review.png" alt="">
             </div>
         </div>
-        <div class="reviews">
-            <div class="reviews__top">
-                <img class="reviews__img" src="img/user.png" alt="">
-                <div>
-                    <strong class="reviews__name">Юлия Архипенко</strong>
-                    <div class="d-flex align-center">
-                        <svg width="20" height="20"><use href="#i-telegram-blue"></use></svg>
-                        <span class="ml-5">@arkh_jozh</span>
-                    </div>
+        <div class="reviews-action mb-30">
+            <div class="d-flex">
+                <div class="relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select class="input input--select">
+                        <option value="">Выберите действие</option>
+                        <option value="">Начислить бонус</option>
+                        <option value="">Вернуть на доработку</option>
+                    </select>
                 </div>
+                <button class="icon-btn icon-btn--white">
+                    <svg width="15" height="15"><use href="#i-save"></use></svg>
+                </button>
             </div>
-            <p class="text text--muted mb-10">21:53 20.03.2020</p>
-            <div class="reviews__text">
-                <p class="text">Cras sit amet vulputate massa. Integer enim purus, egestas ut iaculis sed, consectetur ut eros. </p>
+        </div>
+
+        <!--    когда выбрано  --Начислить бонус--   -->
+        <div class="reviews-action selected mb-30">
+            <div class="d-flex">
+                <div class="relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select class="input input--select">
+                        <option value="">Выберите действие</option>
+                        <option value="" selected>Начислить бонус</option>
+                        <option value="">Вернуть на доработку</option>
+                    </select>
+                </div>
+                <button class="icon-btn icon-btn--white">
+                    <svg width="15" height="15"><use href="#i-save"></use></svg>
+                </button>
             </div>
+        </div>
+
+        <!--    когда выбрано  --Вернуть на доработку--   -->
+        <div class="reviews-action selected mb-30">
+            <div class="d-flex mb-15">
+                <div class="relative">
+                    <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                    <select class="input input--select">
+                        <option value="">Выберите действие</option>
+                        <option value="" >Начислить бонус</option>
+                        <option value="" selected>Вернуть на доработку</option>
+                    </select>
+                </div>
+                <button class="icon-btn icon-btn--white">
+                    <svg width="15" height="15"><use href="#i-save"></use></svg>
+                </button>
+            </div>
+            <span class="input-text">Комментарий:</span>
+            <textarea class="input input--textarea input--muted" placeholder="Введите комментарий для пользователя"></textarea>
         </div>
 
         <nav class="menu">
@@ -104,6 +155,41 @@
                 </li>
             </ul>
         </nav>
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal modal--snippet" id="modal-review">
+    <div class="modal__content">
+        <div class="reviews">
+            <div class="reviews__top">
+                <img class="reviews__img" src="img/user.png" alt="">
+                <div>
+                    <strong class="reviews__name">Юлия Архипенко</strong>
+                    <div class="d-flex align-center">
+                        <svg width="20" height="20"><use href="#i-vk-blue"></use></svg>
+                        <span class="ml-5">id00011546565</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text text--muted mb-10">21:53 20.03.2020</p>
+            <div class="reviews__text mb-15">
+                <p class="text">Cras sit amet vulputate massa. Integer enim purus, egestas ut iaculis sed, consectetur ut eros. Sed eu tellus vitae lacus vestibulum scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
+            </div>
+            <div class="d-flex f-wrap mb-10">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+                <img class="reviews__add-img" src="img/review.png" alt="">
+            </div>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal-review').classList.remove('active')">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
     </div>
 </div>
 

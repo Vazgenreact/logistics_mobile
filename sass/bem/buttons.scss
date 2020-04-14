@@ -21,6 +21,11 @@
     color: $color-33;
   }
 
+  &--red {
+    border-color: $font-color-red;
+    color: $font-color-red;
+  }
+
   &--muted {
     background-color: transparent;
     border: 1px solid $color-f5;

@@ -21,6 +21,10 @@
     &--messages {
       flex-direction: column;
       padding: 15px 20px;
+      
+      &.active {
+        opacity: 1;
+      }
     }
   }
   .checkbox__icon {

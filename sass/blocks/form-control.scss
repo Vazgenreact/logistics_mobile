@@ -56,6 +56,13 @@
   &__small {
     flex-basis: calc(33.33% - 6px);
   }
+  &.flex-start {
+    justify-content: flex-start;
+
+    .input-group__small {
+      margin-right: 8px;
+    }
+  }
 }
 
 .checkbox {

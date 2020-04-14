@@ -1,5 +1,5 @@
 .reviews-form {
-  margin-top: 15vh;
+
 
   .add-file {
     width: 50px;
@@ -18,19 +18,35 @@
   }
 }
 
+.reviews-img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 73%;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .reviews {
+  position: relative;
   background: #FFFFFF;
   border: 1px solid $u-pink;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
   border-radius: 3px;
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 20px 20px 0;
 
   &__top {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     padding-top: 10px;
+    padding-right: 35px;
   }
   &__img {
     width: 50px;
@@ -56,5 +72,49 @@
     object-fit: cover;
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+  .icon-search {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.reviews-action {
+  padding: 20px;
+  background-color: $color-f5;
+
+  .relative {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  .input--select {
+    height: 35px;
+    padding: 0 12px;
+  }
+
+  .icon-btn {
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+
+    svg {
+      opacity: .45;
+    }
+  }
+  &.selected {
+    .icon-btn {
+      background-color: $u-orange;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  .input--textarea {
+    min-height: 70px;
   }
 }

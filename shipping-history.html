@@ -210,11 +210,11 @@
 
                         <div class="order-slider__content">
                             <ul class="order-slider__nav reset-list">
-                                <li><a class="order-slider__link " href="#">Заказ</a></li>
-                                <li><a class="order-slider__link active" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link active" href="#">Заказ</a></li>
+                                <li><a class="order-slider__link " href="#">Оплата</a></li>
                                 <li><a class="order-slider__link" href="#">Доставка</a></li>
                             </ul>
-                            <div class="order-slider__tab ">
+                            <div class="order-slider__tab active">
                                 <!-- no-slider -->
                                 <div class="">
                                     <ul class="reset-list justify-between">
@@ -323,7 +323,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="order-slider__tab active">
+                            <div class="order-slider__tab ">
                                 <ul class="reset-list justify-between">
                                     <li>
                                         <span>Стоимость доставки:</span>
@@ -465,11 +465,11 @@
 
                         <div class="order-slider__content">
                             <ul class="order-slider__nav reset-list">
-                                <li><a class="order-slider__link " href="#">Заказ</a></li>
+                                <li><a class="order-slider__link active" href="#">Заказ</a></li>
                                 <li><a class="order-slider__link" href="#">Оплата</a></li>
-                                <li><a class="order-slider__link active" href="#">Доставка</a></li>
+                                <li><a class="order-slider__link " href="#">Доставка</a></li>
                             </ul>
-                            <div class="order-slider__tab ">
+                            <div class="order-slider__tab active">
                                 <!-- no-slider -->
                                 <div class="">
                                     <ul class="reset-list justify-between">
@@ -617,7 +617,7 @@
 
                                 <div class="delivery__bottom"></div>
                             </div>
-                            <div class="order-slider__tab active">
+                            <div class="order-slider__tab ">
                                 <ul class="reset-list">
                                     <li class="mb-10">
                                         <span>Китай - Россия</span>
@@ -713,11 +713,11 @@
 
                         <div class="order-slider__content">
                             <ul class="order-slider__nav reset-list">
-                                <li><a class="order-slider__link " href="#">Заказ</a></li>
-                                <li><a class="order-slider__link active" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link active" href="#">Заказ</a></li>
+                                <li><a class="order-slider__link " href="#">Оплата</a></li>
                                 <li><a class="order-slider__link" href="#">Доставка</a></li>
                             </ul>
-                            <div class="order-slider__tab ">
+                            <div class="order-slider__tab active">
                                 <div class="">
                                     <ul class="reset-list justify-between">
                                         <li>
@@ -769,7 +769,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="order-slider__tab active">
+                            <div class="order-slider__tab ">
                                 <ul class="reset-list justify-between">
                                     <li>
                                         <span>Стоимость доставки:</span>
@@ -889,6 +889,140 @@
                 </ul>
             </nav>
         </div>
+
+        <!--    Статус: Ожидаем поступления    -->
+        <div class="mb-40">
+            <div class="order-slider">
+                <div class="order-slider__item">
+                    <div class="delivery">
+                        <div class="d-flex mb-25">
+                            <div class="grow-1">
+                                <div class="mb-5 text-bold">Заказ на доставку №1</div>
+                                <small class="yellow-ellipse">Статус: Ожидаем поступления</small>
+                            </div>
+                            <div class="d-flex">
+                                <button class="icon-btn">
+                                    <svg width="15" height="15">
+                                        <use href="#i-edit"></use>
+                                    </svg>
+                                </button>
+                                <button class="icon-btn ml-5" onclick="document.getElementById('modal').classList.add('active')">
+                                    <svg width="10" height="10">
+                                        <use href="#i-close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="order-slider__content">
+                            <ul class="order-slider__nav reset-list">
+                                <li><a class="order-slider__link active" href="#">Заказ</a></li>
+                                <li><a class="order-slider__link" href="#">Оплата</a></li>
+                                <li><a class="order-slider__link" href="#">Доставка</a></li>
+                            </ul>
+                            <div class="order-slider__tab active">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Дата:</span>
+                                        <span>14.02.2020</span>
+                                    </li>
+                                    <li>
+                                        <span>№ заявки:</span>
+                                        <span>548763</span>
+                                    </li>
+                                    <li>
+                                        <span>Кол-во мест:</span>
+                                        <span class="product-count">3</span>
+                                    </li>
+                                    <li>
+                                        <span>Общий вес:</span>
+                                        <span class="text--muted">210 кг</span>
+                                    </li>
+                                    <li>
+                                        <span>Общий объем:</span>
+                                        <span class="text--muted">0.25 м3</span>
+                                    </li>
+                                    <li>
+                                        <span>Характер груза:</span>
+                                        <span class="text--muted">Электроника</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom">
+                                    <a href="#" class="btn btn--outline btn--red">
+                                        <span>подтвердить получение</span>
+                                        <svg width="5" height="9">
+                                            <use href="#i-arrow-red"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list justify-between">
+                                    <li>
+                                        <span>Стоимость доставки:</span>
+                                        <span class="text--muted">200$</span>
+                                    </li>
+                                    <li>
+                                        <span>Тариф</span>
+                                        <span class="text--muted">120$</span>
+                                    </li>
+                                    <li>
+                                        <span>Страховой сбор</span>
+                                        <span class="text--muted">10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Упаковка и погр.работы</span>
+                                        <span class="text--muted">10$</span>
+                                    </li>
+                                    <li>
+                                        <span>Статус:</span>
+                                        <span class="text--muted">не оплачено</span>
+                                    </li>
+                                    <li>
+                                        <span>Крайняя дата оплаты:</span>
+                                        <span class="text--muted">-</span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            Компенсация:
+                                            <button class="tooltip-btn">
+                                                <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                                            </button>
+                                        </span>
+                                        <span class="">0$</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom"></div>
+                            </div>
+                            <div class="order-slider__tab ">
+                                <ul class="reset-list">
+                                    <li class="mb-10">
+                                        <span>Китай - Россия</span>
+                                        <span>ЖД 8-12 дней</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата прибытия</span>
+                                        <span class="">-</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Россия - Россия</span>
+                                        <span class="">Сдек, до двери</span>
+                                    </li>
+                                    <li class="mb-10">
+                                        <span>Ориентировочная<br> дата получения</span>
+                                        <span class="">-</span>
+                                    </li>
+                                </ul>
+
+                                <div class="delivery__bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -934,7 +1068,34 @@
     </div>
 </div>
 
+<script>
+    window.onload = function () {
+        let tabs = document.querySelectorAll('.order-slider__content');
 
+        for(let i = 0, len = tabs.length; i < len; i++){
+            let links = tabs[i].querySelectorAll('.order-slider__link');
+            let tabss = tabs[i].querySelectorAll('.order-slider__tab');
+
+            links.forEach((elem, i) => {
+                elem.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    removeClass();
+                    this.classList.add('active');
+                    tabss[i].classList.add('active')
+                })
+            });
+
+            function removeClass() {
+                links.forEach(elem => {
+                    elem.classList.remove('active')
+                });
+                tabss.forEach(elem => {
+                    elem.classList.remove('active')
+                })
+            }
+        }
+    }
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
