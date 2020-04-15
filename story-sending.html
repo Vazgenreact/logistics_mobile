@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">история отправок</p>
+        </div>
+        <p class="text mb-30 mr-30">В данном разделе хранится вся нформация о Ваших заявках на отправку и фактическим отправлениям.</p>
+
+        <!--    нет операций   -->
+        <div class="mb-40 pt-20 transactions-not-result text-center">
+            <img class="mb-20" width="195" height="200" src="./img/not-result.png" alt="">
+            <p class="text">У Вас еще нет ни одного заказа<br> на складе</p>
+        </div>
+
+        <div class="large-buttons">
+            <a href="#" class="btn btn--yellow mb-10">
+                <span>Новый расчет доставки</span>
+                <svg width="6" height="11"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list reset-list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="27">
+                            <use href="#i-home"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="29" height="31">
+                            <use href="#i-box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="36" height="23">
+                            <use href="#i-delivery"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="25">
+                            <use href="#i-referal"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="33" height="23">
+                            <use href="#i-message"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <svg width="26" height="26">
+                            <use href="#i-menu"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
