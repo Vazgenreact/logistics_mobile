@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Новый расчет доставки</p>
+        </div>
+
+        <!--    two  form block    -->
+        <form action="">
+            <div class="d-flex mb-30">
+                <div class="list-count">
+                    <span class="list-count__icon">2</span>
+                    <strong>Выберите метод упаковки для данной отправки</strong>
+                </div>
+                <button class="tooltip-btn ml-5" type="button" onclick="document.getElementById('modal-tooltip').classList.add('active')">
+                    <svg width="15" height="17"><use href="#i-info-black"></use></svg>
+                </button>
+            </div>
+
+            <div class="mb-20">
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method1" checked>
+                    <label class="method__label" for="packing_method1">
+                        <div class="method__icon--sm">
+                            <svg width="25" height="17"><use href="#skotch"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Мешок + скотч</span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method2">
+                    <label class="method__label" for="packing_method2">
+                        <div class="method__icon--sm">
+                            <svg width="24" height="25"><use href="#korobka"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Коробка + мешок + скотч </span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method3">
+                    <label class="method__label" for="packing_method3">
+                        <div class="method__icon--sm">
+                            <svg width="24" height="24"><use href="#obreshetka"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Обрешетка + мешок + скотч </span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+                <div class="method">
+                    <input class="d-none" type="radio" name="packing_method" id="packing_method4">
+                    <label class="method__label" for="packing_method4">
+                        <div class="method__icon--sm">
+                            <svg width="24" height="24"><use href="#palet"></use></svg>
+                        </div>
+                        <span class="method__title grow-1">Палет + обрешетка<br> + стрейч-пленка + скотч </span>
+                        <span class="method__price mr-10">2$</span>
+                        <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="">
+                <span class="input-text">Комментарий:</span>
+                <textarea name="" class="input input--muted input--textarea" placeholder="Если у Вас есть дополнительные требования, укажите их здесь"></textarea>
+            </div>
+            <div class="d-flex flex-end saved-message mb-20">
+                <div class="d-flex align-center">
+                    <svg width="7" height="7"><use href="#i-check-circle"></use></svg>
+                    <small class="ml-5">Комментарий сохранен</small>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end mb-30">
+                <a href="#" class="btn btn--yellow btn--auto-2">
+                    <span>далее</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="">
+            <p class="text"><strong>Внимание!</strong>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

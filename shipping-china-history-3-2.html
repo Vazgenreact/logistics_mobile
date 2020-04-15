@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Новый расчет доставки</p>
+        </div>
+
+        <!--    three  form block    -->
+        <form action="">
+            <div class="d-flex mb-25">
+                <div class="list-count">
+                    <span class="list-count__icon">3</span>
+                    <strong>Укажите адрес доставки груза</strong>
+                </div>
+            </div>
+
+            <!--      no delivery address      -->
+            <div>
+                <div class="mb-15">
+                    <label class="checkbox">
+                        <input type="radio" name="delivery-address3" class="input-hide" >
+                        <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                        <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
+                    </label>
+                </div>
+                <div class="mb-15">
+                    <label class="checkbox">
+                        <input type="radio" name="delivery-address3" class="input-hide" checked>
+                        <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                        <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                    </label>
+                </div>
+                <div class="mb-15 input-group">
+                    <div class="input-group__item mb-15">
+                        <span class="input-text">Страна</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item mb-15">
+                        <span class="input-text">Город</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item mb-15">
+                        <span class="input-text">Улица</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item mb-15">
+                        <span class="input-text">Дом</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item mb-15">
+                        <span class="input-text">Квартира</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end mb-30">
+                <a href="#" class="btn btn--yellow btn--auto-2">
+                    <span>далее</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

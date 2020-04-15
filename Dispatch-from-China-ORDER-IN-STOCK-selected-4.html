@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">заказы на складе</p>
+        </div>
+
+        <!--    four  form block    -->
+        <div>
+            <div class="d-flex mb-30">
+                <div class="list-count">
+                    <span class="list-count__icon">3</span>
+                    <strong>Выберите метод доставки:</strong>
+                </div>
+            </div>
+            <p class="text mb-30">В данном пункте Вы можете создать свой уникальный составной маршрут для отправки груза из Китая
+                в город назначения. Не важно, оптовый это груз
+                или розничный заказ. Стоимость заказа указана исходя из характеристик Вашего груза.</p>
+
+            <form action="">
+                <div class="d-flex mb-20">
+                    <div class="list-count">
+                        <span class="list-count__icon-sm">1</span>
+                        <strong>Для доставки груза: Китай - Россия</strong>
+                    </div>
+                </div>
+
+                <div class="input-group mb-20">
+                    <div class="input-group__item">
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select" disabled>
+                                <option value="" selected>Москва</option>
+                                <option value="">Баланс</option>
+                                <option value="">Баланс</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group__item">
+                        <div class="relative w-100">
+                            <svg class="select-icon" width="10" height="6"><use href="#i-select-arrow"></use></svg>
+                            <select class="input input--select">
+                                <option value="" selected>Сортировать по:</option>
+                                <option value="">Срокам</option>
+                                <option value="">Стоимости</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-30 pb-20 border-bottom">
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia1" checked>
+                        <label class="method__label" for="china-russia1">
+                            <div class="method__icon">
+                                <svg width="20" height="28"><use href="#superexpres"></use></svg>
+                            </div>
+                            <span class="method__title">Супер<br> Экспрес</span>
+                            <span class="grow-1">3-4 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia2">
+                        <label class="method__label" for="china-russia2">
+                            <div class="method__icon">
+                                <svg width="42" height="25"><use href="#avia"></use></svg>
+                            </div>
+                            <span class="method__title">Авиа</span>
+                            <span class="grow-1">6-8 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia3">
+                        <label class="method__label" for="china-russia3">
+                            <div class="method__icon">
+                                <svg width="26" height="25"><use href="#poezd"></use></svg>
+                            </div>
+                            <span class="method__title">Ж/Д</span>
+                            <span class="grow-1">10-12 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia4">
+                        <label class="method__label" for="china-russia4">
+                            <div class="method__icon">
+                                <svg width="26" height="25"><use href="#poezd"></use></svg>
+                            </div>
+                            <span class="method__title">Ж/Д</span>
+                            <span class="grow-1">13-15 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia5">
+                        <label class="method__label" for="china-russia5">
+                            <div class="method__icon">
+                                <svg width="23" height="25"><use href="#avto"></use></svg>
+                            </div>
+                            <span class="method__title">Авто</span>
+                            <span class="grow-1">18-25 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                            <span class="checkbox__icon">
+                                <svg width="10" height="8"><use href="#i-check"></use></svg>
+                            </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="method">
+                        <input class="d-none" type="radio" name="packing_method" id="china-russia6">
+                        <label class="method__label" for="china-russia6">
+                            <div class="method__icon">
+                                <svg width="22" height="25"><use href="#ship"></use></svg>
+                            </div>
+                            <span class="method__title">Море</span>
+                            <span class="grow-1">35-45 дн</span>
+                            <span class="method__price mr-10">2$</span>
+                            <div class="checkbox">
+                                <span class="checkbox__icon">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-end mb-30">
+                    <a href="#" class="btn btn--yellow btn--auto-2">
+                        <span>далее</span>
+                        <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

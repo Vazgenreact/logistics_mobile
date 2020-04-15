@@ -19,7 +19,7 @@
       border: 1px solid $silver-big;
       background-color: #fff;
 
-      svg {
+      &:disabled svg {
         opacity: .45;
       }
 

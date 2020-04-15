@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15"><use href="#logo-sm"></use></svg>
+            <p class="title">Новый расчет доставки</p>
+        </div>
+
+        <!--    three  form block    -->
+        <form action="">
+            <div class="d-flex mb-25">
+                <div class="list-count">
+                    <span class="list-count__icon">3</span>
+                    <strong>Укажите адрес доставки груза</strong>
+                </div>
+            </div>
+
+            <!--      yes delivery address      -->
+            <div class="mb-30">
+                <div class="delivery mb-20">
+                    <label class="checkbox justify-between w-100 mb-15">
+                        <small class="green-ellipse">Адрес по умолчанию</small>
+                        <input type="checkbox" class="input-hide" checked>
+                        <span class="checkbox__icon">
+                            <svg width="10" height="6"><use href="#i-check"></use></svg>
+                        </span>
+                    </label>
+
+                    <ul class="reset-list pb-25">
+                        <li>Архипенко Юлия Владимировна</li>
+                        <li>Красная, 15/1, 88</li>
+                        <li>Краснодарский край, Краснодар</li>
+                        <li>350900</li>
+                        <li>Россия</li>
+                        <li>892821965453</li>
+                    </ul>
+
+                    <div class="delivery__bottom">
+                        <div class="mb-15">
+                            <label class="checkbox">
+                                <input type="radio" name="delivery-address" class="input-hide" checked>
+                                <span class="checkbox__icon mr-10 self-start">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                <span>До пункта выдачи заказов<br> Транспортной компани (ПВЗ).<br> САМОВЫВОЗ</span>
+                            </label>
+                        </div>
+                        <div class="mb-15">
+                            <label class="checkbox">
+                                <input type="radio" name="delivery-address" class="input-hide">
+                                <span class="checkbox__icon mr-10">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="new-address">
+                    <div class="d-flex align-center">
+                        <svg width="25" height="25" class="shrink-0 mr-10"><use href="#new-adress"></use></svg>
+                        <p class="text font-400">Или создайте<br> новый адрес</p>
+                    </div>
+                    <a href="#" class="btn btn--outline btn--auto">
+                        <span>новый адрес</span>
+                        <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex flex-end mb-30">
+                <a href="#" class="btn btn--yellow btn--auto-2">
+                    <span>далее</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

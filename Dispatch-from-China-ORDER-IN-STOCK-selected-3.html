@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15">
+                <use href="#logo-sm"></use>
+            </svg>
+            <p class="title">заказы на складе</p>
+        </div>
+
+
+        <div class="list-count mb-30">
+            <span class="list-count__icon">2</span>
+            <strong class="text">Укажите получателя и адрес для доставки груза</strong>
+        </div>
+
+        <div class="mb-30">
+            <div class="d-flex justify-between mb-20">
+                <strong>Мои адреса:</strong>
+                <strong>1<span class="text--muted">/2</span></strong>
+            </div>
+
+            <div class="delivery-slider mb-20">
+                <div class="delivery-slider__list">
+                    <div class="delivery">
+                        <label class="checkbox justify-between w-100 mb-15">
+                            <small class="green-ellipse">Адрес по умолчанию</small>
+                            <input type="radio" name="delivery-checkbox" class="input-hide" checked="">
+                            <div class="checkbox__icon">
+                                <svg width="11" height="8"><use href="#i-check"></use></svg>
+                            </div>
+                        </label>
+
+                        <ul class="reset-list pb-25">
+                            <li>Архипенко Юлия Владимировна</li>
+                            <li>Красная, 15/1, 88</li>
+                            <li>Краснодарский край, Краснодар</li>
+                            <li>350900</li>
+                            <li>Россия</li>
+                            <li>892821965453</li>
+                        </ul>
+
+                        <div class="delivery__bottom">
+                            <div class="mb-15">
+                                <label class="checkbox">
+                                    <input type="radio" name="delivery-address" class="input-hide" checked="">
+                                    <span class="checkbox__icon mr-10 self-start">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                    <span>До пункта выдачи заказов<br> Транспортной компани (ПВЗ).<br> САМОВЫВОЗ</span>
+                                </label>
+                            </div>
+                            <div class="mb-15">
+                                <label class="checkbox">
+                                    <input type="radio" name="delivery-address" class="input-hide">
+                                    <span class="checkbox__icon mr-10">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                    <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery">
+                        <label class="checkbox flex-end align-center w-100 mb-15">
+                            <input type="radio" name="delivery-checkbox" class="input-hide">
+                            <div class="checkbox__icon">
+                                <svg width="11" height="8"><use href="#i-check"></use></svg>
+                            </div>
+                        </label>
+
+                        <ul class="reset-list pb-25">
+                            <li>Архипенко Юлия Владимировна</li>
+                            <li>Красная, 15/1, 88</li>
+                            <li>Краснодарский край, Краснодар</li>
+                            <li>350900</li>
+                            <li>Россия</li>
+                            <li>892821965453</li>
+                        </ul>
+
+                        <div class="delivery__bottom">
+                            <div class="mb-15">
+                                <label class="checkbox">
+                                    <input type="radio" name="delivery-address2" class="input-hide" checked="" disabled>
+                                    <span class="checkbox__icon mr-10 self-start">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                    <span>До пункта выдачи заказов<br> Транспортной компани (ПВЗ).<br> САМОВЫВОЗ</span>
+                                </label>
+                            </div>
+                            <div class="mb-15">
+                                <label class="checkbox">
+                                    <input type="radio" name="delivery-address2" class="input-hide" disabled>
+                                    <span class="checkbox__icon mr-10">
+                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                </span>
+                                    <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <span class="slider-nav__item active" style="width: calc((100% / 2) - 10px)"></span>
+                <span class="slider-nav__item" style="width: calc((100% / 2) - 10px)"></span>
+            </div>
+        </div>
+
+        <div class="border-bottom mb-30">
+            <div class="new-address mb-30">
+                <div class="d-flex align-center">
+                    <svg width="25" height="25" class="shrink-0 mr-10"><use href="#new-adress"></use></svg>
+                    <p class="text font-400">Или создайте<br> новый адрес</p>
+                </div>
+                <a href="#" class="btn btn--outline btn--auto">
+                    <span>новый адрес</span>
+                    <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                </a>
+            </div>
+
+
+            <!--   add new address    -->
+            <form action="" class="mb-30">
+                <div class="mb-20 input-group">
+                    <div class="input-group__item">
+                        <span class="input-text">Фамилия</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <span class="input-text">Имя</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="mb-20 input-group">
+                    <div class="input-group__item">
+                        <span class="input-text">Отчество</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="d-flex align-center justify-between">
+                            <span class="input-text">Страна</span>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="mb-20 input-group">
+                    <div class="input-group__item">
+                        <div class="d-flex align-center justify-between">
+                            <span class="input-text">Край или область</span>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <span class="input-text">Город</span>
+                        <div class="autocomplete-select">
+                            <input type="text" class="input" value="">
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">Перевод на карту Сбербанка</li>
+                                <li class="custom-select__item">Перевод на карту ВТБ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-20 input-group">
+                    <div class="input-group__item">
+                        <span class="input-text">Улица</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <span class="input-text">Дом</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="mb-20 input-group">
+                    <div class="input-group__item">
+                        <span class="input-text">Квартира</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <span class="input-text">Индекс</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+                <div class="mb-20 input-group">
+                    <div class="input-group__item">
+                        <span class="input-text">Телефон</span>
+                        <input type="text" class="input" value="">
+                    </div>
+                    <div class="input-group__item">
+                        <div class="d-flex align-center justify-between">
+                            <span class="input-text">Паспорт</span>
+                            <button class="tooltip-btn" type="button">
+                                <svg width="15" height="17"><use href="#i-info"></use></svg>
+                            </button>
+                        </div>
+                        <input type="text" class="input" value="">
+                    </div>
+                </div>
+
+                <div class="mb-15">
+                    <label class="checkbox">
+                        <input type="radio" name="delivery-address" class="input-hide" checked="">
+                        <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                        <span>До пункта выдачи заказов Транспортной компани (ПВЗ). САМОВЫВОЗ</span>
+                    </label>
+                </div>
+                <div class="mb-20">
+                    <label class="checkbox">
+                        <input type="radio" name="delivery-address" class="input-hide">
+                        <span class="checkbox__icon mr-10">
+                        <svg width="10" height="8"><use href="#i-check"></use></svg>
+                    </span>
+                        <span>До двери: КУРЬЕРСКАЯ ДОСТАВКА</span>
+                    </label>
+                </div>
+
+                <div class="d-flex flex-end">
+                    <a href="#" class="btn btn--yellow btn--auto">
+                        <span>сохранить</span>
+                        <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="d-flex flex-end mb-40">
+            <a href="#" class="btn btn--yellow btn--auto-2">
+                <span>далее</span>
+                <svg width="5" height="9"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="mb-25">
+            <p><strong>Внимание!</strong>
+                Мы осуществим зачисление средств
+                на баланс личного кабинета в течении
+                3х рабочих дней
+            </p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10"><use href="#i-close"></use></svg>
+        </button>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -58,15 +58,13 @@
 
     .modal__content {
       padding: 0;
-      left: 15px;
-      right: 15px;
+      left: 20px;
+      right: 20px;
     }
 
-    .reviews {
-      box-shadow: none;
-      border: 0;
-    }
     .modal__close {
+      top: 20px;
+      right: 20px;
       background-color: $color-f5;
     }
   }

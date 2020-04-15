@@ -15,6 +15,20 @@ body {
     min-height: 100vh;
   }
 }
+.to-pay-body {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+  }
+}
 @media screen and (max-width: 377px) {
   body {
     font-size: 14px;
