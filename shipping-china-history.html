@@ -95,10 +95,26 @@
                     <span class="color-blue" onclick="this.parentElement.parentElement.nextElementSibling.classList.toggle('d-none')">Не нашли нужный товар?</span>
                 </div>
                 <div class="filter__search search">
-                    <input type="text" class="input input--muted" placeholder="Введите название">
+                    <input type="text" class="input input--muted" placeholder="Введите название" value="Кран">
                     <button class="search__btn" type="button">
                         <svg width="20" height="20"><use href="#i-search"></use></svg>
                     </button>
+                    <!--    toggleClass active   -->
+                    <ul class="search__result reset-list active">
+                        <li>
+                            <p class="text"><span class="color-black">Кран</span> для кухни</p>
+                        </li>
+                        <li>
+                            <p class="text"><span class="color-black">Кран</span> водонагреватель</p>
+                            <ul class="reset-list">
+                                <li>
+                                    <p class="text"><span class="color-black">Кран</span> для кухни</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><p class="text">Ничего не найдено =(</p></li>
+                    </ul>
                 </div>
                 <div class="teg">
                     <div class="teg__item">

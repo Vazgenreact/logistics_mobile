@@ -10,4 +10,40 @@
     border: 0;
     padding: 0;
   }
+
+  &__result {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 10px;
+    border: 1px solid $silver-big;
+    border-radius: 3px;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    z-index: -9;
+    opacity: 0;
+    transition: opacity .2s;
+
+    &.active {
+      z-index: 9;
+      opacity: 1;
+      transition: opacity .2s;
+    }
+
+    .text {
+      padding: 4px 10px;
+      color: $font-color-silver;
+
+      &:hover {
+        background-color: $color-f5;
+      }
+    }
+
+    .reset-list {
+      .text {
+        padding-left: 25px;
+      }
+    }
+  }
 }
