@@ -118,6 +118,13 @@
 <!-- toggle class    active -->
 <div class="modal modal--review" id="modal-review">
     <div class="modal__content">
+        <div class="modal-review-top">
+            <a href="#">
+                <svg width="131" height="37"><use href="#big-logo"></use></svg>
+            </a>
+            <span class="modal-big-text">Отзывы</span>
+        </div>
+
         <div class="reviews">
             <div class="reviews__top">
                 <img class="reviews__img" src="img/user.png" alt="">
@@ -144,10 +151,29 @@
             </div>
         </div>
 
-        <button class="modal__close icon-btn" onclick="document.getElementById('modal-review').classList.remove('active')">
-            <svg width="10" height="10"><use href="#i-close"></use></svg>
-        </button>
+        <div class="modal-review-bottom">
+            <svg class="shrink-0" width="50" height="50"><use href="#globus"></use></svg>
+            <div class="grow-1">
+                <p class="text font-400">Работаете с Китаем?</p>
+                <p class="text">Присоединяйтесь к нашей команде.</p>
+                <p class="text">www.<span class="color-yellow">zzlogistics.ru</span></p>
+                <div class="d-flex align-center">
+                    <a class="modal-phone" href="tel:+7 900 277 47 00">+7 <span class="color-yellow">900 277 47 00</span></a>
+                    <a class="social-link" href="#">
+                        <svg width="13" height="13"><use href="#telegram"></use></svg>
+                    </a>
+                    <a class="social-link" href="#">
+                        <svg width="13" height="13"><use href="#viber"></use></svg>
+                    </a>
+                    <a class="social-link" href="#">
+                        <svg width="13" height="13"><use href="#whatsapp"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="for-close-modal" onclick="this.parentElement.classList.remove('active')"></div>
 </div>
 
 <!-- toggle class    active -->
