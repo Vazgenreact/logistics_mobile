@@ -3,14 +3,17 @@
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 10px 10px 20px;
-  background-color: $silver-normal;
-  border-radius: 10px 10px 0 0;
   z-index: 99;
+  background-color: #fff;
 
   &__list {
+    position: relative;
     display: flex;
     justify-content: center;
+    padding: 10px 10px 20px;
+    background-color: $silver-normal;
+    border-radius: 10px 10px 0 0;
+    z-index: 2;
   }
   &__item {
     padding: 0 7px;
