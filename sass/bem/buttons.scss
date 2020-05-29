@@ -66,10 +66,10 @@
   }
 
   svg {
-    &:first-child {
+    &:first-child:not(:last-child) {
       margin-right: 8px;
     }
-    &:last-child {
+    &:last-child:not(:first-child) {
       margin-left: 8px;
     }
   }

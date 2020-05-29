@@ -134,3 +134,13 @@
     }
   }
 }
+
+.message-item {
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.right {
+    margin-left: auto;
+  }
+}

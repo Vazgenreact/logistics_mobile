@@ -7,6 +7,11 @@
   font-size: 1em;
   color: $color-33;
 
+  &--sm {
+    height: 30px;
+    padding: 0 12px;
+  }
+
   &--error {
     border-color: $font-color-red;
   }

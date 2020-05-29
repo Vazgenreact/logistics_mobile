@@ -180,6 +180,9 @@ small, .small {
     color: $font-color-silver;
   }
 }
+svg.text--muted {
+  opacity: .4;
+}
 .font-400 {
   font-weight: 400;
 }
@@ -195,6 +198,7 @@ small, .small {
 .reset-btn {
   border: 0;
   background: none;
+  outline: none;
 }
 .underline {
   text-decoration: underline;
@@ -207,4 +211,8 @@ small, .small {
 }
 .color-yellow {
   color: $u-orange;
+}
+.overflow-auto {
+  overflow: auto;
+  padding-bottom: 5px;
 }

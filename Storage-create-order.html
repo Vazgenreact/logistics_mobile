@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15">
+                <use href="#logo-sm"></use>
+            </svg>
+            <p class="title">Склад</p>
+        </div>
+
+        <div class="mb-20">
+            <div class="d-flex align-center mb-10">
+                <div class="relative grow-1 mr-10">
+                    <input type="text" class="input input--muted" placeholder="Поиск" value="">
+                    <button class="search__btn" type="button">
+                        <svg width="20" height="20">
+                            <use href="#i-search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button class="btn btn--outline scan-btn">
+                    <svg width="30" height="30">
+                        <use href="#scan"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="relative mb-10">
+                <svg class="select-icon" width="10" height="6">
+                    <use href="#i-select-arrow"></use>
+                </svg>
+                <select class="input input--select">
+                    <option value="1">Заказы на выкуп</option>
+                    <option value="2">Заказы на доставку</option>
+                    <option value="3">Заказы на консолидацию</option>
+                    <option value="4">Неизвестный заказ</option>
+                </select>
+            </div>
+            <div class="relative mb-10">
+                <svg class="select-icon" width="10" height="6">
+                    <use href="#i-select-arrow"></use>
+                </svg>
+                <select class="input input--select">
+                    <option selected>Статус заказа:</option>
+                    <option value="1">Не оплачен</option>
+                    <option value="2">Оплачен</option>
+                    <option value="3">Выкуплен</option>
+                    <option value="4">Ожидаем поступления</option>
+                    <option value="5">Готов к отправке</option>
+                    <option value="6">Отправлен</option>
+                    <option value="7">Получен</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-30 border-bottom">
+            <div class="storage mb-30">
+                <div class="d-flex align-center justify-between mb-20">
+                    <span class="text-bold">Заказ на выкуп №V145184532</span>
+                    <button class="icon-btn save-btn" disabled>
+                        <svg width="13" height="13">
+                            <use href="#i-save"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="mb-20">
+                    <div class="d-flex align-center justify-between mb-15">
+                        <span>ID клиента</span>
+                        <span>ID54325463</span>
+                    </div>
+                    <div class="d-flex align-center justify-between mb-15">
+                        <span>№ заказа клиента</span>
+                        <span>145</span>
+                    </div>
+                    <div class="d-flex align-center justify-between mb-10">
+                        <span class="text-bold">№ на складе</span>
+                        <div class="d-flex">
+                            <button class="icon-btn mr-10">
+                                <svg width="15" height="15">
+                                    <use href="#i-edit"></use>
+                                </svg>
+                            </button>
+                            <input type="text" value="А125" class="input input--sm text-right text-bold" readonly>
+                        </div>
+                    </div>
+                    <div class="d-flex align-center justify-between mb-10">
+                        <span>Статус</span>
+                        <div class="relative">
+                            <svg class="select-icon" width="10" height="6">
+                                <use href="#i-select-arrow"></use>
+                            </svg>
+                            <select class="input large input--select">
+                                <option value="1">Не оплачен</option>
+                                <option value="2">Оплачен</option>
+                                <option value="3">Выкуплен</option>
+                                <option value="4" selected>Ожидаем поступления</option>
+                                <option value="5">Готов к отправке</option>
+                                <option value="6">Отправлен</option>
+                                <option value="7">Получен</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-slider__content">
+                    <div class="order-slider__nav">
+                        <button class="order-slider__link active">Трек №</button>
+                        <button class="order-slider__link ">Информация</button>
+                        <button class="order-slider__link ">Проверка</button>
+                    </div>
+
+                    <div class="tabs-content">
+                        <div class="order-slider__tab active">
+                            <ul class="reset-list border-bottom">
+                                <li class="d-flex align-center justify-between">
+                                    <div class="d-flex align-center">
+                                        <svg class="mr-15" width="10" height="8">
+                                            <use href="#i-check"></use>
+                                        </svg>
+                                        <span class="color-blue">RK11245265626</span>
+                                    </div>
+                                    <div class="relative">
+                                        <svg class="select-icon" width="10" height="6">
+                                            <use href="#i-select-arrow"></use>
+                                        </svg>
+                                        <select class="input middle input--select">
+                                            <option value="1">Ожидаем</option>
+                                            <option value="2">Получен</option>
+                                            <option value="3" selected>Проверен</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-center justify-between">
+                                    <div class="d-flex align-center">
+                                        <svg class="mr-15 text--muted" width="10" height="8">
+                                            <use href="#i-check"></use>
+                                        </svg>
+                                        <span class="color-blue">TR11165962656</span>
+                                    </div>
+                                    <div class="relative">
+                                        <svg class="select-icon" width="10" height="6">
+                                            <use href="#i-select-arrow"></use>
+                                        </svg>
+                                        <select class="input middle input--select">
+                                            <option value="1">Ожидаем</option>
+                                            <option value="2" selected>Получен</option>
+                                            <option value="3">Проверен</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-center justify-between">
+                                    <div class="d-flex align-center">
+                                        <span class="mr-15 icon-minus"></span>
+                                        <span class="color-blue">YT51545569562</span>
+                                    </div>
+                                    <div class="relative">
+                                        <svg class="select-icon" width="10" height="6">
+                                            <use href="#i-select-arrow"></use>
+                                        </svg>
+                                        <select class="input middle input--select">
+                                            <option value="1" selected>Ожидаем</option>
+                                            <option value="2">Получен</option>
+                                            <option value="3">Проверен</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="reset-btn color-blue mb-5"
+                                    onclick="this.classList.remove('color-blue');this.nextElementSibling.classList.remove('d-none')">
+                                Добавить трек номер
+                            </button>
+                            <div class="new-track pt-10 d-none">
+                                <div class="relative mb-10">
+                                    <svg class="select-icon" width="10" height="6">
+                                        <use href="#i-select-arrow"></use>
+                                    </svg>
+                                    <select class="input input--select">
+                                        <option selected>К заказу:</option>
+                                        <option value="1">№16185452154544555544</option>
+                                        <option value="2">№72016870138094051150</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex align-center mb-10">
+                                    <input type="text" class="input input--muted mr-10" placeholder="" value="">
+                                    <button class="btn btn--outline scan-btn">
+                                        <svg width="20" height="20">
+                                            <use href="#i-add"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="d-flex flex-end pt-20">
+                                    <a href="#" class="btn btn--yellow btn--auto">
+                                        <span>сохранить</span>
+                                        <svg width="5" height="9">
+                                            <use href="#i-arrow"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-slider__tab ">
+                            <div class="order-slider__content">
+                                <div class="order-slider__nav pt-10">
+                                    <button class="order-slider__link active">Товар</button>
+                                    <button class="order-slider__link ">Упаковка</button>
+                                    <button class="order-slider__link ">Доставка</button>
+                                </div>
+
+                                <div class="tabs-content">
+                                    <div class="order-slider__tab active">
+                                        <div class="pb-20">
+                                            <div class="pt-10 mb-20">
+                                                <p class="text mb-10"><strong>TR11165962656</strong></p>
+                                                <p class="text mb-10"><strong>RK11245265626</strong></p>
+                                            </div>
+                                            <div class="d-flex overflow-auto mb-20">
+                                                <div class="images-slider__item">
+                                                    <img src="img/botas1.png" alt="">
+                                                </div>
+                                                <div class="images-slider__item">
+                                                    <img src="img/botas2.png" alt="">
+                                                </div>
+                                                <div class="images-slider__item">
+                                                    <img src="img/botas3.png" alt="">
+                                                </div>
+                                                <div class="images-slider__item">
+                                                    <img src="img/botas4.png" alt="">
+                                                </div>
+                                                <div class="images-slider__item">
+                                                    <img src="img/botas3.png" alt="">
+                                                </div>
+                                                <div class="images-slider__item">
+                                                    <img src="img/botas4.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="">
+                                                <p class="text mb-5">Скриншот с модификациями товара</p>
+                                                <div class="d-flex align-center mb-10">
+                                                    <input type="text" class="input input--muted mr-10" placeholder="" value="https://detail.1688.com/pic/5585...">
+                                                    <button class="btn btn--outline scan-btn">
+                                                        <svg width="20" height="20">
+                                                            <use href="#i-link-right"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex align-center mb-10">
+                                                    <input type="text" class="input input--muted mr-10" placeholder="" value="https://detail.1688.com/pic/5585...">
+                                                    <button class="btn btn--outline scan-btn">
+                                                        <svg width="20" height="20">
+                                                            <use href="#i-link-right"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="pink-block">
+                                            <label class="checkbox justify-between w-100 mb-5">
+                                                <span>Приемка на складе</span>
+                                                <input type="checkbox" class="input-hide" checked="">
+                                                <span class="checkbox__icon">
+                                            <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                        </span>
+                                            </label>
+                                            <label class="checkbox justify-between w-100 mb-5">
+                                                <span>Проверка на визуальный брак</span>
+                                                <input type="checkbox" class="input-hide">
+                                                <span class="checkbox__icon">
+                                            <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                        </span>
+                                            </label>
+                                            <label class="checkbox justify-between w-100 mb-5">
+                                                <span>Детальная проверка на брак</span>
+                                                <input type="checkbox" class="input-hide">
+                                                <span class="checkbox__icon">
+                                            <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                        </span>
+                                            </label>
+                                            <label class="checkbox justify-between w-100">
+                                                <span>Отдельное фото товара</span>
+                                                <input type="checkbox" class="input-hide">
+                                                <span class="checkbox__icon">
+                                            <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                        </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="pt-20">
+                                            <div class="message-item mb-15">
+                                                <div class="small w-100 mb-5">
+                                                    <p class="text name">Комментарий клиента:</p>
+                                                </div>
+                                                <div class="message__text">
+                                                    <p class="text">“Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                        elit. Donec condimentum, lacus vitae commodo convallis, augue
+                                                        neque blandit...</p>
+                                                </div>
+                                            </div>
+                                            <!--     Отправить сообщение    -->
+                                            <div class="d-flex">
+                                                <label class="messages__label">
+                                                    <input type="text" class="input messages__input" placeholder="Введите сообщение">
+                                                    <svg class="messages__icon" width="20" height="20">
+                                                        <use href="#i-file"></use>
+                                                    </svg>
+                                                </label>
+                                                <button class="messages__send">
+                                                    <svg width="20" height="20">
+                                                        <use href="#sending"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-slider__tab">
+                                        <div class="d-flex align-center pt-10">
+                                        <span class="mr-15">
+                                            <svg width="24" height="24"><use href="#palet"></use></svg>
+                                        </span>
+                                            <span class="method__title1">Палет + обрешетка<br> + стрейч-пленка + скотч </span>
+                                        </div>
+                                    </div>
+                                    <div class="order-slider__tab">
+                                        <ul class="reset-list">
+                                            <li class="border-bottom">
+                                                <span>Китай - Китай</span>
+                                                <div class="relative">
+                                                    <svg class="select-icon" width="10" height="6">
+                                                        <use href="#i-select-arrow"></use>
+                                                    </svg>
+                                                    <select class="input input--select">
+                                                        <option value="TR29823893399" selected="">TR29823893399</option>
+                                                        <option value="TR11165962656">TR11165962656</option>
+                                                        <option value="TR89383289996">TR89383289996</option>
+                                                        <option value="TR28278236209">TR28278236209</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <span>Китай - Россия</span>
+                                                <span>ЖД 8-12 дней</span>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <span>Россия - Россия<br> Сдек, до двери</span>
+                                                <div class="relative">
+                                                    <svg class="select-icon" width="10" height="6">
+                                                        <use href="#i-select-arrow"></use>
+                                                    </svg>
+                                                    <select class="input input--select">
+                                                        <option value="TR29823893399" selected=""></option>
+                                                        <option value="TR29823893399">TR29823893399</option>
+                                                        <option value="TR11165962656">TR11165962656</option>
+                                                        <option value="TR89383289996">TR89383289996</option>
+                                                        <option value="TR28278236209">TR28278236209</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-slider__tab ">
+                            <div class="inspection mb-20">
+                                <div class="relative mb-15">
+                                    <svg class="select-icon" width="10" height="6">
+                                        <use href="#i-select-arrow"></use>
+                                    </svg>
+                                    <select class="input input--select">
+                                        <option value="1">YT51545569562</option>
+                                        <option value="2">YT51545569562</option>
+                                        <option value="3">YT51545569562</option>
+                                    </select>
+                                </div>
+                                <div class="pink-block mb-15">
+                                    <label class="checkbox justify-between w-100 mb-5">
+                                        <span>Приемка на складе</span>
+                                        <input type="checkbox" class="input-hide" checked>
+                                        <span class="checkbox__icon">
+                                    <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                </span>
+                                    </label>
+                                    <label class="checkbox justify-between w-100 mb-5">
+                                        <span>Проверка на визуальный брак</span>
+                                        <input type="checkbox" class="input-hide">
+                                        <span class="checkbox__icon">
+                                    <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                </span>
+                                    </label>
+                                    <label class="checkbox justify-between w-100 mb-5">
+                                        <span>Детальная проверка на брак</span>
+                                        <input type="checkbox" class="input-hide">
+                                        <span class="checkbox__icon">
+                                    <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                </span>
+                                    </label>
+                                    <label class="checkbox justify-between w-100">
+                                        <span>Отдельное фото товара</span>
+                                        <input type="checkbox" class="input-hide">
+                                        <span class="checkbox__icon">
+                                    <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                </span>
+                                    </label>
+                                </div>
+                                <div class="d-flex align-center justify-between">
+                                    <span>Статус</span>
+                                    <div class="relative">
+                                        <svg class="select-icon" width="10" height="6">
+                                            <use href="#i-select-arrow"></use>
+                                        </svg>
+                                        <select class="input large input--select">
+                                            <option value="1">Не оплачен</option>
+                                            <option value="2">Оплачен</option>
+                                            <option value="3">Выкуплен</option>
+                                            <option value="4">Ожидаем поступления</option>
+                                            <option value="5">Готов к отправке</option>
+                                            <option value="6">Отправлен</option>
+                                            <option value="7" selected>Получен</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-slider__content">
+                                <div class="order-slider__nav mb-15">
+                                    <button class="order-slider__link active">Габариты</button>
+                                    <button class="order-slider__link">Фото</button>
+                                    <button class="order-slider__link ">Услуги</button>
+                                </div>
+
+                                <div class="tabs-content">
+                                    <div class="order-slider__tab active">
+                                        <div class="mb-20 pb-30 border-bottom">
+                                            <p class="text-bold text mb-15">Место 1</p>
+                                            <div class="d-flex justify-between mb-20">
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Длина, см</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Ширина, см</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Высота, см</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Вес, кг</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-20">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="delivery-address3" class="input-hide" checked="">
+                                                    <span class="checkbox__icon mr-10">
+                                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                                </span>
+                                                    <span>Брендовый товар</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="">
+                                                <div class="d-flex justify-between">
+                                                    <span>Укажите груз:</span>
+                                                    <span class="color-blue">Не нашли нужный товар?</span>
+                                                </div>
+                                                <div class="filter__search search">
+                                                    <input type="text" class="input input--muted"
+                                                           placeholder="Введите название товара" value="">
+                                                    <button class="search__btn" type="button">
+                                                        <svg width="20" height="20">
+                                                            <use href="#i-search"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <!--    toggleClass active   -->
+                                                    <ul class="search__result reset-list">
+                                                        <li>
+                                                            <p class="text"><span class="color-black">Кран</span> для кухни
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text"><span class="color-black">Кран</span>
+                                                                водонагреватель</p>
+                                                            <ul class="reset-list">
+                                                                <li>
+                                                                    <p class="text"><span class="color-black">Кран</span>
+                                                                        для кухни</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li><p class="text">Ничего не найдено =(</p></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="teg">
+                                                    <div class="teg__item">
+                                                        <span>Женские ветровки</span>
+                                                        <button class="teg__close" type="button">
+                                                            <svg width="6" height="6">
+                                                                <use href="#i-close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="teg__item">
+                                                        <span>Брюки мужские</span>
+                                                        <button class="teg__close" type="button">
+                                                            <svg width="6" height="6">
+                                                                <use href="#i-close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-bottom pb-20 mb-20">
+                                            <p class="text text-bold mb-5">Упаковка</p>
+                                            <ul class="reset-list mb-5">
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Скотч</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" checked class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Мешок, штук</span>
+
+                                                    <div class="d-flex">
+                                                        <!--  при выборе просто убираем класс counter--disabled и disabled у buttons  -->
+                                                        <div class="counter mr-20 counter--disabled">
+                                                            <button type="button" class="counter__btn" disabled="">-</button>
+                                                            <span class="counter__number">1</span>
+                                                            <button type="button" class="counter__btn" disabled="">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Коробка, штук</span>
+
+                                                    <div class="d-flex">
+                                                        <div class="counter mr-20">
+                                                            <button type="button" class="counter__btn">-</button>
+                                                            <span class="counter__number">3</span>
+                                                            <button type="button" class="counter__btn">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" checked class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Обрешетка</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Палет</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Уголки</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Стрейч-пленка, слой</span>
+
+                                                    <div class="d-flex">
+                                                        <div class="counter mr-20 counter--disabled">
+                                                            <button type="button" class="counter__btn" disabled="">-</button>
+                                                            <span class="counter__number">1</span>
+                                                            <button type="button" class="counter__btn" disabled="">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Пупырка, слой</span>
+
+                                                    <div class="d-flex">
+                                                        <div class="counter mr-20">
+                                                            <button type="button" class="counter__btn" disabled="">-</button>
+                                                            <span class="counter__number">1</span>
+                                                            <button type="button" class="counter__btn">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" checked class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <div class="">
+                                                <span class="input-text">Комментарий:</span>
+                                                <textarea name="" class="input input--muted input--textarea" placeholder="Текст комментария"></textarea>
+                                                <div class="d-flex flex-end saved-message">
+                                                    <div class="d-flex align-center">
+                                                        <svg width="7" height="7">
+                                                            <use href="#i-check-circle"></use>
+                                                        </svg>
+                                                        <small class="ml-5">Комментарий сохранен</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-25 pb-30 border-bottom">
+                                            <p class="text-bold text mb-15">Место 2</p>
+                                            <div class="d-flex justify-between mb-20">
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Длина, см</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Ширина, см</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Высота, см</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                                <div class="column-3">
+                                                    <p class="text mb-5">Вес, кг</p>
+                                                    <input type="number" class="input">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-20">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="delivery-address" class="input-hide">
+                                                    <span class="checkbox__icon mr-10">
+                                                    <svg width="10" height="8"><use href="#i-check"></use></svg>
+                                                </span>
+                                                    <span>Брендовый товар</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="">
+                                                <div class="d-flex justify-between mb-5">
+                                                    <span>Укажите груз:</span>
+                                                    <span class="color-blue">Поиск по названию</span>
+                                                </div>
+
+                                                <div class="relative w-100 mb-10">
+                                                    <svg class="select-icon" width="10" height="6">
+                                                        <use href="#i-select-arrow"></use>
+                                                    </svg>
+                                                    <select class="input input--select">
+                                                        <option value="Категория">Категория</option>
+                                                        <option value="Категория 1">Категория 1</option>
+                                                        <option value="Категория 2">Категория 2</option>
+                                                        <option value="Категория">Категори 3</option>
+                                                        <option value="Категория">Категория 4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="relative w-100 mb-10">
+                                                    <svg class="select-icon" width="10" height="6">
+                                                        <use href="#i-select-arrow"></use>
+                                                    </svg>
+                                                    <select class="input input--select">
+                                                        <option value="Категория">Подкатегория</option>
+                                                        <option value="Категория 1">Категория 1</option>
+                                                        <option value="Категория 2">Категория 2</option>
+                                                        <option value="Категория">Категори 3</option>
+                                                        <option value="Категория">Категория 4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="relative w-100">
+                                                    <svg class="select-icon" width="10" height="6">
+                                                        <use href="#i-select-arrow"></use>
+                                                    </svg>
+                                                    <select class="input input--select">
+                                                        <option value="Категория">Товар</option>
+                                                        <option value="Категория 1">Категория 1</option>
+                                                        <option value="Категория 2">Категория 2</option>
+                                                        <option value="Категория">Категори 3</option>
+                                                        <option value="Категория">Категория 4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="teg">
+                                                    <div class="teg__item">
+                                                        <span>Женские ветровки</span>
+                                                        <button class="teg__close" type="button">
+                                                            <svg width="6" height="6">
+                                                                <use href="#i-close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="teg__item">
+                                                        <span>Брюки мужские</span>
+                                                        <button class="teg__close" type="button">
+                                                            <svg width="6" height="6">
+                                                                <use href="#i-close"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-bottom pb-20 mb-20">
+                                            <p class="text text-bold mb-5">Упаковка</p>
+                                            <ul class="reset-list mb-5">
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Скотч</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" checked class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Мешок, штук</span>
+
+                                                    <div class="d-flex">
+                                                        <!--  при выборе просто убираем класс counter--disabled и disabled у buttons  -->
+                                                        <div class="counter mr-20 counter--disabled">
+                                                            <button type="button" class="counter__btn" disabled="">-</button>
+                                                            <span class="counter__number">1</span>
+                                                            <button type="button" class="counter__btn" disabled="">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Коробка, штук</span>
+
+                                                    <div class="d-flex">
+                                                        <div class="counter mr-20">
+                                                            <button type="button" class="counter__btn">-</button>
+                                                            <span class="counter__number">3</span>
+                                                            <button type="button" class="counter__btn">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" checked class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Обрешетка</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Палет</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Уголки</span>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" class="input-hide">
+                                                        <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Стрейч-пленка, слой</span>
+
+                                                    <div class="d-flex">
+                                                        <div class="counter mr-20 counter--disabled">
+                                                            <button type="button" class="counter__btn" disabled="">-</button>
+                                                            <span class="counter__number">1</span>
+                                                            <button type="button" class="counter__btn" disabled="">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex align-center justify-between">
+                                                    <span>Пупырка, слой</span>
+
+                                                    <div class="d-flex">
+                                                        <div class="counter mr-20">
+                                                            <button type="button" class="counter__btn" disabled="">-</button>
+                                                            <span class="counter__number">1</span>
+                                                            <button type="button" class="counter__btn">+</button>
+                                                        </div>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" checked class="input-hide">
+                                                            <span class="checkbox__icon">
+                                                        <svg width="10" height="7"><use href="#i-check"></use></svg>
+                                                    </span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <div class="">
+                                                <span class="input-text">Комментарий:</span>
+                                                <textarea name="" class="input input--muted input--textarea" placeholder="Текст комментария"></textarea>
+                                                <div class="d-flex flex-end saved-message">
+                                                    <div class="d-flex align-center">
+                                                        <svg width="7" height="7">
+                                                            <use href="#i-check-circle"></use>
+                                                        </svg>
+                                                        <small class="ml-5">Комментарий сохранен</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-center mb-25">
+                                            <button class="reset-btn color-blue">Добавить еще 1 место</button>
+                                        </div>
+
+                                        <div class="d-flex flex-end">
+                                            <a href="#" class="btn btn--yellow btn--auto">
+                                                <span>сохранить</span>
+                                                <svg width="5" height="9">
+                                                    <use href="#i-arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="order-slider__tab">
+                                        <div class="images-slider mb-20">
+                                            <label class="images-slider__item">
+                                                <input type="file" class="d-none">
+                                                <svg width="20" height="20">
+                                                    <use href="#i-add"></use>
+                                                </svg>
+                                            </label>
+                                            <div class="images-slider__item"></div>
+                                            <div class="images-slider__item"></div>
+                                            <div class="images-slider__item"></div>
+                                            <div class="images-slider__item"></div>
+                                            <div class="images-slider__item"></div>
+                                        </div>
+
+                                        <div class="mb-20">
+                                            <span class="input-text">Комментарий:</span>
+                                            <textarea name="" class="input input--muted input--textarea"
+                                                      placeholder="Текст комментария"></textarea>
+                                            <div class="d-flex flex-end saved-message">
+                                                <div class="d-flex align-center">
+                                                    <svg width="7" height="7">
+                                                        <use href="#i-check-circle"></use>
+                                                    </svg>
+                                                    <small class="ml-5">Комментарий сохранен</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-end">
+                                            <a href="#" class="btn btn--yellow btn--auto">
+                                                <span>сохранить</span>
+                                                <svg width="5" height="9">
+                                                    <use href="#i-arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="order-slider__tab">
+                                        <div class="mb-30">
+                                            <p class="text mb-5">Выставить доп. счет по данному заказу</p>
+                                            <div class="relative w-100">
+                                                <svg class="select-icon" width="10" height="6">
+                                                    <use href="#i-select-arrow"></use>
+                                                </svg>
+                                                <select class="input input--select">
+                                                    <option value="Категория">Выберите услугу</option>
+                                                    <option value="Категория 1">Категория 1</option>
+                                                    <option value="Категория 2">Категория 2</option>
+                                                    <option value="Категория">Категори 3</option>
+                                                    <option value="Категория">Категория 4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-center mb-20">
+                                            <span class="text mr-20">Укажите<br> сумму</span>
+                                            <input type="number" class="input input--select mr-10">
+                                            <div class="relative shrink-0">
+                                                <svg class="select-icon" width="10" height="6">
+                                                    <use href="#i-select-arrow"></use>
+                                                </svg>
+                                                <select class="input input--select">
+                                                    <option value="юани">¥, юани</option>
+                                                    <option value="доллары">$, доллары</option>
+                                                    <option value="рубли">₽, рубли</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-10">
+                                            <span class="input-text">Комментарий:</span>
+                                            <textarea name="" class="input input--muted input--textarea"
+                                                      placeholder="Текст комментария для пользователя"></textarea>
+                                        </div>
+
+                                        <div class="d-flex align-end justify-between">
+                                            <label class="images-slider__item">
+                                                <input type="file" class="d-none">
+                                                <svg width="20" height="20">
+                                                    <use href="#i-add"></use>
+                                                </svg>
+                                            </label>
+                                            <a href="#" class="btn btn--yellow btn--auto">
+                                                <span>выставить счет</span>
+                                                <svg width="5" height="9">
+                                                    <use href="#i-arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-end mb-30">
+            <a href="#" class="btn btn--yellow btn--auto">
+                <span>создать заказ</span>
+                <svg width="5" height="9">
+                    <use href="#i-arrow"></use>
+                </svg>
+            </a>
+        </div>
+
+        <div class="storage mb-30">
+            <div class="d-flex align-center justify-between mb-20">
+                <span class="text-bold">Заказ на выкуп №V145184532</span>
+                <button class="icon-btn save-btn" disabled>
+                    <svg width="13" height="13">
+                        <use href="#i-save"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mb-20">
+                <div class="mb-10">
+                    <p class="text mb-5">Введите трек номер:</p>
+                    <input name="" class="input input--muted w-100" placeholder="Трек №">
+                </div>
+                <div class="mb-15">
+                    <p class="text mb-5">Введите ID клиента</p>
+                    <input name="" class="input input--muted w-100" placeholder="Введите ID клиента">
+                </div>
+                <div class="mb-15 d-flex justify-between">
+                    <span>№ заказа клиента</span>
+                    <span>-</span>
+                </div>
+                <div class="d-flex align-center justify-between mb-10">
+                    <span class="text-bold">№ на складе</span>
+                    <div class="d-flex">
+                        <button class="icon-btn mr-10">
+                            <svg width="15" height="15">
+                                <use href="#i-edit"></use>
+                            </svg>
+                        </button>
+                        <input type="text" value="" class="input input--sm text-right text-bold" readonly>
+                    </div>
+                </div>
+                <div class="d-flex align-center justify-between mb-10">
+                    <span>Статус</span>
+                    <div class="relative">
+                        <svg class="select-icon" width="10" height="6">
+                            <use href="#i-select-arrow"></use>
+                        </svg>
+                        <select class="input large input--select">
+                            <option value="1">Не оплачен</option>
+                            <option value="2">Оплачен</option>
+                            <option value="3">Выкуплен</option>
+                            <option value="4" >Ожидаем поступления</option>
+                            <option value="5">Готов к отправке</option>
+                            <option value="6">Отправлен</option>
+                            <option value="7" selected>Получен</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-slider__content">
+                <div class="order-slider__nav mb-15">
+                    <button class="order-slider__link active">Габариты</button>
+                    <button class="order-slider__link">Фото</button>
+                    <button class="order-slider__link ">Услуги</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="order-slider__tab active">
+                        <div class="mb-25 pb-30 border-bottom">
+                            <p class="text-bold text mb-15">Место 1</p>
+                            <div class="d-flex justify-between mb-20">
+                                <div class="column-3">
+                                    <p class="text mb-5">Длина, см</p>
+                                    <input type="number" class="input">
+                                </div>
+                                <div class="column-3">
+                                    <p class="text mb-5">Ширина, см</p>
+                                    <input type="number" class="input">
+                                </div>
+                                <div class="column-3">
+                                    <p class="text mb-5">Высота, см</p>
+                                    <input type="number" class="input">
+                                </div>
+                                <div class="column-3">
+                                    <p class="text mb-5">Вес, кг</p>
+                                    <input type="number" class="input">
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <div class="d-flex justify-between">
+                                    <span>Укажите груз:</span>
+                                    <span class="color-blue">Не нашли нужный товар?</span>
+                                </div>
+                                <div class="filter__search search">
+                                    <input type="text" class="input input--muted" placeholder="Введите название товара" value="">
+                                    <button class="search__btn" type="button">
+                                        <svg width="20" height="20">
+                                            <use href="#i-search"></use>
+                                        </svg>
+                                    </button>
+                                    <!--    toggleClass active   -->
+                                    <ul class="search__result reset-list">
+                                        <li>
+                                            <p class="text"><span class="color-black">Кран</span> для кухни
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="text"><span class="color-black">Кран</span>
+                                                водонагреватель</p>
+                                            <ul class="reset-list">
+                                                <li>
+                                                    <p class="text"><span class="color-black">Кран</span>
+                                                        для кухни</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li><p class="text">Ничего не найдено =(</p></li>
+                                    </ul>
+                                </div>
+                                <div class="teg">
+                                    <div class="teg__item">
+                                        <span>Женские ветровки</span>
+                                        <button class="teg__close" type="button">
+                                            <svg width="6" height="6">
+                                                <use href="#i-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="teg__item">
+                                        <span>Брюки мужские</span>
+                                        <button class="teg__close" type="button">
+                                            <svg width="6" height="6">
+                                                <use href="#i-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-25 pb-30 border-bottom">
+                            <p class="text-bold text mb-15">Место 2</p>
+                            <div class="d-flex justify-between mb-20">
+                                <div class="column-3">
+                                    <p class="text mb-5">Длина, см</p>
+                                    <input type="number" class="input">
+                                </div>
+                                <div class="column-3">
+                                    <p class="text mb-5">Ширина, см</p>
+                                    <input type="number" class="input">
+                                </div>
+                                <div class="column-3">
+                                    <p class="text mb-5">Высота, см</p>
+                                    <input type="number" class="input">
+                                </div>
+                                <div class="column-3">
+                                    <p class="text mb-5">Вес, кг</p>
+                                    <input type="number" class="input">
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <div class="d-flex justify-between mb-5">
+                                    <span>Укажите груз:</span>
+                                    <span class="color-blue">Поиск по названию</span>
+                                </div>
+
+                                <div class="relative w-100 mb-10">
+                                    <svg class="select-icon" width="10" height="6">
+                                        <use href="#i-select-arrow"></use>
+                                    </svg>
+                                    <select class="input input--select">
+                                        <option value="Категория">Категория</option>
+                                        <option value="Категория 1">Категория 1</option>
+                                        <option value="Категория 2">Категория 2</option>
+                                        <option value="Категория">Категори 3</option>
+                                        <option value="Категория">Категория 4</option>
+                                    </select>
+                                </div>
+                                <div class="relative w-100 mb-10">
+                                    <svg class="select-icon" width="10" height="6">
+                                        <use href="#i-select-arrow"></use>
+                                    </svg>
+                                    <select class="input input--select">
+                                        <option value="Категория">Подкатегория</option>
+                                        <option value="Категория 1">Категория 1</option>
+                                        <option value="Категория 2">Категория 2</option>
+                                        <option value="Категория">Категори 3</option>
+                                        <option value="Категория">Категория 4</option>
+                                    </select>
+                                </div>
+                                <div class="relative w-100">
+                                    <svg class="select-icon" width="10" height="6">
+                                        <use href="#i-select-arrow"></use>
+                                    </svg>
+                                    <select class="input input--select">
+                                        <option value="Категория">Товар</option>
+                                        <option value="Категория 1">Категория 1</option>
+                                        <option value="Категория 2">Категория 2</option>
+                                        <option value="Категория">Категори 3</option>
+                                        <option value="Категория">Категория 4</option>
+                                    </select>
+                                </div>
+                                <div class="teg">
+                                    <div class="teg__item">
+                                        <span>Женские ветровки</span>
+                                        <button class="teg__close" type="button">
+                                            <svg width="6" height="6">
+                                                <use href="#i-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="teg__item">
+                                        <span>Брюки мужские</span>
+                                        <button class="teg__close" type="button">
+                                            <svg width="6" height="6">
+                                                <use href="#i-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-center mb-25">
+                            <button class="reset-btn color-blue">Добавить еще 1 место</button>
+                        </div>
+
+                        <div class="d-flex flex-end">
+                            <a href="#" class="btn btn--yellow btn--auto">
+                                <span>сохранить</span>
+                                <svg width="5" height="9">
+                                    <use href="#i-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-slider__tab">
+                        <div class="images-slider mb-20">
+                            <label class="images-slider__item">
+                                <input type="file" class="d-none">
+                                <svg width="20" height="20">
+                                    <use href="#i-add"></use>
+                                </svg>
+                            </label>
+                            <div class="images-slider__item"></div>
+                            <div class="images-slider__item"></div>
+                            <div class="images-slider__item"></div>
+                            <div class="images-slider__item"></div>
+                            <div class="images-slider__item"></div>
+                        </div>
+
+                        <div class="mb-20">
+                            <span class="input-text">Комментарий:</span>
+                            <textarea name="" class="input input--muted input--textarea" placeholder="Текст комментария"></textarea>
+                            <div class="d-flex flex-end saved-message">
+                                <div class="d-flex align-center">
+                                    <svg width="7" height="7">
+                                        <use href="#i-check-circle"></use>
+                                    </svg>
+                                    <small class="ml-5">Комментарий сохранен</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-end">
+                            <a href="#" class="btn btn--yellow btn--auto">
+                                <span>сохранить</span>
+                                <svg width="5" height="9">
+                                    <use href="#i-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-slider__tab">
+                        <div class="mb-30">
+                            <p class="text mb-5">Выставить доп. счет по данному заказу</p>
+                            <div class="relative w-100">
+                                <svg class="select-icon" width="10" height="6">
+                                    <use href="#i-select-arrow"></use>
+                                </svg>
+                                <select class="input input--select">
+                                    <option value="Категория">Выберите услугу</option>
+                                    <option value="Категория 1">Категория 1</option>
+                                    <option value="Категория 2">Категория 2</option>
+                                    <option value="Категория">Категори 3</option>
+                                    <option value="Категория">Категория 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex align-center mb-20">
+                            <span class="text mr-20">Укажите<br> сумму</span>
+                            <input type="number" class="input input--select mr-10">
+                            <div class="relative shrink-0">
+                                <svg class="select-icon" width="10" height="6">
+                                    <use href="#i-select-arrow"></use>
+                                </svg>
+                                <select class="input input--select">
+                                    <option value="юани">¥, юани</option>
+                                    <option value="доллары">$, доллары</option>
+                                    <option value="рубли">₽, рубли</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-10">
+                            <span class="input-text">Комментарий:</span>
+                            <textarea name="" class="input input--muted input--textarea" placeholder="Текст комментария для пользователя"></textarea>
+                        </div>
+
+                        <div class="d-flex align-end justify-between">
+                            <label class="images-slider__item">
+                                <input type="file" class="d-none">
+                                <svg width="20" height="20">
+                                    <use href="#i-add"></use>
+                                </svg>
+                            </label>
+                            <a href="#" class="btn btn--yellow btn--auto">
+                                <span>выставить счет</span>
+                                <svg width="5" height="9">
+                                    <use href="#i-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Menu  -->
+<nav class="menu">
+    <ul class="menu__list reset-list">
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="29" height="27">
+                    <use href="#i-home"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="29" height="31">
+                    <use href="#i-box"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="36" height="23">
+                    <use href="#i-delivery"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="33" height="25">
+                    <use href="#i-referal"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="33" height="23">
+                    <use href="#i-message"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="26" height="26">
+                    <use href="#i-menu"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="">
+            <p>История заявки на отправку. Мы сохранили данные, указанные Вами при оформлении заявки на отправку груза
+                из Китая. Теперь Вы можете сравнить их с данными фактической отправки груза.</p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10">
+                <use href="#i-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<!-- toggle class    active -->
+<div class="modal" id="modal">
+    <div class="modal__content text-center">
+        <div class="mb-30">
+            <strong>Вы уверены, что хотите удалить заказ на доставку?</strong>
+        </div>
+
+        <div class="d-flex justify-center">
+            <button class="btn btn--outline btn--auto mr-10">
+                <span class="font-400">удалить</span>
+                <svg width="5" height="9">
+                    <use href="#i-arrow"></use>
+                </svg>
+            </button>
+            <button class="btn btn--outline btn--auto">
+                <span>отмена</span>
+                <svg width="5" height="9">
+                    <use href="#i-arrow"></use>
+                </svg>
+            </button>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal').classList.remove('active')">
+            <svg width="10" height="10">
+                <use href="#i-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        let navs = document.querySelectorAll('.order-slider__nav');
+
+        for (let i = 0, len = navs.length; i < len; i++) {
+            let links = navs[i].querySelectorAll('.order-slider__link');
+
+            links.forEach((elem, i) => {
+                elem.addEventListener('click', function () {
+                    this.parentElement.querySelector('.order-slider__link.active').classList.remove('active');
+                    this.classList.add('active');
+                    this.parentElement.nextElementSibling.querySelector('.order-slider__tab.active').classList.remove('active');
+                    this.parentElement.nextElementSibling.children[i].classList.add('active')
+                })
+            });
+        }
+    }
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

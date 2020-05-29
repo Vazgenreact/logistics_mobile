@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics вход</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="mobile-body">
+<!-- Это спрайт c svg иконками -->
+<div class="d-none">
+    <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container menu-padding">
+    <div class="pt-30">
+        <div class="small-logo">
+            <svg width="13" height="15">
+                <use href="#logo-sm"></use>
+            </svg>
+            <p class="title">Склад</p>
+        </div>
+
+        <div class="pb-60">
+            <div class="d-flex align-center mb-10">
+                <div class="relative grow-1 mr-10">
+                    <input type="text" class="input input--muted" placeholder="Поиск" value="">
+                    <button class="search__btn" type="button">
+                        <svg width="20" height="20">
+                            <use href="#i-search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button class="btn btn--outline scan-btn">
+                    <svg width="30" height="30">
+                        <use href="#scan"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="relative mb-10">
+                <svg class="select-icon" width="10" height="6">
+                    <use href="#i-select-arrow"></use>
+                </svg>
+                <select class="input input--select">
+                    <option></option>
+                    <option value="1">Заказы на выкуп</option>
+                    <option value="2">Заказы на доставку</option>
+                    <option value="3">Заказы на консолидацию</option>
+                    <option value="4">Неизвестный заказ</option>
+                </select>
+            </div>
+            <div class="relative mb-10">
+                <svg class="select-icon" width="10" height="6">
+                    <use href="#i-select-arrow"></use>
+                </svg>
+                <select class="input input--select">
+                    <option selected>Статус заказа:</option>
+                    <option value="1">Не оплачен</option>
+                    <option value="2">Оплачен</option>
+                    <option value="3">Выкуплен</option>
+                    <option value="4">Ожидаем поступления</option>
+                    <option value="5">Готов к отправке</option>
+                    <option value="6">Отправлен</option>
+                    <option value="7">Получен</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    нет операций   -->
+        <div class="mb-25 transactions-not-result text-center">
+            <img class="mb-20" width="195" height="200" src="./img/not-result.png" alt="">
+            <p class="text">На данный момент таких заказов нет</p>
+        </div>
+
+        <div class="d-flex justify-center">
+            <a href="#" class="btn btn--auto btn--yellow">
+                <span>создать заказ</span>
+                <svg width="6" height="11"><use href="#i-arrow"></use></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--  Menu  -->
+<nav class="menu">
+    <ul class="menu__list reset-list">
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="29" height="27">
+                    <use href="#i-home"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="29" height="31">
+                    <use href="#i-box"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="36" height="23">
+                    <use href="#i-delivery"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="33" height="25">
+                    <use href="#i-referal"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="33" height="23">
+                    <use href="#i-message"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">
+                <svg width="26" height="26">
+                    <use href="#i-menu"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- toggle class    active -->
+<div class="modal" id="modal-tooltip" onclick="this.classList.remove('active')">
+    <div class="modal__content text-center">
+        <div class="">
+            <p>История заявки на отправку. Мы сохранили данные, указанные Вами при оформлении заявки на отправку груза
+                из Китая. Теперь Вы можете сравнить их с данными фактической отправки груза.</p>
+        </div>
+        <button class="modal__close icon-btn">
+            <svg width="10" height="10">
+                <use href="#i-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<!-- toggle class    active -->
+<div class="modal" id="modal">
+    <div class="modal__content text-center">
+        <div class="mb-30">
+            <strong>Вы уверены, что хотите удалить заказ на доставку?</strong>
+        </div>
+
+        <div class="d-flex justify-center">
+            <button class="btn btn--outline btn--auto mr-10">
+                <span class="font-400">удалить</span>
+                <svg width="5" height="9">
+                    <use href="#i-arrow"></use>
+                </svg>
+            </button>
+            <button class="btn btn--outline btn--auto">
+                <span>отмена</span>
+                <svg width="5" height="9">
+                    <use href="#i-arrow"></use>
+                </svg>
+            </button>
+        </div>
+
+        <button class="modal__close icon-btn" onclick="document.getElementById('modal').classList.remove('active')">
+            <svg width="10" height="10">
+                <use href="#i-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        let navs = document.querySelectorAll('.order-slider__nav');
+
+        for (let i = 0, len = navs.length; i < len; i++) {
+            let links = navs[i].querySelectorAll('.order-slider__link');
+
+            links.forEach((elem, i) => {
+                elem.addEventListener('click', function () {
+                    this.parentElement.querySelector('.order-slider__link.active').classList.remove('active');
+                    this.classList.add('active');
+                    this.parentElement.nextElementSibling.querySelector('.order-slider__tab.active').classList.remove('active');
+                    this.parentElement.nextElementSibling.children[i].classList.add('active')
+                })
+            });
+        }
+    }
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

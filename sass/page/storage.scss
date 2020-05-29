@@ -1,0 +1,119 @@
+.scan-btn {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-color: $silver-big;
+
+  &:focus {
+    border-color: $color-33;
+    outline: none;
+  }
+
+  svg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.save-btn {
+  background-color: $u-orange;
+
+  &:disabled {
+    background-color: $color-f5;
+
+    svg {
+      opacity: .4;
+    }
+  }
+}
+
+.storage {
+  padding: 20px;
+  border: 1px solid $color-33;
+  border-radius: 3px;
+  min-height: 510px;
+
+  .input--sm {
+    width: 100px;
+  }
+  .input.large {
+    width: 195px;
+}
+  .input.middle {
+    width: 160px;
+  }
+  .input--select {
+    height: 40px;
+    padding: 3px 12px;
+  }
+  .icon-minus {
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    background-color: $font-color-silver;
+  }
+  .column-3 {
+    font-size: 15px;
+    width: calc(25% - 6px);
+
+    @media screen and (max-width: 410px){
+      font-size: 13px;
+    }
+    @media screen and (max-width: 373px){
+      font-size: 11px;
+    }
+    @media screen and (max-width: 335px){
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 377px) {
+  .storage {
+    .input--sm {
+      width: 90px;
+    }
+
+    .input.large {
+      width: 165px;
+    }
+
+    .input.middle {
+      width: 140px;
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .storage {
+    .input--sm {
+      width: 70px;
+    }
+
+    .input.large {
+      width: 155px;
+    }
+
+    .input.middle {
+      width: 120px;
+    }
+  }
+}
+
+.inspection {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px;
+  background-color: $color-f5;
+}
+
+.pink-block {
+  background-color: $u-pink;
+  padding: 10px 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  .checkbox__icon {
+    border-color: $font-color-silver;
+    margin-right: 0;
+  }
+}
