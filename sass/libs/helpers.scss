@@ -176,6 +176,9 @@ small, .small {
   font-size: 1em;
   line-height: 1.125;
 
+  &--big {
+    font-size: 20px;
+  }
   &--muted {
     color: $font-color-silver;
   }
